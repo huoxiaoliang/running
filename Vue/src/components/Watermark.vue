@@ -5,7 +5,7 @@
 </template>
 <script setup>
 import { ref, watchEffect, onMounted, onUnmounted } from 'vue'
-import useWatermarkBg from '../../hooks/useWatermarkBg'
+import useWatermarkBg from '../hooks/useWatermarkBg'
 const props = defineProps({
   text: {
     type: String,
@@ -40,7 +40,7 @@ watchEffect(() => {
 })
 let ob
 onMounted(() => {
-  // 放篡改
+  // 防止篡改
   ob = new MutationObserver((records) => {
     for (const record of records) {
       //删除水印
