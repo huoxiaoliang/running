@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  --s: 280px;
+  --c1: #ff0000;
+  --c2: #cdff55;
+  --b: 5px;
+  --f: 1;
+
+  width: var(--s);
+  height: var(--s);
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(var(--f));
+  padding-top: 20px;
+  outline: var(--b) solid var(--c1);
+  outline-offset: calc((var(--s) / var(--f) - var(--s)) / 2 - var(--b));
+  border-radius: 0 0 999px 999px;
+  background: radial-gradient(
+      circle closest-side,
+      var(--c2) calc(99% - var(--b)),
+      var(--c1) calc(100% - var(--b)),
+      var(--c1) 99%,
+      lightblue 100%
+    )
+    content-box no-repeat center/ calc(100% / var(--f)) 100%; /*径向渐变*/
+}
+img:hover {
+  --f: 1.35;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: url(../../Images/beijing1.webp) no-repeat center/cover;
+        height: 100vh;
+        color: #fff;
+      }
+      .right {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="right">
+      <button>取色器</button>
+      <div class="box"></div>
+      <label></label>
+    </div>
+    <script>
+      const btn = document.querySelector("button");
+      const box = document.querySelector(".box");
+      const label = document.querySelector("label");
+      btn.onclick = async () => {
+        const dropper = new EyeDropper();
+        try {
+          const res = await dropper.open();
+          box.style.backgroundColor = label.textContent = res.sRGBHex;
+        } catch {}
+      };
+    </script>
+  </body>
+</html>
