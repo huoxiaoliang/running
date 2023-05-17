@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动画</title>
+  </head>
+  <style>
+    *,
+    .body {
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      height: 800px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10vw;
+      background: #ddd;
+    }
+    .footer {
+      height: 800px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10vw;
+      background: dodgerblue;
+    }
+    .playground {
+      height: 200vh;
+      text-align: center;
+      position: relative;
+      background-color: black;
+    }
+    .playground .animation-container {
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+    .playground .animation-container .list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 50%;
+      left: 50%;
+      flex-direction: row;
+      align-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      transform: translateX(-50%);
+    }
+    .list-back {
+      position: absolute;
+      background-color: rgba(91, 71, 71, 0.677);
+      border-radius: 10px;
+      height: 50%;
+      width: 100%;
+    }
+
+    .playground .animation-container .list .list-item {
+      width: 90px;
+      height: 90px;
+      background-color: aqua;
+      margin: 20px;
+    }
+  </style>
+  <body>
+    <div class="header">HEADER</div>
+    <div class="playground">
+      <div class="animation-container">
+        <div class="list">
+          <div class="list-back"></div>
+          <div data-order="0" class="list-item"></div>
+          <div data-order="1" class="list-item"></div>
+          <div data-order="2" class="list-item"></div>
+          <div data-order="3" class="list-item"></div>
+          <div data-order="2" class="list-item"></div>
+          <div data-order="1" class="list-item"></div>
+          <div data-order="0" class="list-item"></div>
+          <div data-order="0" class="list-item"></div>
+          <div data-order="1" class="list-item"></div>
+          <div data-order="2" class="list-item"></div>
+          <div data-order="3" class="list-item"></div>
+          <div data-order="2" class="list-item"></div>
+          <div data-order="1" class="list-item"></div>
+          <div data-order="0" class="list-item"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">FOOTER</div>
+    <script src="index.js"></script>
+  </body>
+</html>
