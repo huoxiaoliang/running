@@ -1,7 +1,10 @@
 const container = document.querySelector(".container");
 const rect = container.getBoundingClientRect();
-const theta = Math.atan(rect.height, rect.width);
+const theta = Math.atan2(rect.height, rect.width);
 container.addEventListener("mousemove", (e) => {
+  if (container.classList.length > 1) {
+    return;
+  }
   const x = e.offsetX - rect.width / 2;
   const y = rect.height / 2 - e.offsetY;
   const d = Math.atan2(y, x);
