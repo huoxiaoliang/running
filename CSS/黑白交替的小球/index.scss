@@ -1,0 +1,101 @@
+body {
+  background: #90b0ca;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+//   align-items: center;
+  overflow: hidden;
+}
+$containerSize: 200px; //容器大小
+$dotSize: 10px; //小球大小
+$n: 36; //小球数量
+$pDeg: calc(360 / $n); //每个小球的偏移角度
+$t: 2s; //动画时间
+.loading {
+  width: $containerSize;
+  height: $containerSize;
+  margin: 50px auto;
+  position: relative;
+  border-radius: 50%;
+  //   outline: 1px solid #fff;
+  .dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: $dotSize;
+    height: $dotSize;
+    margin-left: calc($dotSize / -2); //偏移中心点
+    margin-top: calc($dotSize / -2); //偏移中心点
+    perspective: 70px; //景深
+    transform-style: preserve-3d; //保持3d效果
+    // background: #f40;
+    // 偏移中心点设置为圆心
+    transform-origin: center calc($containerSize / 2) + calc($dotSize / 2);
+
+    @for $i from 1 through $n {
+      //循环生成小球
+      &:nth-child(#{$i}) {
+        transform: rotate($pDeg * ($i - 1) + deg);
+        &::before,
+        &::after {
+          // 延迟动画，负数为提前开始动画
+          animation-delay: calc($t / $n * ($i - 1) * -6);
+        }
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    &::before {
+      background: #fff;
+      top: -100%;
+      animation: rotation-white $t linear infinite;
+      @keyframes rotation-white {
+        0% {
+          animation-timing-function: ease-in;
+        }
+        25% {
+          animation-timing-function: ease-out;
+          transform: translate3d(0, 100%, $dotSize);
+        }
+        50% {
+          animation-timing-function: ease-in;
+          transform: translate3d(0, 200%, 0);
+        }
+        75% {
+          animation-timing-function: ease-out;
+          transform: translate3d(0, 100%, -$dotSize);
+        }
+      }
+    }
+    &::after {
+      background: #000;
+      top: 100%;
+      animation: rotation-black $t linear infinite;
+      @keyframes rotation-black {
+        0% {
+          animation-timing-function: ease-in;
+        }
+        25% {
+          animation-timing-function: ease-out;
+          transform: translate3d(0, -100%, -$dotSize);
+        }
+        50% {
+          animation-timing-function: ease-in;
+          transform: translate3d(0, -200%, 0);
+        }
+        75% {
+          animation-timing-function: ease-out;
+          transform: translate3d(0, -100%, $dotSize);
+        }
+      }
+    }
+  }
+}
