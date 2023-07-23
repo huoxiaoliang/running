@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  height: 300px;
+  top: 200px;
+}
+.prev,
+.next {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  color: white;
+  font-size: 30px;
+  transform: scaleY(3);
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  user-select: none;
+}
+.prev:hover,
+.next:hover {
+  color: #998c8c;
+}
+.prev {
+  left: 10%;
+  top: 40%;
+}
+.next {
+  right: 10%;
+  top: 40%;
+}
+.carousel__face {
+  width: 400px;
+  position: absolute;
+  height: fit-content;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
