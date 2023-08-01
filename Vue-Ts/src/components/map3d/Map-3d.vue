@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import Creatar3d from 'Creatar3d'
+import { onMounted } from 'vue'
 onMounted(() => {
   new Creatar3d.Viewer(`globe-container`, {})
 })
