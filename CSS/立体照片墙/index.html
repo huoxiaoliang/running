@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>立体照片墙</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://picsum.photos/400/600?n=1" alt="" />
+      <img src="https://picsum.photos/400/600?n=2" alt="" />
+      <img src="https://picsum.photos/400/600?n=3" alt="" />
+      <img src="https://picsum.photos/400/600?n=4" alt="" />
+      <img src="https://picsum.photos/400/600?n=5" alt="" />
+      <img src="https://picsum.photos/400/600?n=6" alt="" />
+      <img src="https://picsum.photos/400/600?n=7" alt="" />
+      <img src="https://picsum.photos/400/600?n=8" alt="" />
+      <img src="https://picsum.photos/400/600?n=9" alt="" />
+      <img src="https://picsum.photos/400/600?n=10" alt="" />
+    </div>
+    <script>
+      const imgs = document.querySelectorAll("img");
+      const container = document.querySelector(".container");
+      let lastScreenX = 0;
+      let offsetX = 0;
+      container.addEventListener(
+        "dragend",
+        (e) => {
+          e.preventDefault();
+          console.log(e);
+          if (e.screenX) {
+            offsetX = e.screenX > lastScreenX ? offsetX - 15 : offsetX + 15;
+            container.style.transform = `rotateY(${offsetX}deg)`;
+            lastScreenX = e.screenX;
+          }
+          //   const y = e.clientY - img.offsetTop;
+          //   const width = img.offsetWidth;
+          //   const height = img.offsetHeight;
+          //   const centerX = width / 2;
+          //   const centerY = height / 2;
+          //   const offsetX = (x - centerX) / 10;
+          //   const offsetY = (y - centerY) / 10;
+          //   container.style.transform = `rotateY(${offsetX}deg)`;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
