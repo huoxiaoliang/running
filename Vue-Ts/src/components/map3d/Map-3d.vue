@@ -2,7 +2,12 @@
 import Creatar3d from 'Creatar3d'
 import { onMounted } from 'vue'
 onMounted(() => {
-  new Creatar3d.Viewer(`globe-container`, {})
+  const map = new Creatar3d.Viewer(`globe-container`, {})
+  map.setOptions({
+    widgetController: {
+      enableImagerySwitcher: true
+    } as Creatar3d.WidgetOption.Options
+  })
 })
 </script>
 
@@ -12,6 +17,6 @@ onMounted(() => {
 
 <style scoped>
 .map {
-  max-height: 100vh;
+  height: 100vh;
 }
 </style>
