@@ -1,4 +1,4 @@
-declare module 'Creatar3d' {
+declare module "Creatar3d" {
   /**
    * 可视域分析
    * @param options - 选项。
@@ -17,39 +17,39 @@ declare module 'Creatar3d' {
    */
   declare class ViewShedStage {
     constructor(options: {
-      viewPosition: Cesium.Cartesian3
-      viewPositionEnd: Cesium.Cartesian3
-      viewDistance?: number
-      viewHeading: number
-      viewPitch: number
-      horizontalViewAngle?: number
-      verticalViewAngle?: number
-      visibleAreaColor?: Cesium.Color
-      invisibleAreaColor?: Cesium.Color
-      enabled?: boolean
-      softShadows?: boolean
-      size?: boolean
-    })
+      viewPosition: Cesium.Cartesian3;
+      viewPositionEnd: Cesium.Cartesian3;
+      viewDistance?: number;
+      viewHeading: number;
+      viewPitch: number;
+      horizontalViewAngle?: number;
+      verticalViewAngle?: number;
+      visibleAreaColor?: Cesium.Color;
+      invisibleAreaColor?: Cesium.Color;
+      enabled?: boolean;
+      softShadows?: boolean;
+      size?: boolean;
+    });
     /**
      * 创建相机
      */
-    createLightCamera(): void
+    createLightCamera(): void;
     /**
      * 创建阴影贴图
      */
-    createShadowMap(): void
+    createShadowMap(): void;
     /**
      * 创建PostStage
      */
-    createPostStage(): void
+    createPostStage(): void;
     /**
      * 创建视锥线（用于测试范围）
      */
-    drawFrustumOutline(): void
+    drawFrustumOutline(): void;
     /**
      * 创建视网
      */
-    drawSketch(): void
+    drawSketch(): void;
   }
 
   /**
@@ -66,108 +66,108 @@ declare module 'Creatar3d' {
    */
   declare class ViewShedStage2 {
     constructor(options: {
-      startPosition: Cesium.Cartesian3
-      endPosition: Cesium.Cartesian3
-      fovH?: number
-      fovV?: number
-      visibleColor?: Cesium.Color
-      invisibleColor?: Cesium.Color
-      enabled?: boolean
-      showGridLine?: boolean
-      offsetHeight?: number
-    })
+      startPosition: Cesium.Cartesian3;
+      endPosition: Cesium.Cartesian3;
+      fovH?: number;
+      fovV?: number;
+      visibleColor?: Cesium.Color;
+      invisibleColor?: Cesium.Color;
+      enabled?: boolean;
+      showGridLine?: boolean;
+      offsetHeight?: number;
+    });
     /**
      * 视角落点位置
      */
-    endPosition: Cesium.Cartesian3
+    endPosition: Cesium.Cartesian3;
     /**
      * 相机视椎
      */
-    readonly frustum: Cesium.PerspectiveFrustum
+    readonly frustum: Cesium.PerspectiveFrustum;
     /**
      * 可视域水平夹角
      */
-    fovH: number
+    fovH: number;
     /**
      * 可视域垂直夹角
      */
-    fovV: number
+    fovV: number;
     /**
      * 相机近平面的距离
      */
-    near: number
+    near: number;
     /**
      * 相机远平面的距离
      */
-    far: number
+    far: number;
     /**
      * 视角位置
      */
-    position: Cesium.Cartesian3
+    position: Cesium.Cartesian3;
     /**
      * 偏移
      */
-    offsetHeight: number
+    offsetHeight: number;
     /**
      * 相机heading角
      */
-    heading: number
+    heading: number;
     /**
      * 相机pitch角
      */
-    pitch: number
+    pitch: number;
     /**
      * 相机roll角
      */
-    roll: number
+    roll: number;
     /**
      * 阴影贴图
      */
-    readonly shadowMap: Cesium.ShadowMap
+    readonly shadowMap: Cesium.ShadowMap;
     /**
      * 相机
      */
-    readonly lightCamera: Cesium.Camera
+    readonly lightCamera: Cesium.Camera;
     /**
      * 阴影是否可用
      */
-    enabled: boolean
+    enabled: boolean;
     /**
      * 可见阴影颜色
      */
-    visibleColor: boolean
+    visibleColor: boolean;
     /**
      * 不可见阴影颜色
      */
-    invisibleColor: Cesium.Color
+    invisibleColor: Cesium.Color;
     /**
      * 视椎线可用
      */
-    showGridLine: boolean
+    showGridLine: boolean;
     /**
      * 视椎面颜色
      */
-    faceColor: Cesium.Color
+    faceColor: Cesium.Color;
     /**
      * 视椎线颜色
      */
-    lineColor: Cesium.Color
+    lineColor: Cesium.Color;
     /**
      * 设置相机位置
      */
-    setView(options: any): void
+    setView(options: any): void;
     /**
      * 创建相机视椎
      */
-    createLightCamera(): void
+    createLightCamera(): void;
     /**
      * 创建阴影贴图
      */
-    createShadowMap(): void
+    createShadowMap(): void;
     /**
      * 后处理
      */
-    createPostStage(): void
+    createPostStage(): void;
   }
 
   /**
@@ -186,42 +186,42 @@ declare module 'Creatar3d' {
    */
   declare class ContourLine {
     constructor(options: {
-      positions?: Position[]
-      contourShow?: boolean
-      showElseArea?: boolean
-      width?: number
-      spacing?: number
-      color?: Cesium.Color
-      shadingType?: string
-      shadingAlpha?: number
-      minHeight?: number
-      maxHeight?: number
-      colorScheme?: any
-    })
+      positions?: Position[];
+      contourShow?: boolean;
+      showElseArea?: boolean;
+      width?: number;
+      spacing?: number;
+      color?: Cesium.Color;
+      shadingType?: string;
+      shadingAlpha?: number;
+      minHeight?: number;
+      maxHeight?: number;
+      colorScheme?: any;
+    });
     /**
      * 设置等高线显隐
      */
-    contourShow: boolean
+    contourShow: boolean;
     /**
      * 设置等高线间距
      */
-    spacing: number
+    spacing: number;
     /**
      * 设置等高线线宽
      */
-    width: number
+    width: number;
     /**
      * 设置地表渲染效果
      */
-    shadingType: number
+    shadingType: number;
     /**
      * 设置地表渲染效果
      */
-    showElseArea: number
+    showElseArea: number;
     /**
      * 清除开挖结果
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
@@ -229,15 +229,15 @@ declare module 'Creatar3d' {
    * @param [options.unionClippingRegions = false] - 是否外切开挖
    */
   declare class TerrainClip {
-    constructor(options: { unionClippingRegions?: boolean })
+    constructor(options: { unionClippingRegions?: boolean });
     /**
      * 是否外切开挖
      */
-    unionClippingRegions: boolean
+    unionClippingRegions: boolean;
     /**
      * 清除开挖结果
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
@@ -245,64 +245,64 @@ declare module 'Creatar3d' {
    * @param [options.unionClippingRegions = false] - 是否外切开挖
    */
   declare class TerrainEdit {
-    constructor(options: { unionClippingRegions?: boolean })
+    constructor(options: { unionClippingRegions?: boolean });
     /**
      * 添加区域
      * @param positions - 坐标点集
      * @returns id
      */
-    addArea(positions: Position[]): string
+    addArea(positions: Position[]): string;
     /**
      * 删除区域
      * @param id - id
      */
-    removeArea(id: string): void
+    removeArea(id: string): void;
     /**
      * 隐藏区域
      * @param id - id
      */
-    hideArea(id: string): void
+    hideArea(id: string): void;
     /**
      * 显示区域
      * @param id - id
      */
-    showArea(id: string): void
+    showArea(id: string): void;
     /**
      * 清除开挖结果
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
    * 地形压平、地形抬升等分析 基础类
    */
   declare class TerrainEdit2 {
-    constructor(options: any)
+    constructor(options: any);
     /**
      * 添加区域
      * @param positions - 坐标点集
      * @returns id
      */
-    addArea(positions: Position[]): string
+    addArea(positions: Position[]): string;
     /**
      * 删除区域
      * @param id - id
      */
-    removeArea(id: string): void
+    removeArea(id: string): void;
     /**
      * 隐藏区域
      * @param id - id
      */
-    hideArea(id: string): void
+    hideArea(id: string): void;
     /**
      * 显示区域
      * @param id - id
      */
-    showArea(id: string): void
+    showArea(id: string): void;
     /**
      * 清除结果
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
@@ -310,11 +310,11 @@ declare module 'Creatar3d' {
    * @param [options.unionClippingRegions = false] - 是否外切开挖
    */
   declare class TerrainFlat {
-    constructor(options: { unionClippingRegions?: boolean })
+    constructor(options: { unionClippingRegions?: boolean });
     /**
      * 清除开挖结果
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
@@ -323,15 +323,18 @@ declare module 'Creatar3d' {
    * @param [options.unionClippingRegions = false] - 是否外切开挖
    */
   declare class TerrainPlanClip {
-    constructor(options: { positions: Position[] | any[][]; unionClippingRegions?: boolean })
+    constructor(options: {
+      positions: Position[] | any[][];
+      unionClippingRegions?: boolean;
+    });
     /**
      * 开挖区域的 坐标位置数组
      */
-    positions: Position[]
+    positions: Position[];
     /**
      * 是否外切开挖
      */
-    unionClippingRegions: boolean
+    unionClippingRegions: boolean;
     /**
      * 计算世界坐标系下的裁剪面
      * @param positions - 裁剪范围坐标
@@ -341,7 +344,7 @@ declare module 'Creatar3d' {
     static getClippingPlanes(
       positions: Position[],
       unionClippingRegions: boolean
-    ): Cesium.ClippingPlane[]
+    ): Cesium.ClippingPlane[];
   }
 
   /**
@@ -350,35 +353,35 @@ declare module 'Creatar3d' {
    * @param [options.upHeight] - 设置所有区域的抬升高度（单位：米）,目前不支持单个区域的高度自定义。
    */
   declare class TerrainUplift {
-    constructor(options: { showUp?: boolean; upHeight?: number })
+    constructor(options: { showUp?: boolean; upHeight?: number });
     /**
      * 是否显示抬升区，为false时效果类同 地形开挖 的效果
      */
-    showUp: boolean
+    showUp: boolean;
     /**
      * 设置所有区域的抬升高度（单位：米）,目前不支持单个区域的高度自定义。
      */
-    upHeight: boolean
+    upHeight: boolean;
     /**
      * 清除开挖结果
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
    * 动画基类
    */
   declare class Animation {
-    constructor(视图: Viewer)
+    constructor(视图: Viewer);
     /**
      * 开始动画
      * @returns this
      */
-    start(): Animation
+    start(): Animation;
     /**
      * 停止动画
      */
-    stop(): Animation
+    stop(): Animation;
   }
 
   declare namespace AroundPoint {
@@ -392,13 +395,13 @@ declare module 'Creatar3d' {
      * @property [aroundAmount = 0.2] - 到每帧旋转角度
      */
     type options = {
-      duration?: number
-      callback?: (...params: any[]) => any
-      position: Position
-      pitch?: number
-      range?: number
-      aroundAmount?: number
-    }
+      duration?: number;
+      callback?: (...params: any[]) => any;
+      position: Position;
+      pitch?: number;
+      range?: number;
+      aroundAmount?: number;
+    };
   }
 
   /**
@@ -407,15 +410,15 @@ declare module 'Creatar3d' {
    * @param options - 动画参数
    */
   declare class AroundPoint extends Animation {
-    constructor(viewer: Viewer, options: AroundPoint.options)
+    constructor(viewer: Viewer, options: AroundPoint.options);
     /**
      * 位置
      */
-    position: number
+    position: number;
     /**
      * 到每帧旋转角度
      */
-    aroundAmount: number
+    aroundAmount: number;
   }
 
   declare namespace AroundView {
@@ -427,11 +430,11 @@ declare module 'Creatar3d' {
      * @property [roll = camera.roll] - 旋转角
      */
     type options = {
-      duration?: number
-      callback?: (...params: any[]) => any
-      pitch?: number
-      roll?: number
-    }
+      duration?: number;
+      callback?: (...params: any[]) => any;
+      pitch?: number;
+      roll?: number;
+    };
   }
 
   /**
@@ -440,11 +443,11 @@ declare module 'Creatar3d' {
    * @param options - 动画参数
    */
   declare class AroundView extends Animation {
-    constructor(viewer: Viewer, options: AroundView.options)
+    constructor(viewer: Viewer, options: AroundView.options);
     /**
      * 每次旋转角度
      */
-    aroundAmount: number
+    aroundAmount: number;
   }
 
   declare namespace CircleScan {
@@ -456,11 +459,11 @@ declare module 'Creatar3d' {
      * @property [color = Cesium.Color.RED] - 颜色
      */
     type options = {
-      position: Position
-      radius?: number
-      speed?: number
-      color?: Cesium.Color
-    }
+      position: Position;
+      radius?: number;
+      speed?: number;
+      color?: Cesium.Color;
+    };
   }
 
   /**
@@ -469,16 +472,16 @@ declare module 'Creatar3d' {
    * @param options - 动画参数
    */
   declare class CircleScan extends Animation {
-    constructor(viewer: Viewer, options: CircleScan.options)
+    constructor(viewer: Viewer, options: CircleScan.options);
     /**
      * 开始
      * @returns this
      */
-    start(): CircleScan
+    start(): CircleScan;
     /**
      * 停止
      */
-    stop(): CircleScan
+    stop(): CircleScan;
   }
 
   declare namespace Flying {
@@ -491,12 +494,12 @@ declare module 'Creatar3d' {
      * @property [durations = [3]] - 飞行时长，支持多点统一设置或单独设置
      */
     type options = {
-      positions?: Position[]
-      dwellTime?: number
-      callback?: (...params: any[]) => any
-      loop?: boolean
-      durations?: Number[]
-    }
+      positions?: Position[];
+      dwellTime?: number;
+      callback?: (...params: any[]) => any;
+      loop?: boolean;
+      durations?: Number[];
+    };
   }
 
   /**
@@ -505,14 +508,14 @@ declare module 'Creatar3d' {
    * @param options - 动画参数
    */
   declare class Flying extends Animation {
-    constructor(viewer: Viewer, options: Flying.options)
+    constructor(viewer: Viewer, options: Flying.options);
     /**
      * 点位
      */
-    positions: Position[]
-    start(): Flying
-    pause(): Flying
-    restore(): Flying
+    positions: Position[];
+    start(): Flying;
+    pause(): Flying;
+    restore(): Flying;
   }
 
   declare namespace GlobeRotate {
@@ -524,11 +527,11 @@ declare module 'Creatar3d' {
      * @property [name = '未命名'] - 名称
      */
     type options = {
-      duration?: number
-      callback?: (...params: any[]) => any
-      speed?: number
-      name?: string
-    }
+      duration?: number;
+      callback?: (...params: any[]) => any;
+      speed?: number;
+      name?: string;
+    };
   }
 
   /**
@@ -537,7 +540,7 @@ declare module 'Creatar3d' {
    * @param options - 动画参数
    */
   declare class GlobeRotate extends Animation {
-    constructor(viewer: Viewer, options: GlobeRotate.options)
+    constructor(viewer: Viewer, options: GlobeRotate.options);
   }
 
   /**
@@ -546,22 +549,22 @@ declare module 'Creatar3d' {
    * @param options - 动画参数
    */
   declare class RadarScan extends CircleScan {
-    constructor(viewer: Viewer, options: CircleScan.options)
+    constructor(viewer: Viewer, options: CircleScan.options);
   }
 
   /**
    * 特效基类
    */
   declare class BaseEffect {
-    constructor(options: any)
+    constructor(options: any);
     /**
      * 设置对象的启用和禁用状态
      */
-    enable: boolean
+    enable: boolean;
     /**
      * 特效事件
      */
-    readonly effectEvent: EffectEvent
+    readonly effectEvent: EffectEvent;
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -569,7 +572,11 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns this
      */
-    on(type: EffectEventType, callback: (...params: any[]) => any, context: any): BaseEffect
+    on(
+      type: EffectEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): BaseEffect;
     /**
      * Unsubscribe event
      * @param type - 事件类型
@@ -577,19 +584,23 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns this
      */
-    off(type: EffectEventType, callback: (...params: any[]) => any, context: any): BaseEffect
+    off(
+      type: EffectEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): BaseEffect;
     /**
      * Trigger subscription event
      * @param type - 事件类型
      * @param params - 参数
      * @returns this
      */
-    fire(type: EffectEventType, params: any): BaseEffect
+    fire(type: EffectEventType, params: any): BaseEffect;
     /**
      * 添加到视图
      * @param viewer - 特效
      */
-    addTo(viewer: Viewer): BaseEffect
+    addTo(viewer: Viewer): BaseEffect;
   }
 
   /**
@@ -599,16 +610,16 @@ declare module 'Creatar3d' {
    * @param [options.color = new Cesium.Color(0, 0, 0, 1)] - 颜色
    */
   declare class FogEffect {
-    constructor(options: { fogByDistance?: any; color?: Cesium.Color })
+    constructor(options: { fogByDistance?: any; color?: Cesium.Color });
     /**
      * 类型
      */
-    readonly type: any
-    fogByDistance: number
+    readonly type: any;
+    fogByDistance: number;
     /**
      * 颜色
      */
-    color: Cesium.Color
+    color: Cesium.Color;
   }
 
   /**
@@ -622,36 +633,36 @@ declare module 'Creatar3d' {
    */
   declare class PointLight {
     constructor(options: {
-      position: Cesium.Cartesian3
-      color?: Cesium.Color
-      cutoffDistance?: number
-      decay?: number
-      lightIntensity?: number
-    })
+      position: Cesium.Cartesian3;
+      color?: Cesium.Color;
+      cutoffDistance?: number;
+      decay?: number;
+      lightIntensity?: number;
+    });
     /**
      * 类型
      */
-    readonly type: any
+    readonly type: any;
     /**
      * 设置光源位置
      */
-    position: Cesium.Cartesian3
+    position: Cesium.Cartesian3;
     /**
      * 设置衰减因子
      */
-    decay: number
+    decay: number;
     /**
      * 设置强度
      */
-    lightIntensity: number
+    lightIntensity: number;
     /**
      * 设置扩散距离
      */
-    cutoffDistance: number
+    cutoffDistance: number;
     /**
      * 颜色
      */
-    color: Cesium.Color
+    color: Cesium.Color;
   }
 
   /**
@@ -662,23 +673,23 @@ declare module 'Creatar3d' {
    * @param [options.angle = -0.6] - 角度
    */
   declare class RainEffect {
-    constructor(options: { speed?: number; size?: number; angle?: number })
+    constructor(options: { speed?: number; size?: number; angle?: number });
     /**
      * 类型
      */
-    readonly type: any
+    readonly type: any;
     /**
      * 速度
      */
-    speed: number
+    speed: number;
     /**
      * 大小
      */
-    size: number
+    size: number;
     /**
      * 角度
      */
-    angle: number
+    angle: number;
   }
 
   /**
@@ -688,15 +699,15 @@ declare module 'Creatar3d' {
    * @param [options.alpha = 0.5] - 透明度
    */
   declare class SnowCoverEffect {
-    constructor(options: { maxHeight?: number; alpha?: number })
+    constructor(options: { maxHeight?: number; alpha?: number });
     /**
      * 类型
      */
-    readonly type: any
+    readonly type: any;
     /**
      * 透明度
      */
-    alpha: number
+    alpha: number;
   }
 
   /**
@@ -706,26 +717,26 @@ declare module 'Creatar3d' {
    * @param [options.size = 0.02] - 大小
    */
   declare class SnowEffect {
-    constructor(options: { speed?: number; size?: number })
+    constructor(options: { speed?: number; size?: number });
     /**
      * 类型
      */
-    readonly type: any
+    readonly type: any;
     /**
      * 速度
      */
-    speed: number
+    speed: number;
     /**
      * 速度
      */
-    size: number
+    size: number;
   }
 
   /**
    * Event 基类
    */
   declare class Event {
-    constructor()
+    constructor();
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -733,33 +744,45 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns remove callback function
      */
-    on(type: EventType, callback: (...params: any[]) => any, context: any): Event.RemoveCallback
+    on(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Event.RemoveCallback;
     /**
      * Subscribe once event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    once(type: EventType, callback: (...params: any[]) => any, context: any): void
+    once(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): void;
     /**
      * Unsubscribe event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    off(type: EventType, callback: (...params: any[]) => any, context: any): boolean
+    off(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): boolean;
     /**
      * Trigger subscription event
      * @param type - 事件类型
      * @param params - 参数
      */
-    fire(type: EventType, params: any): void
+    fire(type: EventType, params: any): void;
     /**
      * Returns events by type
      * @param type - 事件类型
      * @returns Event
      */
-    getEvent(type: EventType): Cesium.Event
+    getEvent(type: EventType): Cesium.Event;
   }
 
   /**
@@ -769,11 +792,11 @@ declare module 'Creatar3d' {
     /**
      * 添加
      */
-    ADD = 'add',
+    ADD = "add",
     /**
      * 移除
      */
-    REMOVE = 'remove'
+    REMOVE = "remove",
   }
 
   /**
@@ -783,39 +806,39 @@ declare module 'Creatar3d' {
     /**
      * 左键单击
      */
-    CLICK = 'Cesium.ScreenSpaceEventType.LEFT_CLICK',
+    CLICK = "Cesium.ScreenSpaceEventType.LEFT_CLICK",
     /**
      * 右键单击
      */
-    RIGHT_CLICK = 'Cesium.ScreenSpaceEventType.RIGHT_CLICK',
+    RIGHT_CLICK = "Cesium.ScreenSpaceEventType.RIGHT_CLICK",
     /**
      * 左键双击
      */
-    DB_CLICK = 'Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK',
+    DB_CLICK = "Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK",
     /**
      * 鼠标移动
      */
-    MOUSE_MOVE = 'Cesium.ScreenSpaceEventType.MOUSE_MOVE',
+    MOUSE_MOVE = "Cesium.ScreenSpaceEventType.MOUSE_MOVE",
     /**
      * 滚轮滚动
      */
-    WHEEL = 'Cesium.ScreenSpaceEventType.WHEEL',
+    WHEEL = "Cesium.ScreenSpaceEventType.WHEEL",
     /**
      * 左键按下
      */
-    LEFT_DOWN = 'Cesium.ScreenSpaceEventType.LEFT_DOWN',
+    LEFT_DOWN = "Cesium.ScreenSpaceEventType.LEFT_DOWN",
     /**
      * 左键抬起
      */
-    LEFT_UP = 'Cesium.ScreenSpaceEventType.LEFT_UP',
+    LEFT_UP = "Cesium.ScreenSpaceEventType.LEFT_UP",
     /**
      * 鼠标移出
      */
-    MOUSE_OVER = 'mouseover',
+    MOUSE_OVER = "mouseover",
     /**
      * 鼠标移入
      */
-    MOUSE_OUT = 'mouseout'
+    MOUSE_OUT = "mouseout",
   }
 
   /**
@@ -825,47 +848,47 @@ declare module 'Creatar3d' {
     /**
      * 添加图层
      */
-    ADD_LAYER = 'addLayer',
+    ADD_LAYER = "addLayer",
     /**
      * 移除图层
      */
-    REMOVE_LAYER = 'removeLayer',
+    REMOVE_LAYER = "removeLayer",
     /**
      * 添加特效
      */
-    ADD_EFFECT = 'addEffect',
+    ADD_EFFECT = "addEffect",
     /**
      * 移除特效
      */
-    REMOVE_EFFECT = 'removeEffect',
+    REMOVE_EFFECT = "removeEffect",
     /**
      * 左键单击
      */
-    CLICK = 'Cesium.ScreenSpaceEventType.LEFT_CLICK',
+    CLICK = "Cesium.ScreenSpaceEventType.LEFT_CLICK",
     /**
      * 右键单击
      */
-    RIGHT_CLICK = 'Cesium.ScreenSpaceEventType.RIGHT_CLICK',
+    RIGHT_CLICK = "Cesium.ScreenSpaceEventType.RIGHT_CLICK",
     /**
      * 左键双击
      */
-    DB_CLICK = 'Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK',
+    DB_CLICK = "Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK",
     /**
      * 鼠标移动
      */
-    MOUSE_MOVE = 'Cesium.ScreenSpaceEventType.MOUSE_MOVE',
+    MOUSE_MOVE = "Cesium.ScreenSpaceEventType.MOUSE_MOVE",
     /**
      * 滚轮滚动
      */
-    WHEEL = 'Cesium.ScreenSpaceEventType.WHEEL',
+    WHEEL = "Cesium.ScreenSpaceEventType.WHEEL",
     /**
      * 左键按下
      */
-    LEFT_DOWN = 'Cesium.ScreenSpaceEventType.LEFT_DOWN',
+    LEFT_DOWN = "Cesium.ScreenSpaceEventType.LEFT_DOWN",
     /**
      * 左键抬起
      */
-    LEFT_UP = 'Cesium.ScreenSpaceEventType.LEFT_UP'
+    LEFT_UP = "Cesium.ScreenSpaceEventType.LEFT_UP",
   }
 
   /**
@@ -875,35 +898,35 @@ declare module 'Creatar3d' {
     /**
      * 相机移动结束
      */
-    CAMERA_MOVE_END = 'cameraMoveEnd',
+    CAMERA_MOVE_END = "cameraMoveEnd",
     /**
      * 相机改变
      */
-    CAMERA_CHANGED = 'cameraChanged',
+    CAMERA_CHANGED = "cameraChanged",
     /**
      * 场景更新之前
      */
-    PRE_UPDATE = 'preUpdate',
+    PRE_UPDATE = "preUpdate",
     /**
      * 场景更新后
      */
-    POST_UPDATE = 'postUpdate',
+    POST_UPDATE = "postUpdate",
     /**
      * 渲染更新后
      */
-    PRE_RENDER = 'preRender',
+    PRE_RENDER = "preRender",
     /**
      * 渲染更新后
      */
-    POST_RENDER = 'postRender',
+    POST_RENDER = "postRender",
     /**
      * 变形完成
      */
-    MORPH_COMPLETE = 'morphComplete',
+    MORPH_COMPLETE = "morphComplete",
     /**
      * 时钟变化
      */
-    CLOCK_TICK = 'clockTick'
+    CLOCK_TICK = "clockTick",
   }
 
   /**
@@ -913,35 +936,35 @@ declare module 'Creatar3d' {
     /**
      * 左键单击
      */
-    CLICK = 'Cesium.ScreenSpaceEventType.LEFT_CLICK',
+    CLICK = "Cesium.ScreenSpaceEventType.LEFT_CLICK",
     /**
      * 右键单击
      */
-    RIGHT_CLICK = 'Cesium.ScreenSpaceEventType.RIGHT_CLICK',
+    RIGHT_CLICK = "Cesium.ScreenSpaceEventType.RIGHT_CLICK",
     /**
      * 左键双击
      */
-    DB_CLICK = 'Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK',
+    DB_CLICK = "Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK",
     /**
      * 鼠标移动
      */
-    MOUSE_MOVE = 'Cesium.ScreenSpaceEventType.MOUSE_MOVE',
+    MOUSE_MOVE = "Cesium.ScreenSpaceEventType.MOUSE_MOVE",
     /**
      * 滚轮滚动
      */
-    WHEEL = 'Cesium.ScreenSpaceEventType.WHEEL',
+    WHEEL = "Cesium.ScreenSpaceEventType.WHEEL",
     /**
      * 鼠标移入
      */
-    MOUSE_OVER = 'mouseover',
+    MOUSE_OVER = "mouseover",
     /**
      * 鼠标移出
      */
-    MOUSE_OUT = 'mouseout',
+    MOUSE_OUT = "mouseout",
     /**
      * 位置修改后
      */
-    POSITION_UPDATE = 'positionUpdate'
+    POSITION_UPDATE = "positionUpdate",
   }
 
   /**
@@ -956,15 +979,15 @@ declare module 'Creatar3d' {
     /**
      * 左键单击
      */
-    CLICK = 'Cesium.ScreenSpaceEventType.LEFT_CLICK',
+    CLICK = "Cesium.ScreenSpaceEventType.LEFT_CLICK",
     /**
      * 添加要素
      */
-    ADD_GRAPHIC = 'addGraphic',
+    ADD_GRAPHIC = "addGraphic",
     /**
      * 移除要素
      */
-    REMOVE_GRAPHIC = 'removeGraphic'
+    REMOVE_GRAPHIC = "removeGraphic",
   }
 
   /**
@@ -974,23 +997,23 @@ declare module 'Creatar3d' {
     /**
      * 场景更新后
      */
-    POST_UPDATE = 'postUpdate',
+    POST_UPDATE = "postUpdate",
     /**
      * 变化后
      */
-    CHANGE = 'change',
+    CHANGE = "change",
     /**
      * 完成节点后
      */
-    OVERPOINT = 'overPoint',
+    OVERPOINT = "overPoint",
     /**
      * 开始事件
      */
-    START = 'start',
+    START = "start",
     /**
      * 结束事件
      */
-    END = 'end'
+    END = "end",
   }
 
   /**
@@ -1010,75 +1033,75 @@ declare module 'Creatar3d' {
     /**
      * 标绘开始
      */
-    DRAW_START = 'drawStart',
+    DRAW_START = "drawStart",
     /**
      * 标绘结束
      */
-    DRAW_STOP = 'drawStop',
+    DRAW_STOP = "drawStop",
     /**
      * 标绘取消
      */
-    DRAW_CANCEL = 'drawCancel',
+    DRAW_CANCEL = "drawCancel",
     /**
      * 编辑开始
      */
-    EDIT_START = 'editStart',
+    EDIT_START = "editStart",
     /**
      * 编辑结束
      */
-    EDIT_STOP = 'editEnd',
+    EDIT_STOP = "editEnd",
     /**
      * 编辑取消
      */
-    EDIT_CANCEL = 'editCancel',
+    EDIT_CANCEL = "editCancel",
     /**
      * 右键删除
      */
-    RIGHT_REMOVE = 'rightRemove',
+    RIGHT_REMOVE = "rightRemove",
     /**
      * 绘制过程中增加了点 标绘事件
      */
-    Add_ANCHOR = 'addAnchor',
+    Add_ANCHOR = "addAnchor",
     /**
      * 绘制过程中删除了最后一个点 标绘事件
      */
-    REMOVE_ANCHOR = 'removeAnchor',
+    REMOVE_ANCHOR = "removeAnchor",
     /**
      * 编辑删除更新点 标绘事件
      */
-    EDIT_UPDATE_ANCHOR = 'editUpdateAnchor',
+    EDIT_UPDATE_ANCHOR = "editUpdateAnchor",
     /**
      * 绘制移动中 标绘事件
      */
-    DRAW_MOVEING = 'drawMoveing'
+    DRAW_MOVEING = "drawMoveing",
   }
 
   /**
    * 特效事件
    */
   declare class EffectEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
    * 覆盖物事件
    */
   declare class GraphicEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
    * 图层事件
    */
   declare class LayerEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
    * 图层组事件
    */
   declare class LayerGroupEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
@@ -1088,11 +1111,11 @@ declare module 'Creatar3d' {
     /**
      * 移除鼠标所有默认事件
      */
-    removeEvent(): void
+    removeEvent(): void;
     /**
      * 初始化鼠标所有默认事件
      */
-    initEvent(): void
+    initEvent(): void;
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -1100,47 +1123,59 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns remove callback function
      */
-    on(type: EventType, callback: (...params: any[]) => any, context: any): Event.RemoveCallback
+    on(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Event.RemoveCallback;
     /**
      * Subscribe once event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    once(type: EventType, callback: (...params: any[]) => any, context: any): void
+    once(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): void;
     /**
      * Unsubscribe event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    off(type: EventType, callback: (...params: any[]) => any, context: any): boolean
+    off(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): boolean;
     /**
      * Trigger subscription event
      * @param type - 事件类型
      * @param params - 参数
      */
-    fire(type: EventType, params: any): void
+    fire(type: EventType, params: any): void;
     /**
      * Returns events by type
      * @param type - 事件类型
      * @returns Event
      */
-    getEvent(type: EventType): Cesium.Event
+    getEvent(type: EventType): Cesium.Event;
   }
 
   /**
    * 标绘事件
    */
   declare class PlotEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
    * 漫游事件
    */
   declare class RoamingEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
@@ -1148,7 +1183,7 @@ declare module 'Creatar3d' {
    * @param viewer - 视图
    */
   declare class SceneEvent extends Event {
-    constructor(viewer: Viewer)
+    constructor(viewer: Viewer);
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -1156,50 +1191,58 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns remove callback function
      */
-    on(type: EventType, callback: (...params: any[]) => any, context: any): Event.RemoveCallback
+    on(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Event.RemoveCallback;
     /**
      * Unsubscribe event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    off(type: EventType, callback: (...params: any[]) => any, context: any): boolean
+    off(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): boolean;
   }
 
   /**
    * 特效事件
    */
   declare class ThingEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
    * 视图事件
    */
   declare class ViewerEvent extends Event {
-    constructor()
+    constructor();
   }
 
   /**
    * 大数据合并渲染Primitive对象基类
    */
   declare class BaseCombine extends BasePrimitive {
-    constructor()
+    constructor();
     /**
      * 数据集合数组，同类的构造参数
      */
-    instances: any[]
+    instances: any[];
     /**
      * 根据 pickId 获取对应绑定的数据据对象
      * @param pickedId - 单个对象的pickid
      */
-    getPickedObject(pickedId: string): void
+    getPickedObject(pickedId: string): void;
     /**
      * 更新颜色
      * @param color - 颜色
      * @param index - 更新的instances对象index值，为空时更新所有对象
      */
-    setColorStyle(color: Cesium.Color, index: number | undefined): void
+    setColorStyle(color: Cesium.Color, index: number | undefined): void;
   }
 
   /**
@@ -1224,22 +1267,22 @@ declare module 'Creatar3d' {
   declare class PolygonCombine extends BaseCombine {
     constructor(options: {
       instances: {
-        positions: Position[]
-        style?: Cesium.PolygonGeometry.options
-        attr?: any
-      }[]
-      style?: Cesium.PolygonGeometry.options
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    })
+        positions: Position[];
+        style?: Cesium.PolygonGeometry.options;
+        attr?: any;
+      }[];
+      style?: Cesium.PolygonGeometry.options;
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    });
   }
 
   /**
@@ -1264,45 +1307,45 @@ declare module 'Creatar3d' {
   declare class PolylineCombine extends BaseCombine {
     constructor(options: {
       instances: {
-        positions: Position[]
-        style?: Cesium.PolylineGeometry
-        attr?: any
-      }[]
-      style?: Cesium.PolylineGeometry.options
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    })
+        positions: Position[];
+        style?: Cesium.PolylineGeometry;
+        attr?: any;
+      }[];
+      style?: Cesium.PolylineGeometry.options;
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    });
   }
 
   /**
    * 相机视椎线
    */
   declare class DebugCameraPrimitive extends BasePointPrimitive {
-    constructor(options: any)
+    constructor(options: any);
     /**
      * 视椎面颜色
      */
-    faceColor: Cesium.Color
+    faceColor: Cesium.Color;
     /**
      * 视椎线颜色
      */
-    lineColor: Cesium.Color
+    lineColor: Cesium.Color;
     /**
      * 4x4变换矩阵
      */
-    modelMatrix: Cesium.Matrix4
+    modelMatrix: Cesium.Matrix4;
     /**
      * 位置
      */
-    position: string | any[] | Position
+    position: string | any[] | Position;
   }
 
   /**
@@ -1329,36 +1372,36 @@ declare module 'Creatar3d' {
  */
   declare class PositionEditor {
     constructor(options?: {
-      viewer: Cesium.Viewer
-      model: Model | Tileset | ModelPrimitive
-      length?: number
-      width?: number
-      show?: boolean
-      id?: any
-      type?: number
-      xColor?: Cesium.Color
-      yColor?: Cesium.Color
-      zColor?: Cesium.Color
-      highlightColor?: Cesium.Color
-      applyTransform?: boolean
-      onDragEnd?: (...params: any[]) => any
-    })
+      viewer: Cesium.Viewer;
+      model: Model | Tileset | ModelPrimitive;
+      length?: number;
+      width?: number;
+      show?: boolean;
+      id?: any;
+      type?: number;
+      xColor?: Cesium.Color;
+      yColor?: Cesium.Color;
+      zColor?: Cesium.Color;
+      highlightColor?: Cesium.Color;
+      applyTransform?: boolean;
+      onDragEnd?: (...params: any[]) => any;
+    });
     /**
      * The length of the axes in meters.
      */
-    length: number
+    length: number;
     /**
      * The width of the axes in pixels.
      */
-    width: number
+    width: number;
     /**
      * Determines if this primitive will be shown.
      */
-    show: boolean
+    show: boolean;
     /**
      * User-Cesium.defined value returned when the primitive is picked.
      */
-    id: any
+    id: any;
     /**
      * Returns true if this object was destroyed; otherwise, false.
     <p>
@@ -1367,7 +1410,7 @@ declare module 'Creatar3d' {
     </p>
      * @returns <code>true</code> if this object was destroyed; otherwise, <code>false</code>.
      */
-    isDestroyed(): boolean
+    isDestroyed(): boolean;
     /**
      * Destroys the WebGL resources held by this object.  Destroying an object allows for deterministic
     release of WebGL resources, instead of relying on the garbage collector to destroy this object.
@@ -1379,53 +1422,62 @@ declare module 'Creatar3d' {
      * @example
      * p = p && p.destroy();
      */
-    destroy(): void
+    destroy(): void;
   }
 
   /**
    * 4x4变换矩阵
    */
-  declare var modelMatrix: Cesium.Matrix4
+  declare var modelMatrix: Cesium.Matrix4;
 
   /**
    * 计算zoy面和zoy面单位扇形位置
    */
-  declare function computeUnitPosition(primitive: any): any
+  declare function computeUnitPosition(primitive: any): any;
 
   /**
    * 计算四个扇面的位置
    */
-  declare function computeSectorPositions(unitPosition: any): any[]
+  declare function computeSectorPositions(unitPosition: any): any[];
 
   /**
    * 创建扇面顶点
    */
-  declare function createSectorVertexArray(context: any, positions: any): any
+  declare function createSectorVertexArray(context: any, positions: any): any;
 
   /**
    * 创建扇面边线顶点
    */
-  declare function createSectorLineVertexArray(context: any, positions: any): any
+  declare function createSectorLineVertexArray(
+    context: any,
+    positions: any
+  ): any;
 
   /**
    * 创建扇面圆顶面连接线顶点
    */
-  declare function createSectorSegmentLineVertexArray(context: any, positions: any): any
+  declare function createSectorSegmentLineVertexArray(
+    context: any,
+    positions: any
+  ): any;
 
   /**
    * 创建圆顶面顶点
    */
-  declare function createDomeVertexArray(context: any): void
+  declare function createDomeVertexArray(context: any): void;
 
   /**
    * 创建圆顶面连线顶点
    */
-  declare function createDomeLineVertexArray(context: any): void
+  declare function createDomeLineVertexArray(context: any): void;
 
   /**
    * 创建扫描面顶点
    */
-  declare function createScanPlaneVertexArray(context: any, positions: any): any
+  declare function createScanPlaneVertexArray(
+    context: any,
+    positions: any
+  ): any;
 
   declare namespace Tetrahedron {
     /**
@@ -1439,14 +1491,14 @@ declare module 'Creatar3d' {
      * @property [color = new Cesium.Color(0.8, 0.8, 0.0, 0.8)] - 颜色
      */
     type StyleOptions = {
-      width?: number
-      height?: number
-      moveHeight?: number
-      rotationAngle?: number
-      moveDuration?: number
-      animation?: boolean
-      color?: Cesium.Color
-    }
+      width?: number;
+      height?: number;
+      moveHeight?: number;
+      rotationAngle?: number;
+      moveDuration?: number;
+      animation?: boolean;
+      color?: Cesium.Color;
+    };
   }
 
   /**
@@ -1454,19 +1506,19 @@ declare module 'Creatar3d' {
    * @param options.style - 样式信息
    */
   declare class Tetrahedron extends BasePointPrimitive {
-    constructor(options: { style: Tetrahedron.StyleOptions })
+    constructor(options: { style: Tetrahedron.StyleOptions });
     /**
      * 开启动画
      */
-    startAnimate(): void
+    startAnimate(): void;
     /**
      * 关闭动画
      */
-    closeAnimate(): void
+    closeAnimate(): void;
     /**
      * 4x4变换矩阵
      */
-    readonly modelMatrix: Cesium.Matrix4
+    readonly modelMatrix: Cesium.Matrix4;
   }
 
   declare namespace BasePoint {
@@ -1477,10 +1529,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string | Cesium.PositionProperty
-      style: Cesium.PointGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string | Cesium.PositionProperty;
+      style: Cesium.PointGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1488,67 +1540,70 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class BasePoint extends Graphic {
-    constructor(options: BasePoint.Options)
+    constructor(options: BasePoint.Options);
     /**
      * 位置
      */
-    position: Position
+    position: Position;
     /**
      * 三维空间中的旋转
      */
-    orientation: Cesium.Quaternion
+    orientation: Cesium.Quaternion;
     /**
      * 四周方向角，0-360度角度值
      */
-    heading: number
+    heading: number;
     /**
      * 俯仰角，上下摇摆的角度，0-360度角度值
      */
-    pitch: number
+    pitch: number;
     /**
      * 滚转角，左右摆动的角度，0-360度角度值
      */
-    roll: number
+    roll: number;
     /**
      * 绘制编辑时拾取排除对象
      */
-    readonly objectsToExclude: any[]
+    readonly objectsToExclude: any[];
     /**
      * 设置并添加动画轨迹位置，按“指定时间”运动到达“指定位置”添加。
      * @param [currTime = 10] - 指定时间, 默认为当前时间10秒后。 当为Number时，可以传入当前时间延迟的秒数。
      */
-    addDynamicPosition(position: Position, currTime?: Cesium.JulianDate | number): void
+    addDynamicPosition(
+      position: Position,
+      currTime?: Cesium.JulianDate | number
+    ): void;
     /**
      * 设置样式
      */
-    setStyle(style: any): Graphic
+    setStyle(style: any): Graphic;
   }
 
   /**
    * Entity 线、面类基类
    */
   declare class BasePoly extends BasePoly {
-    constructor()
+    constructor();
     /**
      * 坐标集合
      */
-    positions: string | String[] | Position[]
+    positions: string | String[] | Position[];
     /**
      * 中心点
      */
-    readonly center: Position
+    readonly center: Position;
     /**
      * 几何外包球
      */
-    readonly boundingSphere: Cesium.BoundingSphere
+    readonly boundingSphere: Cesium.BoundingSphere;
     /**
      * 长度
      */
-    readonly distance: number
+    readonly distance: number;
     /**
      * 面积
      */
-    readonly area: number
+    readonly area: number;
     /**
      * 设置标注
      * @param text - 文字
@@ -1558,7 +1613,7 @@ declare module 'Creatar3d' {
       text: string,
       textStyle: Cesium.LabelGraphics.ConstructorOptions,
       位置: Position
-    ): Graphic
+    ): Graphic;
   }
 
   declare namespace Billboard {
@@ -1569,10 +1624,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.BillboardGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.BillboardGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1580,16 +1635,16 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Billboard extends BasePoint {
-    constructor(options: Billboard.Options)
+    constructor(options: Billboard.Options);
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): Billboard
+    static fromEntity(entity: Cesium.Entity): Billboard;
     /**
      * 位置
      */
-    position: Position
+    position: Position;
   }
 
   declare namespace Box {
@@ -1600,10 +1655,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      position: Position | string
-      通用参数?: Graphic.Options
-      style: Cesium.BoxGraphics.ConstructorOptions
-    }
+      position: Position | string;
+      通用参数?: Graphic.Options;
+      style: Cesium.BoxGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1611,19 +1666,19 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Box extends BasePoint {
-    constructor(options: Box.Options)
+    constructor(options: Box.Options);
     /**
      * 长
      */
-    length: number
+    length: number;
     /**
      * 宽
      */
-    width: number
+    width: number;
     /**
      * 高
      */
-    height: number
+    height: number;
   }
 
   declare namespace Circle {
@@ -1635,11 +1690,11 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      radius: number
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      radius: number;
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1647,27 +1702,27 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Circle extends BasePoint {
-    constructor(options: Circle.Options)
+    constructor(options: Circle.Options);
     /**
      * 位置
      */
-    position: Position
+    position: Position;
     /**
      * 半径
      */
-    radius: number
+    radius: number;
     /**
      * 边界坐标
      */
-    readonly outlinePositions: Cesium.Cartesian3[]
+    readonly outlinePositions: Cesium.Cartesian3[];
     /**
      * 样式
      */
-    style: any
+    style: any;
     /**
      * 旋转角
      */
-    rotateAmount: number
+    rotateAmount: number;
   }
 
   declare namespace Corridor {
@@ -1678,10 +1733,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.CorridorGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.CorridorGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1689,12 +1744,12 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Corridor extends Graphic {
-    constructor(options: Corridor.Options)
+    constructor(options: Corridor.Options);
     /**
      * Parses from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): Corridor
+    static fromEntity(entity: Cesium.Entity): Corridor;
   }
 
   /**
@@ -1702,7 +1757,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Curve extends Polyline {
-    constructor(options: Polyline.Options)
+    constructor(options: Polyline.Options);
   }
 
   declare namespace Cylinder {
@@ -1713,10 +1768,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.CylinderGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.CylinderGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1724,19 +1779,19 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Cylinder extends BasePoint {
-    constructor(options: Cylinder.Options)
+    constructor(options: Cylinder.Options);
     /**
      * 长度
      */
-    length: number
+    length: number;
     /**
      * 顶半径
      */
-    topRadius: number
+    topRadius: number;
     /**
      * 低半径
      */
-    bottomRadius: number
+    bottomRadius: number;
   }
 
   declare namespace Ellipse {
@@ -1747,10 +1802,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.EllipseGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.EllipseGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1758,15 +1813,15 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Ellipse extends BasePoint {
-    constructor(options: Ellipse.Options)
+    constructor(options: Ellipse.Options);
     /**
      * 长轴
      */
-    semiMajorAxis: number
+    semiMajorAxis: number;
     /**
      * 短轴
      */
-    semiMinorAxis: number
+    semiMinorAxis: number;
   }
 
   declare namespace Ellipsoid {
@@ -1777,10 +1832,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.EllipsoidGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.EllipsoidGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1788,15 +1843,15 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Ellipsoid extends BasePoint {
-    constructor(options: Ellipsoid.Options)
+    constructor(options: Ellipsoid.Options);
     /**
      * 三轴长度
      */
-    radii: any
+    radii: any;
     /**
      * 位置
      */
-    position: Position
+    position: Position;
   }
 
   declare namespace Label {
@@ -1807,10 +1862,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.LabelGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.LabelGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1818,17 +1873,17 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Label extends BasePoint {
-    constructor(options: Label.Options)
+    constructor(options: Label.Options);
     /**
      * 文字
      */
-    text: string
-    setLabel(text: any, textStyle: any): void
+    text: string;
+    setLabel(text: any, textStyle: any): void;
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): Label
+    static fromEntity(entity: Cesium.Entity): Label;
   }
 
   declare namespace Path {
@@ -1839,10 +1894,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.PathGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.PathGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1850,18 +1905,20 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Path extends BasePoint {
-    constructor(options: Path.Options)
+    constructor(options: Path.Options);
     /**
      * 设置图片
      * @param billboardStyle - 样式
      */
-    setBillboard(billboardStyle: Cesium.BillboardGraphics.ConstructorOptions): Graphic
+    setBillboard(
+      billboardStyle: Cesium.BillboardGraphics.ConstructorOptions
+    ): Graphic;
     /**
      * Parse from entity
      * @param entity - 实体
      * @returns this
      */
-    static fromEntity(entity: Cesium.Entity): Path
+    static fromEntity(entity: Cesium.Entity): Path;
   }
 
   declare namespace Plane {
@@ -1873,11 +1930,11 @@ declare module 'Creatar3d' {
      * @property [plane = {normal:'Z',distance:0}] - plane
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.PlaneGraphics.ConstructorOptions
-      plane?: any
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.PlaneGraphics.ConstructorOptions;
+      plane?: any;
+    };
   }
 
   /**
@@ -1885,19 +1942,19 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Plane extends BasePoint {
-    constructor(options: Plane.Options)
+    constructor(options: Plane.Options);
     /**
      * 宽
      */
-    width: number
+    width: number;
     /**
      * 高
      */
-    height: number
+    height: number;
     /**
      * 距离
      */
-    distance: number
+    distance: number;
   }
 
   declare namespace Point {
@@ -1908,10 +1965,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position | string
-      style: Cesium.PointGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      position: Position | string;
+      style: Cesium.PointGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1919,20 +1976,20 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Point extends BasePoint {
-    constructor(options: Point.Options)
+    constructor(options: Point.Options);
     /**
      * Parse from entity
      * @param entity - 实体
      * @returns this
      */
-    static fromEntity(entity: Cesium.Entity): Point
+    static fromEntity(entity: Cesium.Entity): Point;
     /**
      * 通过标绘 来创建矢量对象
      * @param layer - 图层
      * @param options - 矢量对象的构造参数
      * @returns this
      */
-    static fromDraw(layer: GraphicLayer, options: any): Point
+    static fromDraw(layer: GraphicLayer, options: any): Point;
   }
 
   declare namespace Polygon {
@@ -1943,10 +2000,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
     /**
      * 多边形配置项
      * @property [通用参数] - Graphic通用参数
@@ -1954,10 +2011,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -1965,24 +2022,24 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Polygon extends Graphic {
-    constructor(options: Polygon.Options)
+    constructor(options: Polygon.Options);
     /**
      * 多边形内环坐标
      */
-    holes: string | String[] | Position[]
+    holes: string | String[] | Position[];
     /**
      * 多边形及其孔的线性环的层次结构
      */
-    readonly hierarchy: Cesium.PolygonHierarchy
+    readonly hierarchy: Cesium.PolygonHierarchy;
     /**
      * 边界坐标
      */
-    readonly outlinePositions: Cesium.Cartesian3[]
+    readonly outlinePositions: Cesium.Cartesian3[];
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): any
+    static fromEntity(entity: Cesium.Entity): any;
   }
 
   declare namespace Polyline {
@@ -1993,10 +2050,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolylineGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolylineGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2004,12 +2061,12 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Polyline extends BasePoly {
-    constructor(options: Polyline.Options)
+    constructor(options: Polyline.Options);
     /**
      * 从 entity 转换
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): Polyline
+    static fromEntity(entity: Cesium.Entity): Polyline;
   }
 
   declare namespace PolylineVolume {
@@ -2020,10 +2077,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolylineVolumeGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolylineVolumeGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2031,18 +2088,21 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class PolylineVolume extends BasePoly {
-    constructor(options: PolylineVolume.Options)
+    constructor(options: PolylineVolume.Options);
     /**
      * 外围形状点集
      */
-    shape: any[]
+    shape: any[];
     /**
      * Parses from entity
      * @param entity - 实体
      * @param shape - 外围形状点集
      * @returns this
      */
-    static fromEntity(entity: Cesium.Entity, shape: Cesium.Cartesian2[]): PolylineVolume
+    static fromEntity(
+      entity: Cesium.Entity,
+      shape: Cesium.Cartesian2[]
+    ): PolylineVolume;
   }
 
   declare namespace Rectangle {
@@ -2053,10 +2113,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.RectangleGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.RectangleGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2064,19 +2124,19 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Rectangle extends Graphic {
-    constructor(options: Rectangle.Options)
+    constructor(options: Rectangle.Options);
     /**
      * 中心点
      */
-    readonly center: Position
+    readonly center: Position;
     /**
      * 面积
      */
-    readonly area: number
+    readonly area: number;
     /**
      * 边界坐标
      */
-    readonly outlinePositions: Cesium.Cartesian3[]
+    readonly outlinePositions: Cesium.Cartesian3[];
   }
 
   /**
@@ -2084,11 +2144,11 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Sector extends Graphic {
-    constructor(options: Polygon.Options)
+    constructor(options: Polygon.Options);
     /**
      * 三个点坐标集合
      */
-    positions: string | String[] | Position[]
+    positions: string | String[] | Position[];
   }
 
   declare namespace Wall {
@@ -2099,10 +2159,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.WallGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.WallGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2110,12 +2170,12 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Wall extends BasePoly {
-    constructor(options: Wall.Options)
+    constructor(options: Wall.Options);
     /**
      * Parses from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): Wall | any
+    static fromEntity(entity: Cesium.Entity): Wall | any;
   }
 
   declare namespace Drill {
@@ -2129,13 +2189,13 @@ declare module 'Creatar3d' {
      * @property layers - 分层信息
      */
     type Options = {
-      通用参数?: Graphic.Options
-      radius?: number
-      position: Position | string
-      renderWay?: number
-      radialSegments?: number
-      layers: Drill.Layer[]
-    }
+      通用参数?: Graphic.Options;
+      radius?: number;
+      position: Position | string;
+      renderWay?: number;
+      radialSegments?: number;
+      layers: Drill.Layer[];
+    };
     /**
      * 钻孔分层信息
      * @property maxz - 钻孔分层上顶高程值
@@ -2144,11 +2204,11 @@ declare module 'Creatar3d' {
      * @property attr - 其他属性
      */
     type Layer = {
-      maxz: number
-      minz: number
-      render: string
-      attr: any
-    }
+      maxz: number;
+      minz: number;
+      render: string;
+      attr: any;
+    };
   }
 
   /**
@@ -2156,31 +2216,31 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Drill extends Graphic {
-    constructor(options: Drill.Options)
+    constructor(options: Drill.Options);
     /**
      * 长度
      */
-    readonly length: number
+    readonly length: number;
     /**
      * 顶部z
      */
-    readonly topZ: number
+    readonly topZ: number;
     /**
      * 底部z
      */
-    readonly bottomZ: number
+    readonly bottomZ: number;
     /**
      * 半径
      */
-    radius: number
+    radius: number;
     /**
      * 垂向拉伸
      */
-    zScale: number
+    zScale: number;
     /**
      * 设置样式
      */
-    setStyle(style: any): Graphic
+    setStyle(style: any): Graphic;
   }
 
   declare namespace Drill2 {
@@ -2193,12 +2253,12 @@ declare module 'Creatar3d' {
      * @property layers - 分层信息
      */
     type Options = {
-      通用参数?: Graphic.Options
-      radius?: number
-      renderWay?: number
-      radialSegments?: number
-      layers: Drill2.Layer[]
-    }
+      通用参数?: Graphic.Options;
+      radius?: number;
+      renderWay?: number;
+      radialSegments?: number;
+      layers: Drill2.Layer[];
+    };
     /**
      * 钻孔分层信息
      * @property topPosition - 钻孔分层上顶点坐标
@@ -2207,11 +2267,11 @@ declare module 'Creatar3d' {
      * @property attr - 其他属性
      */
     type Layer = {
-      topPosition: Position
-      bottomPosition: Position
-      render: string
-      attr: any
-    }
+      topPosition: Position;
+      bottomPosition: Position;
+      render: string;
+      attr: any;
+    };
   }
 
   /**
@@ -2219,52 +2279,52 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Drill2 extends Graphic {
-    constructor(options: Drill2.Options)
+    constructor(options: Drill2.Options);
     /**
      * 长度
      */
-    readonly length: number
+    readonly length: number;
     /**
      * 顶部z
      */
-    readonly topZ: number
+    readonly topZ: number;
   }
 
   /**
    * 地质对象基础类
    */
   declare class Geology extends BasePrimitive {
-    constructor(options: any)
+    constructor(options: any);
     /**
      * 几何外包球
      */
-    readonly boundingSphere: Cesium.BoundingSphere
+    readonly boundingSphere: Cesium.BoundingSphere;
     /**
      * 几何变换矩阵
      */
-    readonly modelMatrix: Cesium.Matrix4
+    readonly modelMatrix: Cesium.Matrix4;
     /**
      * 位置
      */
-    position: string | String[] | Position[]
+    position: string | String[] | Position[];
     /**
      * 垂向拉伸
      */
-    zScale: number
+    zScale: number;
     /**
      * 垂向偏移
      */
-    zOffset: number
+    zOffset: number;
     /**
      * 模型透明度
      */
-    alpha: number
+    alpha: number;
     /**
      * 设置图层颜色
      * @param instanceId - instanceId
      * @param [color = '#ff0000'] - 颜色值
      */
-    setLayerColor(instanceId: any, color?: string): void
+    setLayerColor(instanceId: any, color?: string): void;
     /**
      * 图层闪烁
      * @param instanceId - instanceId
@@ -2272,7 +2332,7 @@ declare module 'Creatar3d' {
      * @param [time = 1] - 闪烁时间，单位秒
      * @returns 异步
      */
-    flash(instanceId: any, color?: string, time?: number): Promise
+    flash(instanceId: any, color?: string, time?: number): Promise;
   }
 
   declare namespace Section {
@@ -2286,13 +2346,13 @@ declare module 'Creatar3d' {
      * @property layers - 分层信息
      */
     type Options = {
-      通用参数?: Graphic.Options
-      dataType?: number
-      positions: Position[]
-      renderWay?: number
-      depthScale?: number
-      layers: Section.Layer[]
-    }
+      通用参数?: Graphic.Options;
+      dataType?: number;
+      positions: Position[];
+      renderWay?: number;
+      depthScale?: number;
+      layers: Section.Layer[];
+    };
     /**
      * 剖面分层信息
      * @property [vertexes] - 顶点坐标
@@ -2302,12 +2362,12 @@ declare module 'Creatar3d' {
      * @property attr - 其他属性
      */
     type Layer = {
-      vertexes?: Number[]
-      triangles: Number[]
-      colors: Number[]
-      render: string
-      attr: any
-    }
+      vertexes?: Number[];
+      triangles: Number[];
+      colors: Number[];
+      render: string;
+      attr: any;
+    };
   }
 
   /**
@@ -2315,31 +2375,31 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Section extends Graphic {
-    constructor(options: Section.Options)
+    constructor(options: Section.Options);
     /**
      * 长度
      */
-    readonly length: number
+    readonly length: number;
     /**
      * 深度
      */
-    readonly depth: number
+    readonly depth: number;
     /**
      * 顶部z
      */
-    readonly topZ: number
+    readonly topZ: number;
     /**
      * 底部z
      */
-    readonly bottomZ: number
+    readonly bottomZ: number;
     /**
      * 垂向拉伸
      */
-    zScale: number
+    zScale: number;
     /**
      * 设置样式
      */
-    setStyle(): Graphic
+    setStyle(): Graphic;
   }
 
   declare namespace Tin {
@@ -2350,10 +2410,10 @@ declare module 'Creatar3d' {
      * @property layers - 分层信息
      */
     type Options = {
-      position: Position | string
-      dataType?: number
-      layers: Tin.Layer[]
-    }
+      position: Position | string;
+      dataType?: number;
+      layers: Tin.Layer[];
+    };
     /**
      * xModel TIN对象单tin信息
      * @property triangles - 三角形索引
@@ -2362,11 +2422,11 @@ declare module 'Creatar3d' {
      * @property attr - 其他属性
      */
     type Layer = {
-      triangles: Number[]
-      vertexes: Number[]
-      color: Number[] | string
-      attr: any
-    }
+      triangles: Number[];
+      vertexes: Number[];
+      color: Number[] | string;
+      attr: any;
+    };
   }
 
   /**
@@ -2374,7 +2434,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Tin extends Geology {
-    constructor(options: Tin.Options)
+    constructor(options: Tin.Options);
   }
 
   declare namespace Graphic {
@@ -2391,16 +2451,21 @@ declare module 'Creatar3d' {
      * @property positions - 线类、面类几何，位置对象
      */
     type Options = {
-      groupId?: string
-      id?: string
-      uuid?: string
-      name?: string
-      style?: any
-      attr?: any
-      show?: boolean
-      position: Position | string | any[] | Cesium.Property | Cesium.Cartesian3
-      positions: Position[] | String[] | any[][][] | Cesium.Property | Cesium.Cartesian3[]
-    }
+      groupId?: string;
+      id?: string;
+      uuid?: string;
+      name?: string;
+      style?: any;
+      attr?: any;
+      show?: boolean;
+      position: Position | string | any[] | Cesium.Property | Cesium.Cartesian3;
+      positions:
+        | Position[]
+        | String[]
+        | any[][][]
+        | Cesium.Property
+        | Cesium.Cartesian3[];
+    };
   }
 
   /**
@@ -2408,107 +2473,107 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Graphic {
-    constructor(options: Graphic.Options)
+    constructor(options: Graphic.Options);
     /**
      * 唯一编码
      */
-    readonly graphicId: string
+    readonly graphicId: string;
     /**
      * 图形id
      */
-    id: string
+    id: string;
     /**
      * 图形名称
      */
-    name: string
+    name: string;
     /**
      * groupId
      */
-    groupId: string | any
+    groupId: string | any;
     /**
      * 图形显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * 图形属性
      */
-    attr: any
+    attr: any;
     /**
      * 图形是否允许DrillPick
      */
-    allowDrillPicking: boolean
+    allowDrillPicking: boolean;
     /**
      * 图形事件
      */
-    readonly graphicEvent: GraphicEvent
+    readonly graphicEvent: GraphicEvent;
     /**
      * 图形实例
      */
-    readonly delegate: Enitity | Primitive | any[]
+    readonly delegate: Enitity | Primitive | any[];
     /**
      * 图形状态
      */
-    readonly state: State
+    readonly state: State;
     /**
      * 图形contextMenu
      */
-    contextMenu: string
+    contextMenu: string;
     /**
      * 中心点
      */
-    readonly center: Position
+    readonly center: Position;
     /**
      * 中心点世界坐标
      */
-    earthPosition: Cesium.Cartesian3
+    earthPosition: Cesium.Cartesian3;
     /**
      * 外包矩形
      */
-    boundingRectangle: Cesium.Rectangle
+    boundingRectangle: Cesium.Rectangle;
     /**
      * 外包矩形 {minx.miny,maxx,maxy}
      */
-    boundingRectangleLngLat: any
+    boundingRectangleLngLat: any;
     /**
      * 样式
      */
-    style: any
+    style: any;
     /**
      * 附加的label文本对象
      */
-    readonly label: Cesium.Label
+    readonly label: Cesium.Label;
     /**
      * 笛卡尔坐标
      */
-    cartesians: Cesium.Cartesian3[]
+    cartesians: Cesium.Cartesian3[];
     /**
      * 笛卡尔坐标
      */
-    cartesian: Cesium.Cartesian3
+    cartesian: Cesium.Cartesian3;
     /**
      * 位置是否是动态变化属性
      */
-    callbackProperty: boolean
+    callbackProperty: boolean;
     /**
      * 变换矩阵
      */
-    modelMatrix: Cesium.Matrix4
+    modelMatrix: Cesium.Matrix4;
     /**
      * 类型
      */
-    readonly type: GraphicType
+    readonly type: GraphicType;
     /**
      * 编辑器
      */
-    readonly positionEditor: PositionEditor
+    readonly positionEditor: PositionEditor;
     /**
      * 是否可以编辑位置
      */
-    enablePositionEditor: boolean
+    enablePositionEditor: boolean;
     /**
      * 所属图层
      */
-    readonly layer: GraphicLayer
+    readonly layer: GraphicLayer;
     /**
      * 设置标注
      * @param text - 文字
@@ -2517,41 +2582,44 @@ declare module 'Creatar3d' {
     setLabel(
       text: string | CallbackProperty,
       textStyle: Cesium.LabelGraphics.ConstructorOptions
-    ): Graphic
+    ): Graphic;
     /**
      * 设置样式
      * @param style - 具体对应各几何类型的样式
      */
-    setStyle(style: any): Graphic
+    setStyle(style: any): Graphic;
     /**
      * 设置边框样式
      */
-    setOutlineStyle(): void
+    setOutlineStyle(): void;
     /**
      * 设置模型
      * @param model - 模型uri
      * @param modelStyle - 样式
      */
-    setModel(model: string, modelStyle: Cesium.ModelGraphics.ConstructorOptions): Graphic
+    setModel(
+      model: string,
+      modelStyle: Cesium.ModelGraphics.ConstructorOptions
+    ): Graphic;
     /**
      * 将矢量数据导出为GeoJSON格式规范对象。
      */
-    toGeoJSON(options: any): void
+    toGeoJSON(options: any): void;
     /**
      * 从图层中移除
      */
-    remove(): Graphic
+    remove(): Graphic;
     /**
      * 添加到图层 (同layer.addGraphic)
      * @param layer - 图层
      */
-    addTo(layer: Layer): Graphic
+    addTo(layer: Layer): Graphic;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -2559,7 +2627,11 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns this
      */
-    on(type: GraphicEventType, callback: (...params: any[]) => any, context: any): Graphic
+    on(
+      type: GraphicEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Graphic;
     /**
      * Unsubscribe event
      * @param type - 事件类型
@@ -2567,19 +2639,23 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns this
      */
-    off(type: GraphicEventType, callback: (...params: any[]) => any, context: any): Graphic
+    off(
+      type: GraphicEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Graphic;
     /**
      * Trigger subscription event
      * @param type - 事件类型
      * @param params - 参数
      * @returns this
      */
-    fire(type: GraphicEventType, params: any): Graphic
+    fire(type: GraphicEventType, params: any): Graphic;
     /**
      * 注册图形类型
      * @param type - 类型
      */
-    static registerType(type: string): void
+    static registerType(type: string): void;
   }
 
   /**
@@ -2593,43 +2669,43 @@ declare module 'Creatar3d' {
    * @param options.content - html内容
    */
   declare class DivIcon extends Graphic {
-    constructor(options: { content: string })
+    constructor(options: { content: string });
     /**
      * 图形显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * 位置
      */
-    position: any[] | string
+    position: any[] | string;
     /**
      * 内容
      */
-    content: Element | string
+    content: Element | string;
     /**
      * 不可用
      * @param text - 文字
      * @param textStyle - 样式
      * @returns this
      */
-    setLabel(text: string, textStyle: string): DivIcon
+    setLabel(text: string, textStyle: string): DivIcon;
     /**
      * 设置样式
      * @param style - {className} 样式
      * @returns this
      */
-    setStyle(style: any): DivIcon
+    setStyle(style: any): DivIcon;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): Billboard
+    static fromEntity(entity: Cesium.Entity): Billboard;
   }
 
   declare namespace Model {
@@ -2639,34 +2715,37 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      position: Position | string
-      style: Cesium.ModelGraphics.ConstructorOptions
-    }
+      position: Position | string;
+      style: Cesium.ModelGraphics.ConstructorOptions;
+    };
   }
 
   /**
    * @param options - 参数
    */
   declare class Model extends Graphic {
-    constructor(options: Model.Options)
+    constructor(options: Model.Options);
     /**
      * 模型路径
      */
-    modelUrl: string
+    modelUrl: string;
     /**
      * 自动旋转角
      */
-    rotateAmount: number
+    rotateAmount: number;
     /**
      * Parse from entity
      */
-    static fromEntity(entity: Cesium.Entity, modelUrl: string): Model
+    static fromEntity(entity: Cesium.Entity, modelUrl: string): Model;
     /**
      * 设置模型
      * @param model - 模型uri
      * @param modelStyle - 样式
      */
-    setModel(model: string, modelStyle: Cesium.ModelGraphics.ConstructorOptions): Graphic
+    setModel(
+      model: string,
+      modelStyle: Cesium.ModelGraphics.ConstructorOptions
+    ): Graphic;
   }
 
   /**
@@ -2674,79 +2753,79 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Tileset extends Graphic {
-    constructor(options: Cesium.Cesium3DTileset.Options)
+    constructor(options: Cesium.Cesium3DTileset.Options);
     /**
      * 异步回调
      */
-    readonly readyPromise: Promise<Cesium3DTileset>
+    readonly readyPromise: Promise<Cesium3DTileset>;
     /**
      * 数据外包球
      */
-    readonly boundingSphere: Cesium.BoundingSphere | null
+    readonly boundingSphere: Cesium.BoundingSphere | null;
     /**
      * 4x4变换矩阵
      */
-    readonly modelMatrix: Cesium.Matrix4
+    readonly modelMatrix: Cesium.Matrix4;
     /**
      * 关闭高亮
      */
-    closeHighlight(): void
+    closeHighlight(): void;
     /**
      * 设置位置
      * @param position - 位置
      * @returns this
      */
-    setPosition(position: Position): Tileset
+    setPosition(position: Position): Tileset;
     /**
      * 设置三个方向角
      * @param heading - 旋转角角度值
      * @param pitch - 俯仰角角度值
      * @param roll - 翻滚角角度值
      */
-    setHeadingPitchRoll(heading: number, pitch: number, roll: number): Tileset
-    setLabel(text: any, textStyle: any): void
+    setHeadingPitchRoll(heading: number, pitch: number, roll: number): Tileset;
+    setLabel(text: any, textStyle: any): void;
     /**
      * 贴地处理
      * @returns this
      */
-    clampToGround(): Tileset
+    clampToGround(): Tileset;
     /**
      * 设置高度
      * @param height - 高度值
      * @param isAbsolute - 是否是绝对高度
      * @returns this
      */
-    setHeight(height: number, isAbsolute: boolean): Tileset
+    setHeight(height: number, isAbsolute: boolean): Tileset;
     /**
      * 设置放缩系数
      * @param scale - 放缩系数
      * @returns this
      */
-    setScale(scale: number): Tileset
+    setScale(scale: number): Tileset;
     /**
      * Sets feature property
      */
-    setProperties(properties: any): Tileset
+    setProperties(properties: any): Tileset;
     /**
      * 自定义shader(替换)
      */
-    setCustomShader(fragmentShader: string | Cesium.CustomShader): Tileset
+    setCustomShader(fragmentShader: string | Cesium.CustomShader): Tileset;
     /**
      * 追加Shader
      */
-    appendFS(fragmentShader: any): Tileset
+    appendFS(fragmentShader: any): Tileset;
     /**
      * 设置split 方向
      * @param splitDirection - 分隔方向
      * @returns this
      */
-    setSplitDirection(splitDirection: Cesium.SplitDirection): Tileset
+    setSplitDirection(splitDirection: Cesium.SplitDirection): Tileset;
     /**
      * Sets style
      * @param style - 样式
      * @returns this
      */
-    setStyle(style: Cesium.Cesium3DTileStyle): Tileset
+    setStyle(style: Cesium.Cesium3DTileStyle): Tileset;
   }
 
   /**
@@ -2761,30 +2840,30 @@ declare module 'Creatar3d' {
    */
   declare class ParticleSystem extends BasePointPrimitive {
     constructor(options: {
-      position: Position
-      modelMatrix?: Cesium.Matrix4
-      style: Cesium.ParticleSystem.options
-      gravity?: number
-      target?: Cesium.Cartesian3
-      translation?: Cesium.Cartesian3
-      maxHeight?: number
-    })
+      position: Position;
+      modelMatrix?: Cesium.Matrix4;
+      style: Cesium.ParticleSystem.options;
+      gravity?: number;
+      target?: Cesium.Cartesian3;
+      translation?: Cesium.Cartesian3;
+      maxHeight?: number;
+    });
     /**
      * 位置
      */
-    position: string | any[] | Position
+    position: string | any[] | Position;
     /**
      * 重力因子
      */
-    gravity: number
+    gravity: number;
     /**
      * 粒子的方向，粒子喷射的目标方向。
      */
-    target: Cesium.Cartesian3
+    target: Cesium.Cartesian3;
     /**
      * 三个方向偏离距离。
      */
-    translation: Cesium.Cartesian3
+    translation: Cesium.Cartesian3;
   }
 
   /**
@@ -2792,7 +2871,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class AssaultDirection extends FineArrow {
-    constructor(options: AssaultDirection.Options)
+    constructor(options: AssaultDirection.Options);
   }
 
   declare namespace AttackArrow {
@@ -2803,10 +2882,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2814,27 +2893,27 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class AttackArrow extends Polygon {
-    constructor(options: AttackArrow.Options)
+    constructor(options: AttackArrow.Options);
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): any
+    static fromEntity(entity: Cesium.Entity): any;
   }
 
   /**
    * 曲线旗标
    */
   declare class CurveFlag {
-    constructor()
+    constructor();
     /**
      * 插值点数据
      */
-    calculatePoints(points: any): any[]
+    calculatePoints(points: any): any[];
     /**
      * 获取点数量
      */
-    getPointCount(): number
+    getPointCount(): number;
   }
 
   declare namespace DoubleArrow {
@@ -2845,10 +2924,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2856,12 +2935,12 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class DoubleArrow extends Polygon {
-    constructor(options: DoubleArrow.Options)
+    constructor(options: DoubleArrow.Options);
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): any
+    static fromEntity(entity: Cesium.Entity): any;
   }
 
   declare namespace FineArrow {
@@ -2872,10 +2951,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2883,12 +2962,12 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class FineArrow extends Polygon {
-    constructor(options: FineArrow.Options)
+    constructor(options: FineArrow.Options);
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): any
+    static fromEntity(entity: Cesium.Entity): any;
   }
 
   declare namespace GatheringPlace {
@@ -2899,10 +2978,10 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions?: Position[] | String[]
-      style: Cesium.PolygonGraphics.ConstructorOptions
-    }
+      通用参数?: Graphic.Options;
+      positions?: Position[] | String[];
+      style: Cesium.PolygonGraphics.ConstructorOptions;
+    };
   }
 
   /**
@@ -2910,26 +2989,26 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class GatheringPlace extends Polygon {
-    constructor(options: GatheringPlace.Options)
+    constructor(options: GatheringPlace.Options);
     /**
      * Parse from entity
      * @param entity - 实体
      */
-    static fromEntity(entity: Cesium.Entity): any
+    static fromEntity(entity: Cesium.Entity): any;
   }
 
   /**
    * 弓形
    */
   declare class Lune extends Polygon {
-    constructor()
+    constructor();
   }
 
   /**
    * 直角旗标
    */
   declare class RectFlag {
-    constructor()
+    constructor();
   }
 
   /**
@@ -2937,7 +3016,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class SquadCombat extends AttackArrow {
-    constructor(options: SquadCombat.Options)
+    constructor(options: SquadCombat.Options);
   }
 
   /**
@@ -2945,7 +3024,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class TailedAttackArrow extends Polygon {
-    constructor(options: TailedAttackArrow.Options)
+    constructor(options: TailedAttackArrow.Options);
   }
 
   /**
@@ -2953,122 +3032,128 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class TailedSquadCombat extends AttackArrow {
-    constructor(options: TailedSquadCombat.Options)
+    constructor(options: TailedSquadCombat.Options);
   }
 
   /**
    * 三角旗标
    */
   declare class TriangleFlag extends Polygon {
-    constructor()
+    constructor();
     /**
      * 插值点数据
      */
-    calculatePoints(points: any): any[]
+    calculatePoints(points: any): any[];
   }
 
   /**
    * 图元点类基类
    */
   declare class BasePointPrimitive extends BasePrimitive {
-    constructor()
+    constructor();
     /**
      * 位置
      */
-    position: string | any[] | Position
+    position: string | any[] | Position;
     /**
      * 四周方向角，0-360度角度值
      */
-    heading: number
+    heading: number;
     /**
      * 俯仰角，上下摇摆的角度，0-360度角度值
      */
-    pitch: number
+    pitch: number;
     /**
      * 滚转角，左右摆动的角度，0-360度角度值
      */
-    roll: number
+    roll: number;
     /**
      * 设置并添加动画轨迹位置，按“指定时间”运动到达“指定位置”添加。
      * @param [currTime = 10] - 指定时间, 默认为当前时间10秒后。 当为Number时，可以传入当前时间延迟的秒数。
      */
-    addDynamicPosition(position: Position, currTime?: Cesium.JulianDate | number): void
+    addDynamicPosition(
+      position: Position,
+      currTime?: Cesium.JulianDate | number
+    ): void;
     /**
      * 异步计算更新坐标进行贴地(或贴模型)
      */
-    clampToGround(): void
+    clampToGround(): void;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
     /**
      * 4x4变换矩阵
      */
-    readonly modelMatrix: Cesium.Matrix4
+    readonly modelMatrix: Cesium.Matrix4;
   }
 
   /**
    * Primitive 线、面类基类
    */
   declare class BasePolyPrimitive extends BasePrimitive {
-    constructor()
+    constructor();
     /**
      * 位置
      */
-    positions: string | String[] | Position[]
+    positions: string | String[] | Position[];
     /**
      * 中心点
      */
-    readonly center: Position
+    readonly center: Position;
     /**
      * 几何外包球
      */
-    readonly boundingSphere: Cesium.BoundingSphere
+    readonly boundingSphere: Cesium.BoundingSphere;
     /**
      * 长度
      */
-    readonly distance: number
+    readonly distance: number;
   }
 
   /**
    * Primitive 基类
    */
   declare class BasePrimitive extends Graphic {
-    constructor()
+    constructor();
     /**
      * 几何外包球
      */
-    readonly boundingSphere: Cesium.BoundingSphere
+    readonly boundingSphere: Cesium.BoundingSphere;
     /**
      * 附加的label文本对象
      */
-    readonly label: Cesium.Label
+    readonly label: Cesium.Label;
     /**
      * 图形显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * 4x4变换矩阵
      */
-    readonly modelMatrix: Cesium.Matrix4
+    readonly modelMatrix: Cesium.Matrix4;
     /**
      * 设置标注
      * @param text - 文字
      * @param textStyle - 样式
      */
-    setLabel(text: string, textStyle: Cesium.Label.ConstructorOptions): BasePrimitive
+    setLabel(
+      text: string,
+      textStyle: Cesium.Label.ConstructorOptions
+    ): BasePrimitive;
     /**
      * 设置样式
      * @param style - 样式
      * @returns this
      */
-    setStyle(style: Cesium.Billboard.ConstructorOptions): BasePrimitive
+    setStyle(style: Cesium.Billboard.ConstructorOptions): BasePrimitive;
     /**
      * 飞向
      */
-    flyTo(options?: any): void
+    flyTo(options?: any): void;
   }
 
   declare namespace BillboardPrimitive {
@@ -3078,9 +3163,9 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      position: Position | string
-      style: Cesium.Billboard
-    }
+      position: Position | string;
+      style: Cesium.Billboard;
+    };
   }
 
   /**
@@ -3088,7 +3173,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class BillboardPrimitive extends BasePointPrimitive {
-    constructor(options: BillboardPrimitive.Options)
+    constructor(options: BillboardPrimitive.Options);
   }
 
   declare namespace BoxPrimitive {
@@ -3109,20 +3194,20 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions: Position[] | string | any[][]
-      style: Cesium.BoxGeometry.options
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+      通用参数?: Graphic.Options;
+      positions: Position[] | string | any[][];
+      style: Cesium.BoxGeometry.options;
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3130,7 +3215,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class BoxPrimitive extends BasePointPrimitive {
-    constructor(options: BoxPrimitive.Options)
+    constructor(options: BoxPrimitive.Options);
   }
 
   declare namespace CirclePrimitive {
@@ -3153,23 +3238,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      position: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3177,11 +3262,11 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class CirclePrimitive extends BasePointPrimitive {
-    constructor(options: CirclePrimitive.Options)
+    constructor(options: CirclePrimitive.Options);
     /**
      * 4x4变换矩阵
      */
-    readonly modelMatrix: Cesium.Matrix4
+    readonly modelMatrix: Cesium.Matrix4;
   }
 
   declare namespace CorridorPrimitive {
@@ -3204,23 +3289,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      positions: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3228,7 +3313,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class CorridorPrimitive extends BasePolyPrimitive {
-    constructor(options: CorridorPrimitive.Options)
+    constructor(options: CorridorPrimitive.Options);
   }
 
   declare namespace CylinderPrimitive {
@@ -3250,22 +3335,22 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
+      通用参数?: Graphic.Options;
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3273,7 +3358,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class CylinderPrimitive extends BasePointPrimitive {
-    constructor(options: CylinderPrimitive.Options)
+    constructor(options: CylinderPrimitive.Options);
   }
 
   declare namespace EllipsePrimitive {
@@ -3296,23 +3381,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      position: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3320,7 +3405,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class EllipsePrimitive extends BasePointPrimitive {
-    constructor(options: CylinderPrimitive.Options)
+    constructor(options: CylinderPrimitive.Options);
   }
 
   declare namespace EllipsoidPrimitive {
@@ -3343,23 +3428,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      position: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3367,7 +3452,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class EllipsoidPrimitive extends BasePointPrimitive {
-    constructor(options: EllipsoidPrimitive.Options)
+    constructor(options: EllipsoidPrimitive.Options);
   }
 
   declare namespace LabelPrimitive {
@@ -3377,9 +3462,9 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      position: Position | string
-      style: Cesium.LabelPrimitive
-    }
+      position: Position | string;
+      style: Cesium.LabelPrimitive;
+    };
   }
 
   /**
@@ -3387,13 +3472,16 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class LabelPrimitive extends BasePointPrimitive {
-    constructor(options: LabelPrimitive.Options)
+    constructor(options: LabelPrimitive.Options);
     /**
      * 设置标注(无用)
      * @param text - 文字
      * @param textStyle - 样式
      */
-    setLabel(text: string, textStyle: Cesium.Label.ConstructorOptions): BasePrimitive
+    setLabel(
+      text: string,
+      textStyle: Cesium.Label.ConstructorOptions
+    ): BasePrimitive;
   }
 
   declare namespace LightCylinderPrimitive {
@@ -3408,26 +3496,26 @@ declare module 'Creatar3d' {
      * @property [style.particleImage] - 粒子图片
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position
+      通用参数?: Graphic.Options;
+      position: Position;
       style: {
-        length?: number
-        topRadius?: number
-        bottomRadius?: number
-        particleImage?: number
-      }
-    }
+        length?: number;
+        topRadius?: number;
+        bottomRadius?: number;
+        particleImage?: number;
+      };
+    };
   }
 
   /**
    * 发光柱
    */
   declare class LightCylinderPrimitive extends BasePointPrimitive {
-    constructor(options: LightCylinderPrimitive.Options)
+    constructor(options: LightCylinderPrimitive.Options);
     /**
      * 位置
      */
-    position: string | String[] | Position[]
+    position: string | String[] | Position[];
     /**
      * 构建圆柱实例
      */
@@ -3435,7 +3523,7 @@ declare module 'Creatar3d' {
       topPts: Cesium.Cartesian3[],
       bottomPts: Cesium.Cartesian3[],
       height: number
-    ): Cesium.GeometryInstance
+    ): Cesium.GeometryInstance;
   }
 
   declare namespace ModelPrimitive {
@@ -3445,9 +3533,9 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      position: Position | string
-      style: Cesium.Model
-    }
+      position: Position | string;
+      style: Cesium.Model;
+    };
   }
 
   /**
@@ -3455,23 +3543,23 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class ModelPrimitive extends BasePointPrimitive {
-    constructor(options: ModelPrimitive.Options)
+    constructor(options: ModelPrimitive.Options);
     /**
      * 垂向偏移
      */
-    zOffset: number
+    zOffset: number;
     /**
      * 几何外包球
      */
-    readonly boundingSphere: Cesium.BoundingSphere
+    readonly boundingSphere: Cesium.BoundingSphere;
     /**
      * 飞向
      */
-    flyTo(options?: any): void
+    flyTo(options?: any): void;
     /**
      * 位置
      */
-    position: string | any[] | Position
+    position: string | any[] | Position;
   }
 
   declare namespace PointPrimitive {
@@ -3481,9 +3569,9 @@ declare module 'Creatar3d' {
      * @property style - 样式
      */
     type Options = {
-      position: Position | string
-      style: Cesium.PointPrimitive
-    }
+      position: Position | string;
+      style: Cesium.PointPrimitive;
+    };
   }
 
   /**
@@ -3491,7 +3579,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class PointPrimitive extends BasePointPrimitive {
-    constructor(options: PointPrimitive.Options)
+    constructor(options: PointPrimitive.Options);
   }
 
   declare namespace PolygonPrimitive {
@@ -3512,12 +3600,12 @@ declare module 'Creatar3d' {
      * @property [options.asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions: Position[] | string | any[][]
-      style: Cesium.PolygonGeometry.options
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-    }
+      通用参数?: Graphic.Options;
+      positions: Position[] | string | any[][];
+      style: Cesium.PolygonGeometry.options;
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+    };
   }
 
   /**
@@ -3525,7 +3613,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class PolygonPrimitive extends BasePolyPrimitive {
-    constructor(options: PolygonPrimitive.Options)
+    constructor(options: PolygonPrimitive.Options);
   }
 
   declare namespace PolylinePrimitive {
@@ -3535,9 +3623,9 @@ declare module 'Creatar3d' {
      * @property style - 参考Cesium.Polyline参数
      */
     type Options = {
-      positions: Position[] | string
-      style: Cesium.Polyline
-    }
+      positions: Position[] | string;
+      style: Cesium.Polyline;
+    };
   }
 
   /**
@@ -3545,7 +3633,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class PolylinePrimitive extends BasePolyPrimitive {
-    constructor(options: PolylinePrimitive.Options)
+    constructor(options: PolylinePrimitive.Options);
   }
 
   declare namespace PolylineVolumePrimitive {
@@ -3568,23 +3656,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      positions: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3592,7 +3680,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class PolylineVolumePrimitive extends BasePolyPrimitive {
-    constructor(options: PolylineVolumePrimitive.Options)
+    constructor(options: PolylineVolumePrimitive.Options);
   }
 
   declare namespace RectanglePrimitive {
@@ -3615,23 +3703,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      position: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3639,7 +3727,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class RectanglePrimitive extends BasePointPrimitive {
-    constructor(options: RectanglePrimitive.Options)
+    constructor(options: RectanglePrimitive.Options);
   }
 
   /**
@@ -3647,7 +3735,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class Road extends BasePolyPrimitive {
-    constructor(options: Road.Options)
+    constructor(options: Road.Options);
   }
 
   declare namespace SpherePrimitive {
@@ -3670,23 +3758,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      position: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      position: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3694,7 +3782,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class SpherePrimitive extends BasePointPrimitive {
-    constructor(options: SpherePrimitive.Options)
+    constructor(options: SpherePrimitive.Options);
   }
 
   declare namespace WallPrimitive {
@@ -3717,23 +3805,23 @@ declare module 'Creatar3d' {
      * @property [asynchronous = true] - 确定该图元是异步创建还是阻塞创建，直到就绪。
      */
     type Options = {
-      通用参数?: Graphic.Options
-      positions: Position[] | string | any[][]
+      通用参数?: Graphic.Options;
+      positions: Position[] | string | any[][];
       style: {
-        outline?: boolean
-        clampToGround?: boolean
-      }
-      appearance?: Cesium.Appearance
-      attributes?: Cesium.GeometryInstance.attributes
-      depthFailAppearance?: Cesium.Appearance
-      vertexCacheOptimize?: boolean
-      interleave?: boolean
-      compressVertices?: boolean
-      releaseGeometryInstances?: boolean
-      allowPicking?: boolean
-      cull?: boolean
-      asynchronous?: boolean
-    }
+        outline?: boolean;
+        clampToGround?: boolean;
+      };
+      appearance?: Cesium.Appearance;
+      attributes?: Cesium.GeometryInstance.attributes;
+      depthFailAppearance?: Cesium.Appearance;
+      vertexCacheOptimize?: boolean;
+      interleave?: boolean;
+      compressVertices?: boolean;
+      releaseGeometryInstances?: boolean;
+      allowPicking?: boolean;
+      cull?: boolean;
+      asynchronous?: boolean;
+    };
   }
 
   /**
@@ -3741,7 +3829,7 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class WallPrimitive extends BasePolyPrimitive {
-    constructor(options: WallPrimitive.Options)
+    constructor(options: WallPrimitive.Options);
   }
 
   declare namespace RoamLine {
@@ -3768,27 +3856,27 @@ declare module 'Creatar3d' {
      * @property [clockRange = Cesium.ClockRange.CLAMPED] - 指定播放的模式 默认：自动停止
      */
     type Options = {
-      positions: Position[]
-      speed: number | Number[]
-      timeField: string
-      startTime?: Cesium.JulianDate
-      multiplier?: number
-      label?: Cesium.LabelGraphics.ConstructorOptions
-      model?: Cesium.ModelGraphics.ConstructorOptions
-      billboard?: Cesium.BillboardGraphics.ConstructorOptions
-      point?: Cesium.PointGraphics.ConstructorOptions
-      path?: Cesium.PathGraphics.ConstructorOptions
-      interpolation?: boolean
-      interpolationDegree?: number
+      positions: Position[];
+      speed: number | Number[];
+      timeField: string;
+      startTime?: Cesium.JulianDate;
+      multiplier?: number;
+      label?: Cesium.LabelGraphics.ConstructorOptions;
+      model?: Cesium.ModelGraphics.ConstructorOptions;
+      billboard?: Cesium.BillboardGraphics.ConstructorOptions;
+      point?: Cesium.PointGraphics.ConstructorOptions;
+      path?: Cesium.PathGraphics.ConstructorOptions;
+      interpolation?: boolean;
+      interpolationDegree?: number;
       camera?: {
-        type?: string
-        distance?: string
-        pitch?: string
-        followedZ?: string
-        range?: string
-      }
-      clockRange?: Cesium.ClockRange
-    }
+        type?: string;
+        distance?: string;
+        pitch?: string;
+        followedZ?: string;
+        range?: string;
+      };
+      clockRange?: Cesium.ClockRange;
+    };
   }
 
   /**
@@ -3796,44 +3884,44 @@ declare module 'Creatar3d' {
    * @param options - 参数
    */
   declare class RoamLine extends Graphic {
-    constructor(options: RoamLine.Options)
+    constructor(options: RoamLine.Options);
     /**
      * 当前时间对应的坐标位置
      */
-    readonly position: Position
+    readonly position: Position;
     /**
      * 倍速
      */
-    multiplier: number
+    multiplier: number;
     /**
      * 是否暂停
      */
-    readonly isPause: any
+    readonly isPause: any;
     /**
      * 开始漫游
      */
-    start(): void
+    start(): void;
     /**
      * 停止漫游
      */
-    stop(): void
+    stop(): void;
     /**
      * 暂停
      */
-    pause(): void
+    pause(): void;
     /**
      * 继续
      */
-    proceed(): void
+    proceed(): void;
     /**
      * 更新视角模式
      */
-    setCameraOptions(): void
+    setCameraOptions(): void;
     /**
      * 计算贴地线
      * @returns 异步调用
      */
-    clampToGround(): Promise
+    clampToGround(): Promise;
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -3845,7 +3933,7 @@ declare module 'Creatar3d' {
       type: GraphicEventType | RoamingEventType,
       callback: (...params: any[]) => any,
       context: any
-    ): Graphic
+    ): Graphic;
     /**
      * Unsubscribe event
      * @param type - 事件类型
@@ -3857,14 +3945,14 @@ declare module 'Creatar3d' {
       type: GraphicEventType | RoamingEventType,
       callback: (...params: any[]) => any,
       context: any
-    ): Graphic
+    ): Graphic;
     /**
      * Trigger subscription event
      * @param type - 事件类型
      * @param params - 参数
      * @returns this
      */
-    fire(type: GraphicEventType | RoamingEventType, params: any): Graphic
+    fire(type: GraphicEventType | RoamingEventType, params: any): Graphic;
   }
 
   /**
@@ -3874,67 +3962,73 @@ declare module 'Creatar3d' {
     /**
      * Create amap image Provider
      */
-    static createAmapImageryProvider(options: any): AmapImageryProvider
+    static createAmapImageryProvider(options: any): AmapImageryProvider;
     /**
      * Create baidu image Provider
      */
-    static createBaiduImageryProvider(options: any): BaiduImageryProvider
+    static createBaiduImageryProvider(options: any): BaiduImageryProvider;
     /**
      * Create google image Provider
      */
-    static createGoogleImageryProvider(options: any): GoogleImageryProvider
+    static createGoogleImageryProvider(options: any): GoogleImageryProvider;
     /**
      * Create tdt image Provider
      */
-    static createTdtImageryProvider(options: any): TdtImageryProvider
+    static createTdtImageryProvider(options: any): TdtImageryProvider;
     /**
      * Create tencent image Provider
      */
-    static createTencentImageryProvider(options: any): TencentImageryProvider
+    static createTencentImageryProvider(options: any): TencentImageryProvider;
     /**
      * Create arcgis image Provider
      */
-    static createArcGisImageryProvider(options: any): Promise<Cesium.ArcGisMapServerImageryProvider>
+    static createArcGisImageryProvider(
+      options: any
+    ): Promise<Cesium.ArcGisMapServerImageryProvider>;
     /**
      * Create bing image Provider
      */
-    static createBingMapsImageryProvider(options: any): Promise<Cesium.BingMapsImageryProvider>
+    static createBingMapsImageryProvider(
+      options: any
+    ): Promise<Cesium.BingMapsImageryProvider>;
     /**
      * Create single tile image Provider
      */
-    static createSingleTileImageryProvider(options: any): module
+    static createSingleTileImageryProvider(options: any): module;
     /**
      * Create WMS image Provider
      */
-    static createWMSImageryProvider(options: any): module
+    static createWMSImageryProvider(options: any): module;
     /**
      * Create WMTS image Provider
      */
-    static createWMTSImageryProvider(options: any): module
+    static createWMTSImageryProvider(options: any): module;
     /**
      * Create xyz image Provider
      */
-    static createXYZImageryProvider(options: any): module
+    static createXYZImageryProvider(options: any): module;
     /**
      * Create coord image Provider
      */
-    static createCoordImageryProvider(options: any): module
+    static createCoordImageryProvider(options: any): module;
     /**
      * Create grid image Provider
      */
-    static createGridImageryProvider(options: any): module
+    static createGridImageryProvider(options: any): module;
     /**
      * Create mapbox image Provider
      */
-    static createMapboxImageryProvider(options: any): module
+    static createMapboxImageryProvider(options: any): module;
     /**
      * Create mapbox style image Provider
      */
-    static createMapboxStyleImageryProvider(options: any): module
+    static createMapboxStyleImageryProvider(options: any): module;
     /**
      * Create TMS image Provider
      */
-    static createTMSImageryProvider(options: any): Promise<Cesium.TileMapServiceImageryProvider>
+    static createTMSImageryProvider(
+      options: any
+    ): Promise<Cesium.TileMapServiceImageryProvider>;
     /**
      * Create Imagery Provider
      */
@@ -3945,7 +4039,7 @@ declare module 'Creatar3d' {
       | Cesium.ImageryProvider
       | Promise<Cesium.ArcGisMapServerImageryProvider>
       | Promise<Cesium.BingMapsImageryProvider>
-      | Promise<Cesium.TileMapServiceImageryProvider>
+      | Promise<Cesium.TileMapServiceImageryProvider>;
   }
 
   /**
@@ -3955,135 +4049,144 @@ declare module 'Creatar3d' {
     /**
      * arcgis
      */
-    ARCGIS = 'arcgis',
+    ARCGIS = "arcgis",
     /**
      * 百度
      */
-    BAIDU = 'baidu',
+    BAIDU = "baidu",
     /**
      * 必应
      */
-    BING = 'bing',
+    BING = "bing",
     /**
      * 单张图像
      */
-    SINGLE_TILE = 'single_tile',
+    SINGLE_TILE = "single_tile",
     /**
      * WMS
      */
-    WMS = 'wms',
+    WMS = "wms",
     /**
      * WMTS
      */
-    WMTS = 'wmts',
+    WMTS = "wmts",
     /**
      * XYZ
      */
-    XYZ = 'xyz',
-    COORD = 'coord',
-    GRID = 'grid',
+    XYZ = "xyz",
+    COORD = "coord",
+    GRID = "grid",
     /**
      * mapbox
      */
-    MAPBOX = 'mapbox',
+    MAPBOX = "mapbox",
     /**
      * mapbox_style
      */
-    MAPBOX_STYLE = 'mapbox_style',
+    MAPBOX_STYLE = "mapbox_style",
     /**
      * tms
      */
-    TMS = 'tms',
+    TMS = "tms",
     /**
      * 天地图
      */
-    TDT = 'tdt'
+    TDT = "tdt",
   }
 
   /**
    * 百度墨卡托投影
    */
   declare class BaiduMercatorProjection {
-    constructor()
-    getDistanceByMC(point1: any, point2: any): number
+    constructor();
+    getDistanceByMC(point1: any, point2: any): number;
     /**
      * Calculate the distance between two points according to the latitude and longitude coordinates
      */
-    getDistanceByLL(point1: any, point2: any): number | any
+    getDistanceByLL(point1: any, point2: any): number | any;
     /**
      * The plane cartesian coordinates are converted to latitude and longitude coordinates
      */
-    convertMC2LL(point: any): any
+    convertMC2LL(point: any): any;
     /**
      * The latitude and longitude coordinates are converted to plane cartesian coordinates
      */
-    convertLL2MC(point: any): any | any
-    convertor(fromPoint: any, factor: any): any
-    getDistance(x1: any, x2: any, y1: any, y2: any): number
-    toRadians(deg: any): number
-    toDegrees(rad: any): number
-    getRange(v: any, a: any, b: any): number
-    getLoop(v: any, a: any, b: any): any
-    lngLatToMercator(point: any): any | any
-    lngLatToPoint(point: any): any
+    convertLL2MC(point: any): any | any;
+    convertor(fromPoint: any, factor: any): any;
+    getDistance(x1: any, x2: any, y1: any, y2: any): number;
+    toRadians(deg: any): number;
+    toDegrees(rad: any): number;
+    getRange(v: any, a: any, b: any): number;
+    getLoop(v: any, a: any, b: any): any;
+    lngLatToMercator(point: any): any | any;
+    lngLatToPoint(point: any): any;
     /**
      * WebMercator transforms to latitude and longitude
      */
-    mercatorToLngLat(point: any): Point | any
-    pointToLngLat(point: any): Point | any
+    mercatorToLngLat(point: any): Point | any;
+    pointToLngLat(point: any): Point | any;
     /**
      * Latitude and longitude coordinates  transforms to  pixel coordinates
      */
-    pointToPixel(point: any, zoom: any, mapCenter: any, mapSize: any): any
+    pointToPixel(point: any, zoom: any, mapCenter: any, mapSize: any): any;
     /**
      * Pixel coordinates transforms to latitude and longitude coordinates
      */
-    pixelToPoint(pixel: any, zoom: any, mapCenter: any, mapSize: any): Point | any
-    getZoomUnits(zoom: any): number
+    pixelToPoint(
+      pixel: any,
+      zoom: any,
+      mapCenter: any,
+      mapSize: any
+    ): Point | any;
+    getZoomUnits(zoom: any): number;
   }
 
   declare class AmapImageryProvider extends Cesium.UrlTemplateImageryProvider {
-    constructor(options?: any)
+    constructor(options?: any);
   }
 
   /**
    * 百度地图服务
    */
   declare class BaiduImageryProvider {
-    constructor(options?: any)
+    constructor(options?: any);
     /**
      * Request Image
      */
-    requestImage(x: any, y: any, level: any): Promise<HTMLImageElement | HTMLCanvasElement>
+    requestImage(
+      x: any,
+      y: any,
+      level: any
+    ): Promise<HTMLImageElement | HTMLCanvasElement>;
   }
 
   /**
    * 谷歌地图
    */
   declare class GoogleImageryProvider extends Cesium.UrlTemplateImageryProvider {
-    constructor(options?: any)
+    constructor(options?: any);
   }
 
   /**
    * 天地图影像类型
    */
   declare const enum TiandituMapsStyle {
-    IMG_W = 'img_w',
-    IMG_C = 'img_c',
-    CIA_W = 'cia_w',
-    CIA_C = 'cia_c',
-    VEC_W = 'vec_w',
-    VEC_C = 'vec_c',
-    TER_W = 'ter_w',
-    TER_C = 'ter_c',
-    CVA_W = 'cva_w',
-    CVA_C = 'cva_c',
-    CTA_W = 'cta_w',
-    CTA_C = 'cta_c',
-    EIA_W = 'eia_w',
-    EIA_C = 'eia_c',
-    EVA_W = 'eva_w',
-    EVA_C = 'eva_c'
+    IMG_W = "img_w",
+    IMG_C = "img_c",
+    CIA_W = "cia_w",
+    CIA_C = "cia_c",
+    VEC_W = "vec_w",
+    VEC_C = "vec_c",
+    TER_W = "ter_w",
+    TER_C = "ter_c",
+    CVA_W = "cva_w",
+    CVA_C = "cva_c",
+    CTA_W = "cta_w",
+    CTA_C = "cta_c",
+    EIA_W = "eia_w",
+    EIA_C = "eia_c",
+    EVA_W = "eva_w",
+    EVA_C = "eva_c",
   }
 
   declare namespace TdtImageryProvider {
@@ -4094,10 +4197,10 @@ declare module 'Creatar3d' {
      * @property [protocol] - 协议
      */
     type ConstructorOptions = {
-      key?: String[] | string
-      style?: TiandituMapsStyle
-      protocol?: string
-    }
+      key?: String[] | string;
+      style?: TiandituMapsStyle;
+      protocol?: string;
+    };
   }
 
   /**
@@ -4105,24 +4208,29 @@ declare module 'Creatar3d' {
    * @param [options] - 参数
    */
   declare class TdtImageryProvider extends Cesium.WebMapTileServiceImageryProvider {
-    constructor(options?: TdtImageryProvider.ConstructorOptions)
+    constructor(options?: TdtImageryProvider.ConstructorOptions);
   }
 
   /**
    * 腾讯地图
    */
   declare class TencentImageryProvider extends Cesium.WebMapTileServiceImageryProvider {
-    constructor(options?: any)
+    constructor(options?: any);
   }
 
   declare class AmapMercatorTilingScheme extends Cesium.WebMercatorTilingScheme {
-    constructor()
+    constructor();
   }
 
   declare class BaiduMercatorTilingScheme extends Cesium.WebMercatorTilingScheme {
-    constructor()
-    tileXYToNativeRectangle(x: any, y: any, level: any, result: any): module | any
-    positionToTileXY(position: any, level: any, result: any): undefined | any
+    constructor();
+    tileXYToNativeRectangle(
+      x: any,
+      y: any,
+      level: any,
+      result: any
+    ): module | any;
+    positionToTileXY(position: any, level: any, result: any): undefined | any;
   }
 
   declare namespace BaseLayer {
@@ -4134,11 +4242,11 @@ declare module 'Creatar3d' {
      * @property [name = '未命名'] - 名称
      */
     type Options = {
-      groupId?: string
-      id?: string
-      uuid?: string
-      name?: string
-    }
+      groupId?: string;
+      id?: string;
+      uuid?: string;
+      name?: string;
+    };
   }
 
   /**
@@ -4146,60 +4254,64 @@ declare module 'Creatar3d' {
    * @param options - 图层配置
    */
   declare class BaseLayer {
-    constructor(options: BaseLayer.Options)
+    constructor(options: BaseLayer.Options);
     /**
      * 唯一编号 内部数据管理使用,包括点击拾取时返回的图层信息
      */
-    readonly layerId: string
+    readonly layerId: string;
     /**
      * id
      */
-    readonly id: string | any
+    readonly id: string | any;
     /**
      * 组id
      */
-    groupId: string | any
+    groupId: string | any;
     /**
      * 实例
      */
-    readonly delegate: Cesium.DataSource | Cesium.Primitive | any[] | Cesium.ImageryLayer
+    readonly delegate:
+      | Cesium.DataSource
+      | Cesium.Primitive
+      | any[]
+      | Cesium.ImageryLayer;
     /**
      * 图层显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * 图层状态
      */
-    readonly state: State
+    readonly state: State;
     /**
      * 图层事件
      */
-    readonly layerEvent: LayerEvent
+    readonly layerEvent: LayerEvent;
     /**
      * 场景
      */
-    readonly viewer: Viewer
+    readonly viewer: Viewer;
     /**
      * Clears all graphics
      * Subclasses need to be overridden
      */
-    clear(): void
+    clear(): void;
     /**
      * Removes from the viewer
      */
-    remove(): void
+    remove(): void;
     /**
      * Adds to the viewer
      * @param viewer - 视图
      * @returns this
      */
-    addTo(viewer: Viewer): Layer
+    addTo(viewer: Viewer): Layer;
     /**
      * 比较图层是否为同一图层
      * @param layer - 比较图层
      * @returns 是否相同
      */
-    equal(layer: Layer): boolean
+    equal(layer: Layer): boolean;
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -4207,31 +4319,43 @@ declare module 'Creatar3d' {
      * @param context - 上下文
      * @returns remove callback function
      */
-    on(type: EventType, callback: (...params: any[]) => any, context: any): Event.RemoveCallback
+    on(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Event.RemoveCallback;
     /**
      * Subscribe once event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    once(type: EventType, callback: (...params: any[]) => any, context: any): void
+    once(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): void;
     /**
      * Unsubscribe event
      * @param type - 事件类型
      * @param callback - 回调函数
      * @param context - 上下文
      */
-    off(type: EventType, callback: (...params: any[]) => any, context: any): boolean
+    off(
+      type: EventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): boolean;
     /**
      * 注册图层类型
      * @param type - 类型
      */
-    static registerType(type: string): void
+    static registerType(type: string): void;
     /**
      * 获取图层类型
      * @param type - 类型
      */
-    static getLayerType(type: string): string | undefined
+    static getLayerType(type: string): string | undefined;
   }
 
   /**
@@ -4240,72 +4364,72 @@ declare module 'Creatar3d' {
    * @param options - 图层配置
    */
   declare class Layer extends BaseLayer {
-    constructor(通用参数?: BaseLayer.Options, options: any)
+    constructor(通用参数?: BaseLayer.Options, options: any);
     /**
      * 要素数量
      */
-    readonly length: number
+    readonly length: number;
     /**
      * 添加 graphic
      * @param graphic - 图形
      */
-    addGraphic(graphic: Graphic): Layer
+    addGraphic(graphic: Graphic): Layer;
     /**
      * 添加 graphics
      * @param graphics - 图形集合
      */
-    addGraphics(graphics: Graphic[]): Layer
+    addGraphics(graphics: Graphic[]): Layer;
     /**
      * 移除 graphic
      * @param graphic - 图形
      */
-    removeGraphic(graphic: Graphic): Layer
+    removeGraphic(graphic: Graphic): Layer;
     /**
      * 移除 graphic
      * @param graphics - 图形
      */
-    removeGraphics(graphics: Graphic[]): Layer
+    removeGraphics(graphics: Graphic[]): Layer;
     /**
      * 移除 全部 graphic
      */
-    removeAllGraphic(): Layer
+    removeAllGraphic(): Layer;
     /**
      * 根据要素id判断要素是否存在
      * @param layer - 自定义图层
      */
-    hasGraphic(layer: Graphic): boolean
+    hasGraphic(layer: Graphic): boolean;
     /**
      * 通过id获取图形
      * @param id - id
      */
-    getGraphic(id: string): any | undefined
+    getGraphic(id: string): any | undefined;
     /**
      * 通过属性键值获取图层中图形
      * @param attrName - 属性名
      * @param attrVal - 属性值
      */
-    getGraphicsByAttr(attrName: string, attrVal: any): Graphic[]
+    getGraphicsByAttr(attrName: string, attrVal: any): Graphic[];
     /**
      * Iterate through each graphic and pass it as an argument to the callback function
      * @param method - 函数
      * @param context - 上下文
      */
-    eachGraphic(method: (...params: any[]) => any, context: any): Layer
+    eachGraphic(method: (...params: any[]) => any, context: any): Layer;
     /**
      * Returns all graphics
      */
-    getGraphics(): Graphic[]
+    getGraphics(): Graphic[];
     /**
      * sets the style, the style will apply to every graphic of the layer
      * Subclasses need to be overridden
      */
-    setStyle(style: any): void
+    setStyle(style: any): void;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
   }
 
   /**
@@ -4313,60 +4437,60 @@ declare module 'Creatar3d' {
    * @param options - 图层配置
    */
   declare class LayerGroup {
-    constructor(options: any)
+    constructor(options: any);
     /**
      * 唯一编号 内部数据管理使用
      */
-    readonly id: string
+    readonly id: string;
     /**
      * 图层显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * 图层组事件
      */
-    readonly layerGroupEvent: LayerEvent
+    readonly layerGroupEvent: LayerEvent;
     /**
      * 图层组状态
      */
-    readonly state: State
+    readonly state: State;
     /**
      * 添加一个图层
      * @param layer - 图层
      * @returns this
      */
-    addLayer(layer: Layer): LayerGroup
+    addLayer(layer: Layer): LayerGroup;
     /**
      * 移除一个图层
      * @param layer - 图层
      * @returns this
      */
-    removeLayer(layer: Layer): LayerGroup
+    removeLayer(layer: Layer): LayerGroup;
     /**
      * 通过id获取图层
      * @param id - id
      * @returns 图层
      */
-    getLayer(id: string): Layer | undefined
+    getLayer(id: string): Layer | undefined;
     /**
      * 获取所有图层
      */
-    getLayers(): Layer[]
+    getLayers(): Layer[];
     /**
      * 添加是视图
      * @param viewer - 视图
      * @returns this
      */
-    addTo(viewer: Viewer): LayerGroup
+    addTo(viewer: Viewer): LayerGroup;
     /**
      * 移除
      * @returns this
      */
-    remove(): LayerGroup
+    remove(): LayerGroup;
     /**
      * 清除
      */
-    clear(): void
+    clear(): void;
   }
 
   /**
@@ -4385,13 +4509,13 @@ declare module 'Creatar3d' {
      * @property [gradient = {0.0001: Cesium.Color.DEEPSKYBLUE,0.001: Cesium.Color.GREEN,0.01: Cesium.Color.ORANGE,0.1: Cesium.Color.RED }] - 每级聚合图像数量占总数据量的百分比及对应的颜色
      */
     type Options = {
-      size?: number
-      pixelRange?: number
-      fontSize?: number
-      fontColor?: Cesium.Color
-      style?: string
-      gradient?: any
-    }
+      size?: number;
+      pixelRange?: number;
+      fontSize?: number;
+      fontColor?: Cesium.Color;
+      style?: string;
+      gradient?: any;
+    };
   }
 
   /**
@@ -4400,12 +4524,12 @@ declare module 'Creatar3d' {
    * @param [图层参数] - 聚合图层参数
    */
   declare class ClusterLayer extends Layer {
-    constructor(通用参数?: BaseLayer.Options, 图层参数?: ClusterLayer.Options)
+    constructor(通用参数?: BaseLayer.Options, 图层参数?: ClusterLayer.Options);
     /**
      * Clears all entities
      * @returns this
      */
-    clear(): GraphicLayer
+    clear(): GraphicLayer;
   }
 
   /**
@@ -4415,7 +4539,10 @@ CzmlDataSource,用于将相同类或业务属性的实体放入同一集合
  * @param options - 图层id等信息
  */
   declare class CzmlLayer extends GeoJsonLayer {
-    constructor(通用参数?: BaseLayer.Options, options: Cesium.CzmlDataSource.LoadOptions)
+    constructor(
+      通用参数?: BaseLayer.Options,
+      options: Cesium.CzmlDataSource.LoadOptions
+    );
   }
 
   /**
@@ -4424,27 +4551,30 @@ CzmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [通用参数] - BaseLayer通用参数
    */
   declare class GeoJsonLayer extends Layer {
-    constructor(options: Cesium.GeoJsonDataSource.LoadOptions, 通用参数?: BaseLayer.Options)
+    constructor(
+      options: Cesium.GeoJsonDataSource.LoadOptions,
+      通用参数?: BaseLayer.Options
+    );
     /**
      * 设置显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * Entity矢量数据 集合
      */
-    readonly entities: Cesium.Entity[]
+    readonly entities: Cesium.Entity[];
     /**
      * 遍历数据几何
      * @param method - 执行函数
      * @param context - 上下文
      * @returns this
      */
-    eachGraphic(method: (...params: any[]) => any, context: any): GeoJsonLayer
+    eachGraphic(method: (...params: any[]) => any, context: any): GeoJsonLayer;
     /**
      * Clears all entities
      * @returns this
      */
-    clear(): GeoJsonLayer
+    clear(): GeoJsonLayer;
   }
 
   /**
@@ -4454,7 +4584,10 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
  * @param options - 图层id等信息
  */
   declare class GpxLayer extends GeoJsonLayer {
-    constructor(通用参数?: BaseLayer.Options, options: Cesium.GpxDataSource.LoadOptions)
+    constructor(
+      通用参数?: BaseLayer.Options,
+      options: Cesium.GpxDataSource.LoadOptions
+    );
   }
 
   /**
@@ -4463,52 +4596,52 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    * @param [通用参数] - BaseLayer通用参数
    */
   declare class GraphicLayer extends Layer {
-    constructor(通用参数?: BaseLayer.Options)
+    constructor(通用参数?: BaseLayer.Options);
     /**
      * 点集合
      */
-    readonly pointCollection: Cesium.PointCollection
+    readonly pointCollection: Cesium.PointCollection;
     /**
      * 线集合
      */
-    readonly polylineCollection: Cesium.PolylineCollection
+    readonly polylineCollection: Cesium.PolylineCollection;
     /**
      * Billboard集合
      */
-    readonly billboardCollection: Cesium.BillboardCollection
+    readonly billboardCollection: Cesium.BillboardCollection;
     /**
      * Label集合
      */
-    readonly labelCollection: Cesium.LabelCollection
+    readonly labelCollection: Cesium.LabelCollection;
     /**
      * primitive集合
      */
-    readonly primitiveCollection: Cesium.PrimitiveCollection
+    readonly primitiveCollection: Cesium.PrimitiveCollection;
     /**
      * entity集合
      */
-    readonly dataSource: Cesium.CustomDataSource
+    readonly dataSource: Cesium.CustomDataSource;
     /**
      * Clears all
      * @returns this
      */
-    clear(): PrimitiveLayer
+    clear(): PrimitiveLayer;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
     /**
      * 将矢量数据导出为GeoJSON格式规范对象。
      * @param options - 参数对象:
      * @param [options.noAlt = false] - 不导出高度值
      */
-    toGeoJSON(options: { noAlt?: boolean }): void
+    toGeoJSON(options: { noAlt?: boolean }): void;
     /**
      * 加载通过绘制功能导出生成的json数据
      */
-    loadGeoJSON(geojson: any): void
+    loadGeoJSON(geojson: any): void;
     /**
      * 绘制矢量数据，绘制的数据会加载在当前图层
      * @param options - 绘制参数，包含：
@@ -4517,10 +4650,10 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
      * @param [options.callback] - 绘制创建完成的回调方法
      */
     draw(options: {
-      type: GraphicType | string
-      style?: any
-      callback?: (...params: any[]) => any
-    }): void
+      type: GraphicType | string;
+      style?: any;
+      callback?: (...params: any[]) => any;
+    }): void;
   }
 
   /**
@@ -4528,7 +4661,7 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    * @param dDeg - 间距（弧度）
    * @returns 保留的小数位数
    */
-  declare function gridPrecision(dDeg: number): number
+  declare function gridPrecision(dDeg: number): number;
 
   /**
    * 度转换为度分秒
@@ -4536,7 +4669,7 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    * @param isLat - 是否是纬度
    * @returns 度分秒
    */
-  declare function convertDEGToDMS(deg: number, isLat: boolean): string
+  declare function convertDEGToDMS(deg: number, isLat: boolean): string;
 
   /**
    * 全球经纬网
@@ -4553,13 +4686,13 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    */
   declare class GraticuleLayer extends GraphicLayer {
     constructor(options: {
-      color?: Cesium.Color
-      meridiansColor?: Cesium.Color
-      debounce?: number
-      gridCount?: number
-      meridians?: boolean
-      labelOptions?: Cesium.Label
-    })
+      color?: Cesium.Color;
+      meridiansColor?: Cesium.Color;
+      debounce?: number;
+      gridCount?: number;
+      meridians?: boolean;
+      labelOptions?: Cesium.Label;
+    });
   }
 
   /**
@@ -4572,31 +4705,31 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    */
   declare class HeatLayer extends Layer {
     constructor(options?: {
-      clampGround?: boolean
-      classificationType?: boolean
-      radius: any
-      height?: number
-    })
+      clampGround?: boolean;
+      classificationType?: boolean;
+      radius: any;
+      height?: number;
+    });
     /**
      * 设置数据点
      * @param positions - {lng,lat,value}
      */
-    setPositions(positions: object[]): void
+    setPositions(positions: object[]): void;
     /**
      * 追加点
      * @param position - {lng,lat,value}
      */
-    addPosition(position: any): void
+    addPosition(position: any): void;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
     /**
      * 图层显隐
      */
-    show: boolean
+    show: boolean;
   }
 
   /**
@@ -4604,21 +4737,21 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    * @param [通用参数] - BaseLayer通用参数
    */
   declare class HtmlLayer extends Layer {
-    constructor(通用参数?: BaseLayer.Options)
+    constructor(通用参数?: BaseLayer.Options);
     /**
      * 图层显隐
      */
-    show: boolean
+    show: boolean;
     /**
      * Clears all divIcons
      */
-    clear(): HtmlLayer
+    clear(): HtmlLayer;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyToBoundingSphere}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
   }
 
   declare namespace ImageLayer {
@@ -4633,14 +4766,14 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
      * @property [invertColor] - 反设颜色
      */
     type Options = {
-      type: ImageryType
-      imageryProvider?: Cesium.ImageryProvider
-      options: Cesium.ImageryLayer.options
-      options: Cesium.ImageryLayer.options
-      crs?: string
-      filterColor?: string
-      invertColor?: boolean
-    }
+      type: ImageryType;
+      imageryProvider?: Cesium.ImageryProvider;
+      options: Cesium.ImageryLayer.options;
+      options: Cesium.ImageryLayer.options;
+      crs?: string;
+      filterColor?: string;
+      invertColor?: boolean;
+    };
   }
 
   /**
@@ -4649,72 +4782,72 @@ GpxDataSource,处理 GPS 交换格式 (GPX)
    * @param [通用参数] - BaseLayer通用参数
    */
   declare class ImageLayer extends BaseLayer {
-    constructor(options: ImageLayer.Options, 通用参数?: BaseLayer.Options)
+    constructor(options: ImageLayer.Options, 通用参数?: BaseLayer.Options);
     /**
      * 异步构建
      * @returns 图层实例
      */
-    static build(options: ImageLayer.Options): ImageLayer
+    static build(options: ImageLayer.Options): ImageLayer;
     /**
      * imageLayer 瓦片图层对应的内部ImageryLayer对象
      */
-    readonly imageLayer: Cesium.ImageryLayer
+    readonly imageLayer: Cesium.ImageryLayer;
     /**
      * imageryProvider 瓦片图层对应的内部ImageryProvider对象
      */
-    readonly imageryProvider: Cesium.XXXImageryProvider
+    readonly imageryProvider: Cesium.XXXImageryProvider;
     /**
      * 透明度。从0.0到1.0。
      */
-    alpha: number
+    alpha: number;
     /**
      * 亮度，取值范围：0.0-1.0。
      */
-    brightness: number
+    brightness: number;
     /**
      * 对比度。 1.0使用未修改的图像颜色，小于1.0会降低对比度，而大于1.0则会提高对比度。
      */
-    contrast: number
+    contrast: number;
     /**
      * 伽马校正值。 1.0使用未修改的图像颜色。
      */
-    gamma: number
+    gamma: number;
     /**
      * 色调。 0.0 时未修改的图像颜色。
      */
-    hue: number
+    hue: number;
     /**
      * 饱和度。 1.0使用未修改的图像颜色，小于1.0会降低饱和度，而大于1.0则会增加饱和度。
      */
-    saturation: number
+    saturation: number;
     /**
      * 图层数据矩形范围。
      */
-    rectangle: Cesium.Rectangle
+    rectangle: Cesium.Rectangle;
     /**
      * 获取wms元数据
      * @returns Rectangle
      */
-    static getMateData(): Cesium.Rectangle
+    static getMateData(): Cesium.Rectangle;
     /**
      * GetMap获取数据
      * @returns feature集合
      */
-    getFeatureJson(param: any): Promise<object>
+    getFeatureJson(param: any): Promise<object>;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
     /**
      * 图层置顶
      */
-    raiseToTop(): void
+    raiseToTop(): void;
     /**
      * 图层显隐
      */
-    show: boolean
+    show: boolean;
   }
 
   /**
@@ -4724,7 +4857,10 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
  * @param options - 图层id等信息
  */
   declare class KmlLayer extends GeoJsonLayer {
-    constructor(通用参数?: BaseLayer.Options, options: Cesium.KmlDataSource.LoadOptions)
+    constructor(
+      通用参数?: BaseLayer.Options,
+      options: Cesium.KmlDataSource.LoadOptions
+    );
   }
 
   /**
@@ -4733,7 +4869,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options] - BaseLayer通用参数
    */
   declare class PrimitiveLayer extends Layer {
-    constructor(options?: BaseLayer.Options)
+    constructor(options?: BaseLayer.Options);
   }
 
   /**
@@ -4741,12 +4877,12 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options = {}] - BaseLayer通用参数
    */
   declare class S3MLayer extends Layer {
-    constructor(options?: BaseLayer.Options)
+    constructor(options?: BaseLayer.Options);
     /**
      * 飞向
      * @param options - 同 {@link viewer.camera#flyToBoundingSphere}
      */
-    flyTo(options: any): void
+    flyTo(options: any): void;
   }
 
   /**
@@ -4754,11 +4890,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [通用参数] - BaseLayer通用参数
    */
   declare class TerrainLayer extends BaseLayer {
-    constructor(通用参数?: BaseLayer.Options)
+    constructor(通用参数?: BaseLayer.Options);
     /**
      * 图层显隐
      */
-    show: boolean
+    show: boolean;
   }
 
   /**
@@ -4766,43 +4902,43 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [通用参数] - BaseLayer通用参数
    */
   declare class TilesetLayer extends Layer {
-    constructor(通用参数?: BaseLayer.Options)
+    constructor(通用参数?: BaseLayer.Options);
     /**
      * Clear all tileset
      */
-    clear(): TilesetLayer
+    clear(): TilesetLayer;
     /**
      * 飞向
      * @param options - 同 {@link Viewer#flyTo}
      * @returns 异步
      */
-    flyTo(options: any): Promise<Boolean>
+    flyTo(options: any): Promise<Boolean>;
   }
 
   /**
    * 材质属性(Entity使用) 基类
    */
   declare class MaterialProperty {
-    constructor(options: any)
+    constructor(options: any);
     /**
      * 获取 材质名称
      * @param [time] - 检索值的时间。
      * @returns 材质名称
      */
-    getType(time?: Cesium.JulianDate): any
+    getType(time?: Cesium.JulianDate): any;
     /**
      * 获取所提供时间的属性值。
      * @param [time] - 检索值的时间。
      * @param [result] - 用于存储值的对象，如果省略，则创建并返回一个新的实例。
      * @returns 修改的result参数或一个新的实例(如果没有提供result参数)。
      */
-    getValue(time?: Cesium.JulianDate, result?: any): any
+    getValue(time?: Cesium.JulianDate, result?: any): any;
     /**
      * 将此属性与提供的属性进行比较并返回, 如果两者相等返回true，否则为false
      * @param [other] - 比较的对象
      * @returns 两者是同一个对象
      */
-    equals(other?: Cesium.Property): any
+    equals(other?: Cesium.Property): any;
   }
 
   /**
@@ -4812,7 +4948,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 3] - 速度
    */
   declare class CircleBlurMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4822,7 +4958,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 20] - 速度
    */
   declare class CircleDiffuseMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4832,7 +4968,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 20] - 速度
    */
   declare class CircleFadeMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4842,7 +4978,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 20] - 速度
    */
   declare class CirclePulseMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4852,7 +4988,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 20] - 速度
    */
   declare class CircleScanMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4862,7 +4998,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 20] - 速度
    */
   declare class CircleSpiralMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4872,7 +5008,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 20] - 速度
    */
   declare class CircleVaryMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4885,11 +5021,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    */
   declare class CircleWaveMaterialProperty {
     constructor(options?: {
-      color?: Cesium.Color
-      speed?: number
-      count?: number
-      gradient?: number
-    })
+      color?: Cesium.Color;
+      speed?: number;
+      count?: number;
+      gradient?: number;
+    });
   }
 
   /**
@@ -4899,7 +5035,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class EllipsoidElectricMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4909,7 +5045,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class EllipsoidTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4919,7 +5055,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class PolylineFlickerMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -4932,11 +5068,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    */
   declare class PolylineFlowColorMaterialProperty {
     constructor(options?: {
-      color?: Cesium.Color
-      speed?: number
-      percent?: number
-      gradient?: number
-    })
+      color?: Cesium.Color;
+      speed?: number;
+      percent?: number;
+      gradient?: number;
+    });
   }
 
   /**
@@ -4948,7 +5084,12 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.repeat] - 重复次数
    */
   declare class PolylineImageTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number; image?: string; repeat?: any })
+    constructor(options?: {
+      color?: Cesium.Color;
+      speed?: number;
+      image?: string;
+      repeat?: any;
+    });
   }
 
   /**
@@ -4959,7 +5100,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.image] - 图片地址
    */
   declare class PolylineLightingMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number; image?: string })
+    constructor(options?: {
+      color?: Cesium.Color;
+      speed?: number;
+      image?: string;
+    });
   }
 
   /**
@@ -4970,7 +5115,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.image] - 图片地址
    */
   declare class PolylineLightingTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number; image?: string })
+    constructor(options?: {
+      color?: Cesium.Color;
+      speed?: number;
+      image?: string;
+    });
   }
 
   /**
@@ -4984,12 +5133,12 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    */
   declare class PolylineOdMaterialProperty {
     constructor(options?: {
-      color?: Cesium.Color
-      bgColor?: Cesium.Color
-      speed?: number
-      startTime?: number
-      bidirectional?: number
-    })
+      color?: Cesium.Color;
+      bgColor?: Cesium.Color;
+      speed?: number;
+      startTime?: number;
+      bidirectional?: number;
+    });
   }
 
   /**
@@ -4999,7 +5148,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class PolylineTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -5009,7 +5158,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class RadarLineMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -5019,7 +5168,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class RadarSweepMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -5029,7 +5178,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.speed = 5] - 速度
    */
   declare class RadarWaveMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number })
+    constructor(options?: { color?: Cesium.Color; speed?: number });
   }
 
   /**
@@ -5048,36 +5197,36 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    */
   declare class TextMaterialProperty extends MaterialProperty {
     constructor(options: {
-      text?: string
-      textBaseline?: string
-      fill?: boolean
-      stroke?: boolean
-      fillColor?: Cesium.Color
-      strokeColor?: Cesium.Color
-      backgroundColor?: Cesium.Color
-      strokeWidth?: number
-      padding?: number
-      opacity?: number
-    })
+      text?: string;
+      textBaseline?: string;
+      fill?: boolean;
+      stroke?: boolean;
+      fillColor?: Cesium.Color;
+      strokeColor?: Cesium.Color;
+      backgroundColor?: Cesium.Color;
+      strokeWidth?: number;
+      padding?: number;
+      opacity?: number;
+    });
     /**
      * 获取 材质名称
      * @param [time] - 检索值的时间。
      * @returns 材质名称
      */
-    getType(time?: Cesium.JulianDate): any
+    getType(time?: Cesium.JulianDate): any;
     /**
      * 获取所提供时间的属性值。
      * @param [time] - 检索值的时间。
      * @param [result] - 用于存储值的对象，如果省略，则创建并返回一个新的实例。
      * @returns 修改的result参数或一个新的实例(如果没有提供result参数)。
      */
-    getValue(time?: Cesium.JulianDate, result?: any): any
+    getValue(time?: Cesium.JulianDate, result?: any): any;
     /**
      * 将此属性与提供的属性进行比较并返回, 如果两者相等返回true，否则为false
      * @param [other] - 比较的对象
      * @returns 两者是同一个对象
      */
-    equals(other?: Cesium.Property): any
+    equals(other?: Cesium.Property): any;
   }
 
   /**
@@ -5089,7 +5238,12 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.repeat] - 重复次数
    */
   declare class WallImageTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number; image?: string; repeat?: any })
+    constructor(options?: {
+      color?: Cesium.Color;
+      speed?: number;
+      image?: string;
+      repeat?: any;
+    });
   }
 
   /**
@@ -5101,7 +5255,12 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.repeat] - 重复次数
    */
   declare class WallLineTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number; image?: string; repeat?: any })
+    constructor(options?: {
+      color?: Cesium.Color;
+      speed?: number;
+      image?: string;
+      repeat?: any;
+    });
   }
 
   /**
@@ -5112,7 +5271,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param [options.image] - 图片地址
    */
   declare class WallTrailMaterialProperty {
-    constructor(options?: { color?: Cesium.Color; speed?: number; image?: string })
+    constructor(options?: {
+      color?: Cesium.Color;
+      speed?: number;
+      image?: string;
+    });
   }
 
   /**
@@ -5130,37 +5293,40 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    */
   declare class WaterMaterialProperty {
     constructor(options?: {
-      baseWaterColor?: Cesium.Color
-      blendColor?: Cesium.Color
-      specularMap?: string
-      normalMap?: string
-      frequency?: number
-      animationSpeed?: number
-      amplitude?: number
-      specularIntensity?: number
-      fadeFactor?: number
-    })
+      baseWaterColor?: Cesium.Color;
+      blendColor?: Cesium.Color;
+      specularMap?: string;
+      normalMap?: string;
+      frequency?: number;
+      animationSpeed?: number;
+      amplitude?: number;
+      specularIntensity?: number;
+      fadeFactor?: number;
+    });
   }
 
   /**
    * 测量基类
    */
   declare class Measure {
-    constructor()
+    constructor();
     /**
      * 绑定相关事件
      */
-    bindEvent(): void
+    bindEvent(): void;
     /**
      * 解除相关事件
      */
-    unbindEvent(): void
+    unbindEvent(): void;
     /**
      * 创建节点
      * @param position - 位置
      * @param [isCenter = false] - 是否是中心点
      */
-    createAnchor(position: Cesium.Cartesian3, isCenter?: boolean): Cesium.Entity
+    createAnchor(
+      position: Cesium.Cartesian3,
+      isCenter?: boolean
+    ): Cesium.Entity;
     /**
      * 创建Label
      */
@@ -5168,35 +5334,44 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
       position: Cesium.Cartesian3 | Cesium.CallbackProperty,
       text: string | Cesium.CallbackProperty,
       labelShow?: boolean | Cesium.CallbackProperty
-    ): Cesium.Entity
+    ): Cesium.Entity;
     /**
      * 插值量算贴地距离
      * @returns 贴地距离
      */
-    getGeodesicDistance(point1: Cesium.Cartesian3, point2: Cesium.Cartesian3): Promise<Number>
+    getGeodesicDistance(
+      point1: Cesium.Cartesian3,
+      point2: Cesium.Cartesian3
+    ): Promise<Number>;
     /**
      * 计算中点
      * @param p1 - 第一点
      * @param p2 - 第二点
      * @returns 中点
      */
-    computeMidPosition(p1: Cesium.Cartesian3, p2: Cesium.Cartesian3): Cesium.Cartesian3
+    computeMidPosition(
+      p1: Cesium.Cartesian3,
+      p2: Cesium.Cartesian3
+    ): Cesium.Cartesian3;
     /**
      * 计算几何中点
      * @param p1 - 第一点
      * @param p2 - 第二点
      * @returns 中点
      */
-    computeMathMidPosition(p1: Cesium.Cartesian3, p2: Cesium.Cartesian3): Cesium.Cartesian3
+    computeMathMidPosition(
+      p1: Cesium.Cartesian3,
+      p2: Cesium.Cartesian3
+    ): Cesium.Cartesian3;
     /**
      * 开始测量
      * @param measureFactory - 标绘工厂
      */
-    start(measureFactory: MeasureFactory): void
+    start(measureFactory: MeasureFactory): void;
     /**
      * 结束测量 子类实现
      */
-    cancelMeasure(): void
+    cancelMeasure(): void;
   }
 
   /**
@@ -5212,31 +5387,31 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
       options?: any,
       pointOptions?: Cesium.Point.options,
       textOptions?: Cesium.Label.options
-    )
+    );
     /**
      * 视图
      */
-    readonly viewer: any
+    readonly viewer: any;
     /**
      * 文字样式参数
      */
-    readonly textOptions: any
+    readonly textOptions: any;
     /**
      * 默认参数
      */
-    readonly options: any
+    readonly options: any;
     /**
      * 测量回调事件
      */
-    readonly measureFactoryEvent: any
+    readonly measureFactoryEvent: any;
     /**
      * 测量临时图层
      */
-    readonly graphicLayer: any
+    readonly graphicLayer: any;
     /**
      * 临时图层
      */
-    readonly anchorLayer: any
+    readonly anchorLayer: any;
     /**
      * 开始测量
      * @param type - 测量类型
@@ -5244,19 +5419,23 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @param style - 绘制结果样式
      * @returns 各个测量实例
      */
-    measure(type: MeasureType, callback: (...params: any[]) => any, style: any): Measure
+    measure(
+      type: MeasureType,
+      callback: (...params: any[]) => any,
+      style: any
+    ): Measure;
     /**
      * 结束状态
      */
-    endState(): void
+    endState(): void;
     /**
      * 清除绘制结果
      */
-    clear(): void
+    clear(): void;
     /**
      * 销废
      */
-    destroy(): void
+    destroy(): void;
   }
 
   /**
@@ -5266,39 +5445,39 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
     /**
      * 位置测量
      */
-    POINT = 'point',
+    POINT = "point",
     /**
      * 空间距离
      */
-    DISTANCE = 'distance',
+    DISTANCE = "distance",
     /**
      * 贴地距离
      */
-    GROUNDDISTANCE = 'groundDistance',
+    GROUNDDISTANCE = "groundDistance",
     /**
      * 三角测量
      */
-    ELEVATION = 'elevation',
+    ELEVATION = "elevation",
     /**
      * 高度测量
      */
-    HEIGHT = 'height',
+    HEIGHT = "height",
     /**
      * 空间面积
      */
-    AREA = 'area',
+    AREA = "area",
     /**
      * 贴地面积
      */
-    GROUNDAREA = 'groundArea',
+    GROUNDAREA = "groundArea",
     /**
      * 体积、挖填方
      */
-    VOLUME = 'volume',
+    VOLUME = "volume",
     /**
      * 角度
      */
-    ANGLE = 'angle'
+    ANGLE = "angle",
   }
 
   /**
@@ -5306,7 +5485,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param style - 线段样式
    */
   declare class MeasureAngle extends Measure {
-    constructor(style: Cesium.PolylineGraphics.ConstructorOptions)
+    constructor(style: Cesium.PolylineGraphics.ConstructorOptions);
   }
 
   /**
@@ -5314,7 +5493,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param style - 多边形样式
    */
   declare class MeasureArea extends Measure {
-    constructor(style: Cesium.PolylineGraphics.ConstructorOptions)
+    constructor(style: Cesium.PolylineGraphics.ConstructorOptions);
   }
 
   /**
@@ -5322,7 +5501,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param style - 线样式
    */
   declare class MeasureDistance extends Measure {
-    constructor(style: Cesium.PolylineGraphics.ConstructorOptions)
+    constructor(style: Cesium.PolylineGraphics.ConstructorOptions);
   }
 
   /**
@@ -5330,7 +5509,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param style - 线样式
    */
   declare class MeasureElevation extends MeasureDistance {
-    constructor(style: Cesium.PolylineGraphics.ConstructorOptions)
+    constructor(style: Cesium.PolylineGraphics.ConstructorOptions);
   }
 
   /**
@@ -5338,7 +5517,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param style - 线段样式
    */
   declare class MeasureHeight extends MeasureDistance {
-    constructor(style: Cesium.PolylineGraphics.ConstructorOptions)
+    constructor(style: Cesium.PolylineGraphics.ConstructorOptions);
   }
 
   /**
@@ -5346,7 +5525,7 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param style - 点样式
    */
   declare class MeasurePoint extends Measure {
-    constructor(style: Cesium.PointGraphics.ConstructorOptions)
+    constructor(style: Cesium.PointGraphics.ConstructorOptions);
   }
 
   /**
@@ -5359,45 +5538,48 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    */
   declare class MeasureVolume extends MeasureArea {
     constructor(style: {
-      referencePlaneHeight?: number
-      wallStyle?: Cesium.PolygonGraphics.ConstructorOptions
-      polygonStyle?: Cesium.PolygonGraphics.ConstructorOptions
-      splitNum?: number
-    })
+      referencePlaneHeight?: number;
+      wallStyle?: Cesium.PolygonGraphics.ConstructorOptions;
+      polygonStyle?: Cesium.PolygonGraphics.ConstructorOptions;
+      splitNum?: number;
+    });
     /**
      * 基准面高
      */
-    referencePlaneHeight: number
+    referencePlaneHeight: number;
   }
 
   /**
    * Draw基类
    */
   declare class Draw {
-    constructor()
+    constructor();
     /**
      * 绑定相关事件
      */
-    bindEvent(): void
+    bindEvent(): void;
     /**
      * 解除相关事件
      */
-    unbindEvent(): void
+    unbindEvent(): void;
     /**
      * 创建节点
      * @param position - 位置
      * @param [isCenter = false] - 是否是中心点
      */
-    createAnchor(position: Cesium.Cartesian3, isCenter?: boolean): Cesium.Entity
+    createAnchor(
+      position: Cesium.Cartesian3,
+      isCenter?: boolean
+    ): Cesium.Entity;
     /**
      * 开始绘制
      * @param plot - 标绘工厂
      */
-    start(plot: Plot): void
+    start(plot: Plot): void;
     /**
      * 结束编辑 子类实现
      */
-    cancelDraw(): void
+    cancelDraw(): void;
   }
 
   /**
@@ -5407,80 +5589,86 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
     /**
      * 单击完成绘制
      */
-    point = '\u5355\u51FB\u5B8C\u6210\u7ED8\u5236<br/>\u53F3\u51FB\u53D6\u6D88',
+    point = "\u5355\u51FB\u5B8C\u6210\u7ED8\u5236<br/>\u53F3\u51FB\u53D6\u6D88",
     /**
      * 单击添加点
      */
-    pointAdd = '\u5355\u51FB\u6DFB\u52A0\u70B9',
+    pointAdd = "\u5355\u51FB\u6DFB\u52A0\u70B9",
     /**
      * 单击开始绘制,右键取消
      */
-    poly = '\u5355\u51FB\u5F00\u59CB\u7ED8\u5236,\u53F3\u952E\u53D6\u6D88',
+    poly = "\u5355\u51FB\u5F00\u59CB\u7ED8\u5236,\u53F3\u952E\u53D6\u6D88",
     /**
      * 单击增加点<br/>双击完成绘制
      */
-    end = '\u5355\u51FB\u589E\u52A0\u70B9<br/>\u53CC\u51FB\u5B8C\u6210\u7ED8\u5236',
+    end = "\u5355\u51FB\u589E\u52A0\u70B9<br/>\u53CC\u51FB\u5B8C\u6210\u7ED8\u5236",
     /**
      * 双击完成绘制
      */
-    dbend = '\u53CC\u51FB\u5B8C\u6210\u7ED8\u5236',
+    dbend = "\u53CC\u51FB\u5B8C\u6210\u7ED8\u5236",
     /**
      * 按下拖动修改位置
      */
-    drag = '\u6309\u4E0B\u62D6\u52A8\u4FEE\u6539\u4F4D\u7F6E',
+    drag = "\u6309\u4E0B\u62D6\u52A8\u4FEE\u6539\u4F4D\u7F6E",
     /**
      * 按下拖动修改位置,右击删除节点
      */
-    dragAnchor = '\u6309\u4E0B\u62D6\u52A8\u4FEE\u6539\u4F4D\u7F6E,\u53F3\u51FB\u5220\u9664\u8282\u70B9',
+    dragAnchor = "\u6309\u4E0B\u62D6\u52A8\u4FEE\u6539\u4F4D\u7F6E,\u53F3\u51FB\u5220\u9664\u8282\u70B9",
     /**
      * 按下拖动增加节点
      */
-    dragMidAnchor = '\u6309\u4E0B\u62D6\u52A8\u589E\u52A0\u8282\u70B9',
+    dragMidAnchor = "\u6309\u4E0B\u62D6\u52A8\u589E\u52A0\u8282\u70B9",
     /**
      * 释放后 完成修改
      */
-    endDrag = '\u91CA\u653E\u540E\u5B8C\u6210\u4FEE\u6539',
+    endDrag = "\u91CA\u653E\u540E\u5B8C\u6210\u4FEE\u6539",
     /**
      * 右击结束编辑
      */
-    rClickEnd = '\u53F3\u51FB\u7ED3\u675F\u7F16\u8F91'
+    rClickEnd = "\u53F3\u51FB\u7ED3\u675F\u7F16\u8F91",
   }
 
   /**
    * Edit基类
    */
   declare class Edit {
-    constructor()
+    constructor();
     /**
      * 绑定相关事件
      */
-    bindEvent(): void
+    bindEvent(): void;
     /**
      * 解除相关事件
      */
-    unbindEvent(): void
+    unbindEvent(): void;
     /**
      * 创建节点
      * @param position - 位置
      * @param [isCenter = false] - 是否是中心点
      */
-    createAnchor(position: Cesium.Cartesian3, isCenter?: boolean): Cesium.Entity
+    createAnchor(
+      position: Cesium.Cartesian3,
+      isCenter?: boolean
+    ): Cesium.Entity;
     /**
      * 计算中点
      * @param p1 - 第一点
      * @param p2 - 第二点
      * @returns 中点
      */
-    computeMidPosition(p1: Cesium.Cartesian3, p2: Cesium.Cartesian3): Cesium.Cartesian3
+    computeMidPosition(
+      p1: Cesium.Cartesian3,
+      p2: Cesium.Cartesian3
+    ): Cesium.Cartesian3;
     /**
      * 开始编辑
      * @param plot - 标绘工厂
      */
-    start(plot: Plot): void
+    start(plot: Plot): void;
     /**
      * 停止编辑
      */
-    stopEdit(): void
+    stopEdit(): void;
   }
 
   declare namespace Plot {
@@ -5491,10 +5679,10 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @property [continuousDraw = false] - 是否连续编辑。
      */
     type Options = {
-      graphicLayer?: GraphicLayer
-      enableEdit?: boolean
-      continuousDraw?: boolean
-    }
+      graphicLayer?: GraphicLayer;
+      enableEdit?: boolean;
+      continuousDraw?: boolean;
+    };
   }
 
   /**
@@ -5502,39 +5690,39 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
    * @param viewer - 地图
    */
   declare class Plot {
-    constructor(viewer: Viewer, options: Plot.Options)
+    constructor(viewer: Viewer, options: Plot.Options);
     /**
      * 视图
      */
-    readonly viewer: any
+    readonly viewer: any;
     /**
      * 默认参数
      */
-    readonly options: any
+    readonly options: any;
     /**
      * 标绘回调事件
      */
-    readonly plotEvent: Cesium.Event
+    readonly plotEvent: Cesium.Event;
     /**
      * 标绘图层
      */
-    readonly graphicLayer: GraphicLayer
+    readonly graphicLayer: GraphicLayer;
     /**
      * 临时图层,绘制过程的节点
      */
-    readonly anchorLayer: Cesium.CustomDataSource
+    readonly anchorLayer: Cesium.CustomDataSource;
     /**
      * 当前状态
      */
-    readonly state: any
+    readonly state: any;
     /**
      * 是否开启编辑
      */
-    enableEdit: boolean
+    enableEdit: boolean;
     /**
      * 是否连续绘制
      */
-    continuousDraw: boolean
+    continuousDraw: boolean;
     /**
      * 绘制矢量要素
      * @param type - 类型
@@ -5545,25 +5733,25 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
       type: GraphicType,
       callback: (...params: any[]) => any,
       style: Cesium.Graphics.ConstructorOptions
-    ): void
+    ): void;
     /**
      * 编辑矢量要素
      * @param graphic - 编辑要素
      * @param callback - 回调函数
      */
-    edit(graphic: Graphic, callback: (...params: any[]) => any): void
+    edit(graphic: Graphic, callback: (...params: any[]) => any): void;
     /**
      * 结束绘制和编辑状态
      */
-    endState(): void
+    endState(): void;
     /**
      * 清除绘制结果
      */
-    clear(): void
+    clear(): void;
     /**
      * 销废绘制对象
      */
-    destroy(): void
+    destroy(): void;
     /**
      * Subscribe event
      * @param type - 事件类型
@@ -5571,7 +5759,11 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @param context - 上下文
      * @returns this
      */
-    on(type: PlotEventType, callback: (...params: any[]) => any, context: any): Plot
+    on(
+      type: PlotEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Plot;
     /**
      * Unsubscribe event
      * @param type - 事件类型
@@ -5579,14 +5771,18 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @param context - 上下文
      * @returns this
      */
-    off(type: PlotEventType, callback: (...params: any[]) => any, context: any): Plot
+    off(
+      type: PlotEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Plot;
     /**
      * Trigger subscription event
      * @param type - 事件类型
      * @param params - 参数
      * @returns this
      */
-    fire(type: PlotEventType, params: any): Plot
+    fire(type: PlotEventType, params: any): Plot;
   }
 
   /**
@@ -5596,43 +5792,43 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
     /**
      * 初始化完成
      */
-    INITIALIZED = 'initialized',
+    INITIALIZED = "initialized",
     /**
      * 已添加
      */
-    ADDED = 'added',
+    ADDED = "added",
     /**
      * 已移除
      */
-    REMOVED = 'removed',
+    REMOVED = "removed",
     /**
      * 已清除
      */
-    CLEARED = 'cleared',
+    CLEARED = "cleared",
     /**
      * 注册完成
      */
-    INSTALLED = 'installed',
+    INSTALLED = "installed",
     /**
      * 可使用
      */
-    ENABLED = 'enabled',
+    ENABLED = "enabled",
     /**
      * 不可使用
      */
-    DISABLED = 'disabled',
+    DISABLED = "disabled",
     /**
      * 开始
      */
-    PLAY = 'play',
+    PLAY = "play",
     /**
      * 暂停
      */
-    PAUSE = 'pause',
+    PAUSE = "pause",
     /**
      * 恢复
      */
-    RESTORE = 'restore'
+    RESTORE = "restore",
   }
 
   /**
@@ -5642,41 +5838,47 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
     /**
      * Create ellipsoid terrain
      */
-    static createEllipsoidTerrain(options: any): Promise<EllipsoidTerrainProvider>
+    static createEllipsoidTerrain(
+      options: any
+    ): Promise<EllipsoidTerrainProvider>;
     /**
      * Create url terrain
      */
-    static createUrlTerrain(options: any): Promise<CesiumTerrainProvider>
+    static createUrlTerrain(options: any): Promise<CesiumTerrainProvider>;
     /**
      * Create google terrain
      */
-    static createGoogleTerrain(options: any): Promise<GoogleEarthEnterpriseTerrainProvider>
+    static createGoogleTerrain(
+      options: any
+    ): Promise<GoogleEarthEnterpriseTerrainProvider>;
     /**
      * Create arcgis terrain
      */
-    static createArcgisTerrain(options: any): Promise<ArcGISTiledElevationTerrainProvider>
+    static createArcgisTerrain(
+      options: any
+    ): Promise<ArcGISTiledElevationTerrainProvider>;
     /**
      * Create vr terrain
      */
-    static createVRTerrain(options: any): Promise<VRTheWorldTerrainProvider>
+    static createVRTerrain(options: any): Promise<VRTheWorldTerrainProvider>;
     /**
      * 创建地形服务
      */
     static createTerrain(
       type: TerrainType,
       options: Cesium.TerrainProvider.options
-    ): Promise<TerrainProvider>
+    ): Promise<TerrainProvider>;
   }
 
   /**
    * 地形类型
    */
   declare enum TerrainType {
-    NONE = 'none',
-    XYZ = 'xyz',
-    ARCGIS = 'arcgis',
-    GOOGLE = 'google',
-    VR = 'vr'
+    NONE = "none",
+    XYZ = "xyz",
+    ARCGIS = "arcgis",
+    GOOGLE = "google",
+    VR = "vr",
   }
 
   /**
@@ -5689,46 +5891,46 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @param lat - 纬度
      * @returns [经度,纬度]
      */
-    static BD09ToGCJ02(lng: number, lat: number): any[]
+    static BD09ToGCJ02(lng: number, lat: number): any[];
     /**
      * GCJ-02 To BD-09
      * @param lng - 经度
      * @param lat - 纬度
      * @returns [经度,纬度]
      */
-    static GCJ02ToBD09(lng: number, lat: number): any[]
+    static GCJ02ToBD09(lng: number, lat: number): any[];
     /**
      * WGS-84 To GCJ-02
      * @param lng - 经度
      * @param lat - 纬度
      * @returns [经度,纬度]
      */
-    static WGS84ToGCJ02(lng: number, lat: number): any[]
+    static WGS84ToGCJ02(lng: number, lat: number): any[];
     /**
      * GCJ-02 To WGS-84
      * @param lng - 经度
      * @param lat - 纬度
      * @returns [经度,纬度]
      */
-    static GCJ02ToWGS84(lng: number, lat: number): any[]
+    static GCJ02ToWGS84(lng: number, lat: number): any[];
     /**
      * 是否在国内
      * @param lng - 经度
      * @param lng - 纬度
      */
-    static out_of_china(lng: number, lng: number): boolean
+    static out_of_china(lng: number, lng: number): boolean;
     /**
      * 经纬度转墨卡托
      * @param lnglat - [lng,lat]   转换前经纬度坐标的对象
      * @returns [x,y]
      */
-    static lnglatToMercator(lnglat: any[]): any[]
+    static lnglatToMercator(lnglat: any[]): any[];
     /**
      * 墨卡托转经纬度
      * @param mercator - [x,y] 转换前墨卡托坐标的对象
      * @returns [lng,lat]
      */
-    static mercatorTolnglat(mercator: any[]): any[]
+    static mercatorTolnglat(mercator: any[]): any[];
   }
 
   /**
@@ -5740,28 +5942,34 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @param cartesian - 世界坐标
      * @returns 系统自定义坐标
      */
-    static transformCartesianToWGS84(cartesian: Cesium.Cartesian3): Position
+    static transformCartesianToWGS84(cartesian: Cesium.Cartesian3): Position;
     /**
      * Transforms Cartographic To WGS84
      * @param cartographic - cartographic坐标
      * @returns 系统自定义坐标
      */
-    static transformCartographicToWGS84(cartographic: Cesium.Cartographic): Position
+    static transformCartographicToWGS84(
+      cartographic: Cesium.Cartographic
+    ): Position;
     /**
      * Transforms WGS84 To Cartesian
      * @param position - 系统自定义坐标
      */
-    static transformWGS84ToCartesian(position: Position): Cesium.Cartographic
+    static transformWGS84ToCartesian(position: Position): Cesium.Cartographic;
     /**
      * Transforms Cartesian To Cartesian
      * @param position - 系统自定义坐标
      */
-    static transformCartesianToCartesian(position: Cartesian3): Cesium.Cartographic
+    static transformCartesianToCartesian(
+      position: Cartesian3
+    ): Cesium.Cartographic;
     /**
      * Transforms WGS84 To Cartographic
      * @param position - 系统自定义坐标
      */
-    static transformWGS84ToCartographic(position: Position): Cesium.Cartographic
+    static transformWGS84ToCartographic(
+      position: Position
+    ): Cesium.Cartographic;
     /**
      * Transforms Cartographic Array To WGS84 Array
      * @param cartographicArr - cartographic坐标
@@ -5769,87 +5977,99 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      */
     static transformCartographicArrayToWGS84Array(
       cartographicArr: Cesium.Cartographic[]
-    ): Position[]
+    ): Position[];
     /**
      * Transforms Cartesian Array To WGS84 Array
      * @param cartesianArr - cartesian数组
      */
-    static transformCartesianArrayToWGS84Array(cartesianArr: Cesium.Cartesian3[]): Position[]
+    static transformCartesianArrayToWGS84Array(
+      cartesianArr: Cesium.Cartesian3[]
+    ): Position[];
     /**
      * Transforms WGS84 Array To Cartesian Array
      * @param WGS84Arr - WGS84数组
      */
-    static transformWGS84ArrayToCartesianArray(WGS84Arr: Position[]): Cesium.Cartesian3[]
+    static transformWGS84ArrayToCartesianArray(
+      WGS84Arr: Position[]
+    ): Cesium.Cartesian3[];
     /**
      * Transforms WGS84 Array To Cartographic Array
      * @param WGS84Arr - WGS84数组
      */
-    static transformWGS84ArrayToCartographicArray(WGS84Arr: Position[]): Cesium.Cartographic[]
+    static transformWGS84ArrayToCartographicArray(
+      WGS84Arr: Position[]
+    ): Cesium.Cartographic[];
     /**
      * Transforms WGS84 To Mercator
      * @param position - 系统自定义坐标
      */
-    static transformWGS84ToMercator(position: Position): Position
+    static transformWGS84ToMercator(position: Position): Position;
     /**
      * Transforms Mercator To WGS84
      * @param position - 系统自定义坐标
      */
-    static transformMercatorToWGS84(position: Position): Position
+    static transformMercatorToWGS84(position: Position): Position;
     /**
      * Transforms Window To WGS84
      * @param position - 系统自定义坐标
      * @param viewer - 视图
      */
-    static transformWindowToWGS84(position: Position, viewer: Viewer): Position
+    static transformWindowToWGS84(position: Position, viewer: Viewer): Position;
     /**
      * Transforms WGS84 To Window
      * @param position - 系统自定义坐标
      * @param viewer - 视图
      */
-    static transformWGS84ToWindow(position: Position, viewer: Viewer): Cesium.Cartesian2
+    static transformWGS84ToWindow(
+      position: Position,
+      viewer: Viewer
+    ): Cesium.Cartesian2;
   }
 
   /**
    * Math functions.
    */
-  declare module 'Math' {
+  declare module "Math" {
     /**
      * 计算三角形面积
      * @param positions - 点坐标集合
      * @returns 面积
      */
-    function triangleArea(positions: Position[]): number
+    function triangleArea(positions: Position[]): number;
     /**
      * 计算距离
      * @param positions - 点坐标集合
      * @returns 距离
      */
-    function distance(positions: Position[]): number
+    function distance(positions: Position[]): number;
     /**
      * 计算外包中心点
      * @param positions - 点坐标集合
      * @returns 中心点
      */
-    function center(positions: Position[]): Position
+    function center(positions: Position[]): Position;
     /**
      * 计算两点中点
      * @param start - 经纬度坐标
      * @param end - 经纬度坐标
      * @returns 中点
      */
-    function mid(start: string | String[] | any[][], end: string | String[] | any[][]): Position
+    function mid(
+      start: string | String[] | any[][],
+      end: string | String[] | any[][]
+    ): Position;
     /**
      * 计算面积
      * @param positions - 点坐标集合
      * @returns 面积
      */
-    function area(positions: Position[]): number
+    function area(positions: Position[]): number;
     /**
      * 计算外包
      * @param positions - 点坐标集合
      * @param expand - 外围扩充系数
      */
-    function bounds(positions: Position[], expand: number): any
+    function bounds(positions: Position[], expand: number): any;
     /**
      * Some of the code borrows from MAPV
      * https://github.com/huiyan-fe/mapv/blob/3292c7c25dbbf29af3cf7b3acb48108d60b3eed8/src/utils/curve.js
@@ -5858,31 +6078,35 @@ KmlDataSource,用于将相同类或业务属性的实体放入同一集合
      * @param [count = 40] - 两点之间插值数量
      * @returns [[x,y],[x,y],[x,y]，[x,y]...]
      */
-    function curve(points: Position[], count?: number): any[]
+    function curve(points: Position[], count?: number): any[];
     /**
      * Get a curvilinear coordinate set of points based on two points
      */
-    function getCurveByTwoPoints(point1: Position, point2: Position, count: number): any[]
+    function getCurveByTwoPoints(
+      point1: Position,
+      point2: Position,
+      count: number
+    ): any[];
   }
 
   /**
    * 样式转换
    */
   declare class StyleConvert {
-    constructor()
+    constructor();
     /**
      * 转换Cesium样式为Geojson
      * @param style - 样式
      * @returns 样式
      */
-    static toJSON(style: any): any
+    static toJSON(style: any): any;
     /**
      * 转换Geojson样式为Cesium样式
      * @param style - 样式
      * @param isPrimitive - 是否是Primitive
      * @returns 样式
      */
-    static toCesiumValue(style: any, isPrimitive: boolean): any
+    static toCesiumValue(style: any, isPrimitive: boolean): any;
   }
 
   /**
@@ -5896,60 +6120,64 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      if it was passed directly.
      * @param id - id
      */
-    static get(id: string): HTMLElement | any
+    static get(id: string): HTMLElement | any;
     /**
      * Returns the value for a certain style attribute on an element,
     including computed values or values set through CSS.
      * @param el - html 元素
      * @param style - eg：left
      */
-    static getStyle(el: HTMLElement, style: string): null | any
+    static getStyle(el: HTMLElement, style: string): null | any;
     /**
      * Creates an HTML element with `tagName`, sets its class to `className`, and optionally appends it to `container` element.
      * @param tagName - 元素类型
      * @param className - calss名称
      * @param container - 上级容器
      */
-    static create(tagName: HTMLElement, className: string, container: HTMLDocument): HTMLElement
+    static create(
+      tagName: HTMLElement,
+      className: string,
+      container: HTMLDocument
+    ): HTMLElement;
     /**
      * Removes `el` from its parent element
      * @param el - 元素
      */
-    static remove(el: HTMLElement): void
+    static remove(el: HTMLElement): void;
     /**
      * Removes all of `el`'s children elements from `el`
      * @param el - 元素
      */
-    static empty(el: HTMLElement): void
+    static empty(el: HTMLElement): void;
     /**
      * Returns `true` if the element's class attribute contains `name`.
      * @param el - 元素
      * @param name - class名称
      */
-    static hasClass(el: HTMLElement, name: string): void
+    static hasClass(el: HTMLElement, name: string): void;
     /**
      * add `name` to the element's class attribute.
      * @param el - 元素
      * @param name - class名称
      */
-    static addClass(el: HTMLElement, name: string): void
+    static addClass(el: HTMLElement, name: string): void;
     /**
      * remove`name` from the element's class attribute.
      * @param el - 元素
      * @param name - class名称
      */
-    static removeClass(el: HTMLElement, name: string): void
+    static removeClass(el: HTMLElement, name: string): void;
     /**
      * Sets the element's class.
      * @param el - 元素
      * @param name - class名称
      */
-    static setClass(el: HTMLElement, name: string): void
+    static setClass(el: HTMLElement, name: string): void;
     /**
      * Returns the element's class.
      * @param el - 元素
      */
-    static getClass(el: HTMLElement): void
+    static getClass(el: HTMLElement): void;
     /**
      * Creates svg
      * @param width - svg宽
@@ -5962,7 +6190,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
       height: number,
       path: string,
       container: HTMLElement
-    ): SVGElement
+    ): SVGElement;
     /**
      * Parses string to Dom
      * @param domStr - domString
@@ -5973,22 +6201,26 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
       domStr: string,
       withWrapper: HTMLElement,
       className: string
-    ): HTMLDivElement | NodeListOf<ChildNode>
+    ): HTMLDivElement | NodeListOf<ChildNode>;
     /**
      * enter full screen
      * @param el - 元素
      */
-    static enterFullscreen(el: HTMLElement): void
+    static enterFullscreen(el: HTMLElement): void;
     /**
      * exit full screen
      */
-    static exitFullscreen(): void
+    static exitFullscreen(): void;
     /**
      * Creates video
      * @param className - 类名
      * @param [container = null] - 父容器
      */
-    static createVideo(url: URL, className: string, container?: HTMLElement): HTMLElement
+    static createVideo(
+      url: URL,
+      className: string,
+      container?: HTMLElement
+    ): HTMLElement;
   }
 
   /**
@@ -5999,18 +6231,18 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * GeoJSON格式的Feature单个对象转为 Graphic构造参数（用于创建BaseGraphic）
      * @param feature - geojson单个Feature对象
      */
-    static featureToGraphic(feature: any): Graphic
+    static featureToGraphic(feature: any): Graphic;
     /**
      * GeoJSON 转为 Graphic
      * @param geojson - geojson对象
      */
-    static geoJsonToGraphics(geojson: any): Graphic[]
+    static geoJsonToGraphics(geojson: any): Graphic[];
     /**
      * 根据类型和参数 创建Graphic工厂方法
      * @param type - 数据类型
      * @param options - 构造参数，按type支持GraphicType类的构造方法参数
      */
-    static create(type: string, options: any): Graphic
+    static create(type: string, options: any): Graphic;
   }
 
   /**
@@ -6022,31 +6254,34 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param type - 数据类型
      * @param options - 构造参数，按type支持Material类的构造方法参数
      */
-    static createMaterialProperty(type: string, options: any): Cesium.MaterialProperty
+    static createMaterialProperty(
+      type: string,
+      options: any
+    ): Cesium.MaterialProperty;
     /**
      * 创建 材质属性（用于Entity）
      * @param type - 数据类型
      * @param options - 构造参数，按type支持Material类的构造方法参数
      */
-    static createMaterial(type: string, options: any): Cesium.Material
+    static createMaterial(type: string, options: any): Cesium.Material;
     /**
      * 将材质对象转为Json简单对象，用于保存。
      * @param material - 材质对象
      * @returns json对象
      */
-    static toJSON(material: any): any
+    static toJSON(material: any): any;
     /**
      * 将Json简单对象转为材质对象，用于渲染。
      * @param material - Json简单对象
      * @param isPrimitive - 是否是Primitive
      */
-    static toCesiumValue(material: any, isPrimitive: boolean): MaterialProperty
+    static toCesiumValue(material: any, isPrimitive: boolean): MaterialProperty;
     /**
      * 将Json简单对象转为Cesium对象，用于渲染。
      * @param material - Json简单对象
      * @returns 对象值为Cesium 格式，主要涉及颜色、Cartesian2、Cartesian3
      */
-    static convertJsonToCesiumObject(material: any): any
+    static convertJsonToCesiumObject(material: any): any;
   }
 
   /**
@@ -6058,18 +6293,23 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param position - 支持 string or Array or Position
      * @returns 坐标
      */
-    static parsePosition(position: string | any[] | Position | Cesium.Cartesian3): Position
+    static parsePosition(
+      position: string | any[] | Position | Cesium.Cartesian3
+    ): Position;
     /**
      * Parses all kinds of coordinates array to position array
      */
-    static parsePositions(positions: string | String[] | any[][]): Position[]
+    static parsePositions(positions: string | String[] | any[][]): Position[];
     /**
      * Parses point position to array
      * @param position - 支持 string or Array or Position
      * @param [noAlt = false] - 是否需要高程数据
      * @returns [lng, Lat]
      */
-    static parsePointCoordToArray(position: string | any[] | Position, noAlt?: boolean): any[]
+    static parsePointCoordToArray(
+      position: string | any[] | Position,
+      noAlt?: boolean
+    ): any[];
     /**
      * Parses polyline positions to array
      * @param [noAlt = false] - 是否需要高程数据
@@ -6077,7 +6317,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     static parsePolylineCoordToArray(
       positions: string | String[] | any[][],
       noAlt?: boolean
-    ): any[][]
+    ): any[][];
     /**
      * Parses polygon positions to array
      * @param [noAlt = false] - 是否需要高程数据
@@ -6085,7 +6325,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     static parsePolygonCoordToArray(
       positions: string | String[] | any[][],
       noAlt?: boolean
-    ): any[][]
+    ): any[][];
   }
 
   /**
@@ -6098,55 +6338,78 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param pnt2 - [x,y]
      * @returns 直线距离
      */
-    static distance(pnt1: number[], pnt2: number[]): number
+    static distance(pnt1: number[], pnt2: number[]): number;
     /**
      * 线段距离
      * @param points - [[x,y],[x,y]]
      */
-    static wholeDistance(points: number[]): number
+    static wholeDistance(points: number[]): number;
     /**
      * @param points - [[x,y],[x,y]]
      */
-    static getBaseLength(points: number[]): number
+    static getBaseLength(points: number[]): number;
     /**
      * 两点中点
      * @param pnt1 - [x,y]
      * @param pnt2 - [x,y]
      * @returns [x,y]
      */
-    static mid(pnt1: number[], pnt2: number[]): number[]
-    static getCircleCenterOfThreePoints(pnt1: number[], pnt2: number[], pnt3: number[]): any[]
+    static mid(pnt1: number[], pnt2: number[]): number[];
+    static getCircleCenterOfThreePoints(
+      pnt1: number[],
+      pnt2: number[],
+      pnt3: number[]
+    ): any[];
     /**
      * 求线段交点
      */
-    static getIntersectPoint(pntA: number[], pntB: number[], pntC: number[], pntD: number[]): any[]
+    static getIntersectPoint(
+      pntA: number[],
+      pntB: number[],
+      pntC: number[],
+      pntD: number[]
+    ): any[];
     /**
      * 计算两点方位角
      * @param startPnt - 坐标弧度值
      * @param endPnt - 坐标弧度值
      * @returns 弧度值
      */
-    static getAzimuth(startPnt: number[], endPnt: number[]): number
+    static getAzimuth(startPnt: number[], endPnt: number[]): number;
     /**
      * 计算两点方位角
      * @param startPnt - 坐标弧度值
      * @param endPnt - 坐标弧度值
      * @returns 角度值
      */
-    static getAzimuthDegree(startPnt: number[], endPnt: number[]): number
+    static getAzimuthDegree(startPnt: number[], endPnt: number[]): number;
     /**
      * 求 三点夹角
      */
-    static getAngleOfThreePoints(pntA: number[], pntB: number[], pntC: number[]): number
+    static getAngleOfThreePoints(
+      pntA: number[],
+      pntB: number[],
+      pntC: number[]
+    ): number;
     /**
      * 是否是顺时针
      */
-    static isClockWise(pnt1: number[], pnt2: number[], pnt3: number[]): boolean
+    static isClockWise(pnt1: number[], pnt2: number[], pnt3: number[]): boolean;
     /**
      * 求线上点
      */
-    static getPointOnLine(t: number, startPnt: number[], endPnt: number[]): any[]
-    static getCubicValue(t: any, startPnt: any, cPnt1: any, cPnt2: any, endPnt: any): any[]
+    static getPointOnLine(
+      t: number,
+      startPnt: number[],
+      endPnt: number[]
+    ): any[];
+    static getCubicValue(
+      t: any,
+      startPnt: any,
+      cPnt1: any,
+      cPnt2: any,
+      endPnt: any
+    ): any[];
     /**
      * 已知两点，旋转角度，距离，求第三点
      */
@@ -6156,29 +6419,34 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
       angle: any,
       distance: any,
       clockWise: any
-    ): any[]
-    static getArcPoints(center: any, radius: any, startAngle: any, endAngle: any): Number[]
-    static getBisectorNormals(t: any, pnt1: any, pnt2: any, pnt3: any): any[][]
-    static getNormal(pnt1: any, pnt2: any, pnt3: any): any[]
+    ): any[];
+    static getArcPoints(
+      center: any,
+      radius: any,
+      startAngle: any,
+      endAngle: any
+    ): Number[];
+    static getBisectorNormals(t: any, pnt1: any, pnt2: any, pnt3: any): any[][];
+    static getNormal(pnt1: any, pnt2: any, pnt3: any): any[];
     /**
      * 求曲线上的点
      */
-    static getCurvePoints(t: any, controlPoints: any): any[]
-    static getLeftMostControlPoint(t: any, controlPoints: any): any[]
-    static getRightMostControlPoint(t: any, controlPoints: any): number[]
+    static getCurvePoints(t: any, controlPoints: any): any[];
+    static getLeftMostControlPoint(t: any, controlPoints: any): any[];
+    static getRightMostControlPoint(t: any, controlPoints: any): number[];
     /**
      * 获取贝塞尔曲线点
      * @param points - [[x,y],[x,y]]
      */
-    static getBezierPoints(points: any[][]): any[][]
-    static getBinomialFactor(n: any, index: any): number
-    static getFactorial(n: any): number
+    static getBezierPoints(points: any[][]): any[][];
+    static getBinomialFactor(n: any, index: any): number;
+    static getFactorial(n: any): number;
     /**
      * 获取B样条曲线坐标集合
      * @param points - [[x,y],[x,y]]
      */
-    static getQBSplinePoints(points: any[][]): any[][]
-    static getQuadricBSplineFactor(k: any, t: any): number
+    static getQBSplinePoints(points: any[][]): any[][];
+    static getQuadricBSplineFactor(k: any, t: any): number;
   }
 
   /**
@@ -6196,14 +6464,17 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
       position: Position,
       angle: number,
       radius: number
-    ): Position
+    ): Position;
     /**
      * 计算两点之间的航向角
      * @param start - A点
      * @param end - B点
      * @returns 航向角
      */
-    static calculateHeadingForLine(start: Cesium.Cartesian3, end: Cesium.Cartesian3): number
+    static calculateHeadingForLine(
+      start: Cesium.Cartesian3,
+      end: Cesium.Cartesian3
+    ): number;
     /**
      * 获取坐标的贴地形坐标
      * @param scene - 三维地图场景对象，一般用map.scene或viewer.scene
@@ -6213,7 +6484,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     static getSurfaceTerrainPositions(
       scene: Cesium.Scene,
       positions: Position[]
-    ): Promise<Position[]>
+    ): Promise<Position[]>;
     /**
      * 计算 贴地(或贴模型)高度 坐标 （非精确计算，根据当前加载的地形和模型数据情况有关）
      * @param scene - 三维地图场景对象，一般用map.scene或viewer.scene
@@ -6227,10 +6498,10 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
       scene: Cesium.Scene,
       positions: Position[],
       options?: {
-        async?: boolean
-        objectsToExclude?: object[]
+        async?: boolean;
+        objectsToExclude?: object[];
       }
-    ): Promise<Position[]>
+    ): Promise<Position[]>;
     /**
      * 点集设置统计高度
      * @param positions - 点集
@@ -6242,7 +6513,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
       positions: Position[] | Cesium.Cartesian3[],
       alt: number,
       isAbsolute?: boolean
-    ): Position[] | Cesium.Cartesian3[]
+    ): Position[] | Cesium.Cartesian3[];
   }
 
   /**
@@ -6262,14 +6533,14 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @returns 无
      */
     static computeStepSurfaceLine(options?: {
-      scene: Cesium.Scene
-      positions: Cesium.Cartesian3[]
-      splitNum?: number
-      has3dtiles?: boolean
-      objectsToExclude?: object[]
-      offset?: number
-      callback: (...params: any[]) => any
-    }): any
+      scene: Cesium.Scene;
+      positions: Cesium.Cartesian3[];
+      splitNum?: number;
+      has3dtiles?: boolean;
+      objectsToExclude?: object[];
+      offset?: number;
+      callback: (...params: any[]) => any;
+    }): any;
     /**
      * 求路线的贴地线坐标（插值）
      * @param [options = {}] - 参数对象:
@@ -6283,14 +6554,14 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @returns 插值后的数据集合
      */
     static computeSurfaceLine(options?: {
-      viewer: Viewer
-      positions: Cesium.Cartesian3[]
-      splitNum?: number
-      async?: number
-      has3dtiles?: boolean
-      objectsToExclude?: object[]
-      offset?: number
-    }): Promise<Position[]>
+      viewer: Viewer;
+      positions: Cesium.Cartesian3[];
+      splitNum?: number;
+      async?: number;
+      has3dtiles?: boolean;
+      objectsToExclude?: object[];
+      offset?: number;
+    }): Promise<Position[]>;
     /**
      * 求点集的贴地坐标
      * @param [options = {}] - 参数对象:
@@ -6301,11 +6572,11 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @returns 贴地后的数据集合
      */
     static pointsClampToGround(options?: {
-      viewer: Viewer
-      positions: Position[]
-      offset?: number
-      async?: boolean
-    }): Promise<Position[]>
+      viewer: Viewer;
+      positions: Position[];
+      offset?: number;
+      async?: boolean;
+    }): Promise<Position[]>;
     /**
      * 求多边形内部插值后的点和生成的三角形
      * @param [options = {}] - 参数对象:
@@ -6315,16 +6586,16 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @returns 插值后的数据集合
      */
     static interPolygon(options?: {
-      positions: Position[]
-      splitNum?: number
-      isOnlyPoint?: boolean
-    }): any
+      positions: Position[];
+      splitNum?: number;
+      isOnlyPoint?: boolean;
+    }): any;
     /**
      * 根据 基准面高度 重新计算填挖方体积
      * @param resultInter - 插值完的对象
      * @param cutHeight - 基准面高度
      */
-    static updateVolume(resultInter: VolumeResult, cutHeight: number): void
+    static updateVolume(resultInter: VolumeResult, cutHeight: number): void;
     /**
      * 计算体积
      * @param options.viewer - 三维地图场景 viewer
@@ -6334,11 +6605,11 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @returns 面内进行贴地(或贴模型)插值, 返回三角网等计算结果
      */
     static computeVolume(options: {
-      viewer: Viewer
-      positions: Position[]
-      splitNum?: number
-      cutHeight?: number
-    }): Promise<VolumeResult>
+      viewer: Viewer;
+      positions: Position[];
+      splitNum?: number;
+      cutHeight?: number;
+    }): Promise<VolumeResult>;
   }
 
   /**
@@ -6352,14 +6623,14 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
    * @property totalArea - 贴地面积
    */
   declare type VolumeResult = {
-    minHeight: number
-    maxHeight: number
-    positions: Position[]
-    triangles: Number[]
-    digVolume: number
-    fillVolume: number
-    totalArea: number
-  }
+    minHeight: number;
+    maxHeight: number;
+    positions: Position[];
+    triangles: Number[];
+    digVolume: number;
+    fillVolume: number;
+    totalArea: number;
+  };
 
   /**
    * 系统自定义Position类
@@ -6371,80 +6642,87 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
    * @param roll - 旋转角
    */
   declare class Position {
-    constructor(lng: number, lat: number, alt: number, heading: number, pitch: number, roll: number)
+    constructor(
+      lng: number,
+      lat: number,
+      alt: number,
+      heading: number,
+      pitch: number,
+      roll: number
+    );
     /**
      * 经度
      */
-    lng: number
+    lng: number;
     /**
      * 纬度
      */
-    lat: number
+    lat: number;
     /**
      * 高度
      */
-    alt: number
+    alt: number;
     /**
      * 航向角
      */
-    heading: number
+    heading: number;
     /**
      * 旋转角
      */
-    pitch: number
+    pitch: number;
     /**
      * 翻滚角
      */
-    roll: number
+    roll: number;
     /**
      * 序列化为字符串格式
      */
-    serialize(): string
+    serialize(): string;
     /**
      * Calculate the distance between two positions
      * @param target - 目标点
      * @returns 距离
      */
-    distance(target: Position): number
+    distance(target: Position): number;
     /**
      * 复制点
      * @returns 点
      */
-    copy(): Position
+    copy(): Position;
     /**
      * 判断是否两点是否坐标一致
      * @param position - 比较点
      * @returns 是否一致
      */
-    equal(position: Position): boolean
+    equal(position: Position): boolean;
     /**
      * 转为数组格式
      */
-    toArray(): any[]
+    toArray(): any[];
     /**
      * 以“，”分隔为字符串
      */
-    toString(): string
+    toString(): string;
     /**
      * 转为对象格式
      */
-    toObject(): any
+    toObject(): any;
     /**
      * 从数组格式生成
      */
-    static fromArray(arr: any[]): Position
+    static fromArray(arr: any[]): Position;
     /**
      * 从字符串格式生成
      */
-    static fromString(str: string): Position
+    static fromString(str: string): Position;
     /**
      * 从对象格式生成
      */
-    static fromObject(obj: any): Position
+    static fromObject(obj: any): Position;
     /**
      * Deserialize
      */
-    static deserialize(valStr: string): Position
+    static deserialize(valStr: string): Position;
   }
 
   /**
@@ -6455,57 +6733,57 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     /**
      * Generates uuid
      */
-    static uuid(prefix?: any): string
+    static uuid(prefix?: any): string;
     /**
      * Merges the properties of the `src` object (or multiple objects) into `dest` object and returns the latter.
      */
-    static merge(dest: any, ...sources: any[]): any
+    static merge(dest: any, ...sources: any[]): any;
     /**
      * splitWords(str: String): String[]
      * Trims and splits the string on whitespace and returns the array of parts.
      */
-    static splitWords(str: any): void
+    static splitWords(str: any): void;
     /**
      * setOptions(obj: Object, options: Object): Object
      * Merges the given properties to the `options` of the `obj` object, returning the resulting options. See `Class options`.
      */
-    static setOptions(obj: any, options: any): void
+    static setOptions(obj: any, options: any): void;
     /**
      * formatNum(num: Number, digits?: Number): Number
      *  Returns the number `num` rounded to `digits` decimals, or to 6 decimals by default.
      */
-    static formatNum(num: any, digits: any): number
+    static formatNum(num: any, digits: any): number;
     /**
      * trim(str: String): String
      * Compatibility polyfill for [String.prototype.trim](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
      */
-    static trim(str: any): void
+    static trim(str: any): void;
     /**
      * Data URI string containing a base64-encoded empty GIF image.
      * Used as a hack to free memory from unused images on WebKit-powered
      * mobile devices (by setting image `src` to this string).
      */
-    static emptyImageUrl(): string
+    static emptyImageUrl(): string;
     /**
      * checkPosition(position: Object): Boolean
      * Check position for validity
      */
-    static checkPosition(position: any): void
+    static checkPosition(position: any): void;
     /**
      * Creates a debounced function that delays invoking `fn` until after `delay`
      */
-    static debounce(fn: any, delay: any): (...params: any[]) => any
+    static debounce(fn: any, delay: any): (...params: any[]) => any;
     /**
      * Creates a throttled function that only invokes `fn` at most once per
      */
-    static throttle(fn: any, delay: any): (...params: any[]) => any
-    static dataURLtoBlob(dataUrl: any): Blob
+    static throttle(fn: any, delay: any): (...params: any[]) => any;
+    static dataURLtoBlob(dataUrl: any): Blob;
     /**
      * 判断对象是否为Object类型
      * @param obj - 对象
      * @returns 是否为Object类型
      */
-    static isObject(obj: any): boolean
+    static isObject(obj: any): boolean;
     /**
      * 按范围截图
      * @param positions - 坐标集合
@@ -6515,7 +6793,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     static clipRegion2Canvas(
       positions: Cesium.Cartesian3[],
       scene: Viewer.scene
-    ): Promise<HTMLCanvasElement>
+    ): Promise<HTMLCanvasElement>;
   }
 
   /**
@@ -6523,22 +6801,22 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
    * @param viewer - 视图
    */
   declare class CameraOption {
-    constructor(viewer: Viewer)
+    constructor(viewer: Viewer);
     /**
      * 设置相机pitch 范围
      * @param min - 最小pitch
      * @param max - 最大pitch
      */
-    setPitchRange(min: any, max: any): void
+    setPitchRange(min: any, max: any): void;
     /**
      * 限制相机视角到地面以下
      */
-    limitCameraToGround(): void
-    setBounds(west: any, south: any, east: any, north: any): void
+    limitCameraToGround(): void;
+    setBounds(west: any, south: any, east: any, north: any): void;
     /**
      * 切换鼠标操作模式
      */
-    changeMouseMode(mouseMode: any): void
+    changeMouseMode(mouseMode: any): void;
   }
 
   /**
@@ -6552,7 +6830,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     /**
      * 左键右键
      */
-    LEFT_RIGHT = 1
+    LEFT_RIGHT = 1,
   }
 
   declare namespace ViewerOption {
@@ -6579,39 +6857,39 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @property [cameraController.enableCollisionDetection = true] - 是否可以进入地下,默认不可进入
      */
     type options = {
-      shadows?: boolean
-      resolutionScale?: number
-      backgroundColor?: Cesium.Color
-      showAtmosphere?: boolean
-      showSun?: boolean
-      showMoon?: boolean
-      enableFxaa?: boolean
-      skyBox?: any | Cesium.SkyBox
+      shadows?: boolean;
+      resolutionScale?: number;
+      backgroundColor?: Cesium.Color;
+      showAtmosphere?: boolean;
+      showSun?: boolean;
+      showMoon?: boolean;
+      enableFxaa?: boolean;
+      skyBox?: any | Cesium.SkyBox;
       globe?: {
-        show?: boolean
-        showGroundAtmosphere?: boolean
-        depthTestAgainstTerrain?: boolean
-        tileCacheSize?: number
-        baseColor?: Cesium.Color
-        undergroundColor?: Cesium.Color
-      }
+        show?: boolean;
+        showGroundAtmosphere?: boolean;
+        depthTestAgainstTerrain?: boolean;
+        tileCacheSize?: number;
+        baseColor?: Cesium.Color;
+        undergroundColor?: Cesium.Color;
+      };
       translucency?: {
-        enabled?: boolean
-        backFaceAlpha?: number
-        backFaceAlphaByDistance?: Cesium.NearFarScalar
-        frontFaceAlpha?: number
-        frontFaceAlphaByDistance?: Cesium.NearFarScalar
-      }
+        enabled?: boolean;
+        backFaceAlpha?: number;
+        backFaceAlphaByDistance?: Cesium.NearFarScalar;
+        frontFaceAlpha?: number;
+        frontFaceAlphaByDistance?: Cesium.NearFarScalar;
+      };
       cameraController?: {
-        enableInputs?: boolean
-        enableRotate?: boolean
-        enableTilt?: boolean
-        enableTranslate?: boolean
-        enableCollisionDetection?: boolean
-        minimumZoomDistance?: number
-        maximumZoomDistance?: number
-      }
-    }
+        enableInputs?: boolean;
+        enableRotate?: boolean;
+        enableTilt?: boolean;
+        enableTranslate?: boolean;
+        enableCollisionDetection?: boolean;
+        minimumZoomDistance?: number;
+        maximumZoomDistance?: number;
+      };
+    };
   }
 
   /**
@@ -6619,13 +6897,13 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
    * @param viewer - 视图
    */
   declare class ViewerOption {
-    constructor(viewer: Viewer)
+    constructor(viewer: Viewer);
     /**
      * Sets options
      * @param options - 配置对象参数
      * @returns this
      */
-    setOptions(options: ViewerOption.options): ViewerOption
+    setOptions(options: ViewerOption.options): ViewerOption;
   }
 
   /**
@@ -6633,13 +6911,13 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
    * @param viewer - 视图
    */
   declare class WidgetOption {
-    constructor(viewer: Viewer)
+    constructor(viewer: Viewer);
     /**
      * setOptions
      * @param options - 配置项
      * @returns this
      */
-    setOptions(options: WidgetOption.Options): WidgetOption
+    setOptions(options: WidgetOption.Options): WidgetOption;
   }
 
   declare namespace WidgetOption {
@@ -6655,15 +6933,15 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @property [enableKeyboardRoaming = false] - 行走组件
      */
     type Options = {
-      enableCompass?: boolean
-      enableCompass2?: boolean
-      enableStateBar?: boolean
-      enableDistanceLegend?: boolean
-      enableImagerySwitch?: boolean
-      enableImagerySwitchTerrain?: boolean
-      enableZoomController?: boolean
-      enableKeyboardRoaming?: boolean
-    }
+      enableCompass?: boolean;
+      enableCompass2?: boolean;
+      enableStateBar?: boolean;
+      enableDistanceLegend?: boolean;
+      enableImagerySwitch?: boolean;
+      enableImagerySwitchTerrain?: boolean;
+      enableZoomController?: boolean;
+      enableKeyboardRoaming?: boolean;
+    };
   }
 
   /**
@@ -6672,207 +6950,212 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
    * @param options - Cesium.Viewer 配置项
    */
   declare class Viewer {
-    constructor(id: string | Cesium.Viewer, options: Cesium.Viewer.ConstructorOptions)
+    constructor(
+      id: string | Cesium.Viewer,
+      options: Cesium.Viewer.ConstructorOptions
+    );
     /**
      * 注册事件
      */
-    _mouseEvent: any
+    _mouseEvent: any;
     /**
      * Cesium.Viewer
      */
-    readonly delegate: Cesium.Viewer
+    readonly delegate: Cesium.Viewer;
     /**
      * Cesium.Viewer
      */
-    readonly viewer: Cesium.Viewer
+    readonly viewer: Cesium.Viewer;
     /**
      * 自定义组件容器
      */
-    readonly container: HTMLElement
+    readonly container: HTMLElement;
     /**
      * viewer.scene
      */
-    readonly scene: Cesium.Scene
+    readonly scene: Cesium.Scene;
     /**
      * Cesium相机
      */
-    readonly camera: Cesium.Camera
+    readonly camera: Cesium.Camera;
     /**
      * 画布
      */
-    readonly canvas: canvas
+    readonly canvas: canvas;
     /**
      * viewer.dataSources
      */
-    readonly dataSources: Cesium.DataSourceCollection
+    readonly dataSources: Cesium.DataSourceCollection;
     /**
      * viewer.imageryLayers
      */
-    readonly imageryLayers: Cesium.ImageryLayerCollection
+    readonly imageryLayers: Cesium.ImageryLayerCollection;
     /**
      * viewer.terrainProvider
      */
-    readonly terrainProvider: Cesium.TerrainProvider
+    readonly terrainProvider: Cesium.TerrainProvider;
     /**
      * trackedEntity
      */
-    trackedEntity: Cesium.Entity
+    trackedEntity: Cesium.Entity;
     /**
      * viewer.entities
      */
-    readonly entities: Cesium.EntityCollection
+    readonly entities: Cesium.EntityCollection;
     /**
      * viewer.postProcessStages
      */
-    readonly postProcessStages: Cesium.PostProcessStageCollection
+    readonly postProcessStages: Cesium.PostProcessStageCollection;
     /**
      * viewer.clock
      */
-    readonly clock: Cesium.Clock
+    readonly clock: Cesium.Clock;
     /**
      * 视图事件
      */
-    readonly viewerEvent: ViewerEvent
+    readonly viewerEvent: ViewerEvent;
     /**
      * 场景事件
      */
-    readonly sceneEvent: SceneEvent
+    readonly sceneEvent: SceneEvent;
     /**
      * 鼠标事件
      */
-    readonly mouseEvent: MouseEvent
+    readonly mouseEvent: MouseEvent;
     /**
      * 相机位置
      */
-    readonly cameraPosition: Position
+    readonly cameraPosition: Position;
     /**
      * 分辨率
      */
-    readonly resolution: number
+    readonly resolution: number;
     /**
      * 视图范围
      */
-    readonly viewBounds: Cesium.Rectangle
+    readonly viewBounds: Cesium.Rectangle;
     /**
      * 临时图层
      */
-    readonly graphicLayer: GraphicLayer
+    readonly graphicLayer: GraphicLayer;
     /**
      * 地图显示等级
      */
-    readonly level: number
+    readonly level: number;
     /**
      * 是否只触发Viewer上绑定的事件，屏蔽图层和要素事件
      */
-    onlyViewEvent: boolean
+    onlyViewEvent: boolean;
     /**
      * 获取当前客户端显卡信息
      */
-    readonly clientGraphicsCard: string
+    readonly clientGraphicsCard: string;
     /**
      * 设置viewer的options
      * @param [options] - 配置项
      * @param [options.widgetController] - 默认组件相关参数
      * @returns 视图
      */
-    setOptions(options?: { widgetController?: WidgetOption.Options }): Viewer
+    setOptions(options?: { widgetController?: WidgetOption.Options }): Viewer;
     /**
      * 设置相机pitch 范围
      * @param min - 最小pitch
      * @param max - 最大pitch
      * @returns this
      */
-    setPitchRange(min: number, max: number): Viewer
+    setPitchRange(min: number, max: number): Viewer;
     /**
      * 改变场景模式，2：2D，2.5：2.5D，3：3D
      * @param sceneMode - 模式
      * @param duration - 飞行时间
      * @returns this
      */
-    changeSceneMode(sceneMode: number, duration: number): Viewer
+    changeSceneMode(sceneMode: number, duration: number): Viewer;
     /**
      * 改变鼠标模式，0：Default，1: Change the tiltEventTypes to CameraEventType.RIGHT_DRAG
      * @param mouseMode - 鼠标模式
      * @returns this
      */
-    changeMouseMode(mouseMode: number): Viewer
+    changeMouseMode(mouseMode: number): Viewer;
     /**
      * 添加地形
      * @param terrainProvider - 地形服务
      * @returns terrain
      */
-    setTerrain(terrainProvider: Promise<Cesium.TerrainProvider>): Cesium.Terrain
+    setTerrain(
+      terrainProvider: Promise<Cesium.TerrainProvider>
+    ): Cesium.Terrain;
     /**
      * 移除地形
      * @returns this
      */
-    removeTerrain(): Viewer
+    removeTerrain(): Viewer;
     /**
      * 添加图层(图层组)
      * @param layer - 自定义图层
      * @returns this
      */
-    addLayer(layer: LayerGroup | BaseLayer): Viewer
+    addLayer(layer: LayerGroup | BaseLayer): Viewer;
     /**
      * 移除图层(图层组)
      * @param layer - 自定义图层
      */
-    removeLayer(layer: BaseLayer): Viewer
+    removeLayer(layer: BaseLayer): Viewer;
     /**
      * 根据图层id判断图层是否存在
      * @param layer - 自定义图层
      */
-    hasLayer(layer: BaseLayer | any): boolean
+    hasLayer(layer: BaseLayer | any): boolean;
     /**
      * 根据图层id获取图层
      * @param id - 图层id
      */
-    getLayer(id: string): BaseLayer | undefined
+    getLayer(id: string): BaseLayer | undefined;
     /**
      * 通过名称获取图层
      * @param name - 图层名称
      * @returns 图层实例
      */
-    getLayerByName(name: string): Layer
+    getLayerByName(name: string): Layer;
     /**
      * 获取所以图层
      * @returns 所有图层
      */
-    getLayers(): Layer[]
+    getLayers(): Layer[];
     /**
      * 获取图层数量
      * @returns 图层数量
      */
-    getLayerCount(): number
+    getLayerCount(): number;
     /**
      * Iterate through each layer and pass it as an argument to the callback function
      * @param method - 函数
      * @param context - 上下文
      * @returns this
      */
-    eachLayer(method: (...params: any[]) => any, context: any): Viewer
+    eachLayer(method: (...params: any[]) => any, context: any): Viewer;
     /**
      * 添加后处理特效
      * @param effect - 特效
      * @returns this
      */
-    addEffect(effect: BaseEffect): Viewer
+    addEffect(effect: BaseEffect): Viewer;
     /**
      * 移除后处理特效
      * @param effect - 自定义图层
      */
-    removeEffect(effect: BaseEffect): Viewer
+    removeEffect(effect: BaseEffect): Viewer;
     /**
      * 添加分析
      * @param thing - 特效
      * @returns this
      */
-    addThing(thing: BaseThing): Viewer
+    addThing(thing: BaseThing): Viewer;
     /**
      * 移除分析
      * @param thing - 自定义图层
      */
-    removeThing(thing: BaseThing): Viewer
+    removeThing(thing: BaseThing): Viewer;
     /**
      * 飞向
      * @param target - 自定义图层等
@@ -6885,31 +7168,37 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     flyTo(
       target: BaseLayer | Cesium.Object,
       options?: {
-        duration?: number
-        maximumHeight?: number
-        offset?: Cesium.HeadingPitchRange
+        duration?: number;
+        maximumHeight?: number;
+        offset?: Cesium.HeadingPitchRange;
       }
-    ): Promise<Boolean>
+    ): Promise<Boolean>;
     /**
      * viewer.zoomTo
      * @param target - 自定义图层等
      * @returns this
      */
-    zoomTo(target: Layer | Cesium.Object): Viewer
+    zoomTo(target: Layer | Cesium.Object): Viewer;
     /**
      * 相机flyTo
      * @param position - 位置点
      * @param duration - 飞行的持续时间以秒为单位
      * @returns this
      */
-    flyToPosition(position: string | any[] | Position, duration: number): Promise
+    flyToPosition(
+      position: string | any[] | Position,
+      duration: number
+    ): Promise;
     /**
      * 相机 camera.flyToBoundingSphere
      * @param positions - 位置点
      * @param options - 参数参考camera.flyToBoundingSphere.options
      * @returns this
      */
-    flyToPositions(positions: string | any[] | Position[], options: any): Viewer
+    flyToPositions(
+      positions: string | any[] | Position[],
+      options: any
+    ): Viewer;
     /**
      * Camera zoom to a position
      * @param position - 位置点
@@ -6919,7 +7208,7 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
     zoomToPosition(
       position: string | any[] | Position,
       completeCallback: (...params: any[]) => any
-    ): Viewer
+    ): Viewer;
     /**
      * 绑定指定类型事件监听器
      * @param type - 事件类型
@@ -6927,7 +7216,11 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param context - 侦听器的上下文(this关键字将指向的对象)
      * @returns this
      */
-    on(type: ViewerEventType, callback: (...params: any[]) => any, context: any): Viewer
+    on(
+      type: ViewerEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Viewer;
     /**
      * 执行一次指定类型事件监听器
      * @param type - 事件类型
@@ -6935,7 +7228,11 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param context - 侦听器的上下文(this关键字将指向的对象)
      * @returns this
      */
-    once(type: ViewerEventType, callback: (...params: any[]) => any, context: any): Viewer
+    once(
+      type: ViewerEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Viewer;
     /**
      * 解除事件监听器
      * @param type - ViewerEventType or  sceneEvent
@@ -6943,11 +7240,15 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param context - 侦听器的上下文(this关键字将指向的对象)
      * @returns this
      */
-    off(type: ViewerEventType, callback: (...params: any[]) => any, context: any): Viewer
+    off(
+      type: ViewerEventType,
+      callback: (...params: any[]) => any,
+      context: any
+    ): Viewer;
     /**
      * Destroys the viewer.
      */
-    destroy(): void
+    destroy(): void;
     /**
      * Export scene to image
      * @param options - 参数
@@ -6957,59 +7258,59 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @returns image
      */
     exportScene(options: {
-      name?: string
-      download?: boolean
-      positions?: Cesium.Cartesian3[]
-    }): string
+      name?: string;
+      download?: boolean;
+      positions?: Cesium.Cartesian3[];
+    }): string;
     /**
      * 添加组件，调用组件install方法
      * @returns this
      */
-    use(plugin: any): Viewer
+    use(plugin: any): Viewer;
   }
 
   /**
    * 导航盘
    */
   declare class Compass extends Widget {
-    constructor()
+    constructor();
   }
 
   /**
    * 导航盘
    */
   declare class Compass2 extends Widget {
-    constructor()
+    constructor();
   }
 
   /**
    * 比例尺
    */
   declare class DistanceLegend extends Widget {
-    constructor()
+    constructor();
   }
 
   /**
    * 地理底图控件
    */
   declare class ImagerySwitch extends Widget {
-    constructor()
+    constructor();
     /**
      * 设置或获取地形开关
      */
-    terrainEnable: boolean
+    terrainEnable: boolean;
     /**
      * 设置或获取显示图层
      */
-    switchId: number
+    switchId: number;
     /**
      * 设置或获取影像透明度
      */
-    imageryAlpha: number
+    imageryAlpha: number;
     /**
      * 图层集合
      */
-    layers: any[]
+    layers: any[];
     /**
      * 添加影像图层
      * @param options - 以下参数：
@@ -7020,173 +7321,176 @@ https://github.com/Leaflet/Leaflet/tree/master/src/core
      * @param [options.show = false] - 显隐
      */
     addLayer(options: {
-      id?: string
-      layer: ImageLayer[]
-      iconUrl: string
-      name: string
-      show?: boolean
-    }): void
+      id?: string;
+      layer: ImageLayer[];
+      iconUrl: string;
+      name: string;
+      show?: boolean;
+    }): void;
     /**
      * 改变图层显隐
      */
-    changeLayer(id: any): void
+    changeLayer(id: any): void;
     /**
      * 移除指定图层
      */
-    removeLayer(id: any): void
+    removeLayer(id: any): void;
     /**
      * 改变地形显隐
      * @param show - 是否显隐
      */
-    changeTerrain(show: boolean): void
+    changeTerrain(show: boolean): void;
     /**
      * 修改默认地形
      * @param terrain - 地形对象
      */
-    setTerrain(terrain: Cesium.TerrainProvider): void
+    setTerrain(terrain: Cesium.TerrainProvider): void;
   }
 
   /**
    * 键盘控制行走
    */
   declare class KeyboardRoaming extends Widget {
-    constructor()
+    constructor();
     /**
      * 设置或获取组件是否可用
      */
-    enable: boolean
+    enable: boolean;
     /**
      * 设置或获取移动速率
      */
-    moveRate: boolean
+    moveRate: boolean;
     /**
      * 设置或获取旋转速率
      */
-    rotateRate: boolean
+    rotateRate: boolean;
   }
 
   /**
    * 加载蒙层
    */
   declare class LoadingMask extends Widget {
-    constructor()
+    constructor();
   }
 
   /**
    * 分屏显示
    */
   declare class MapSplit extends Widget {
-    constructor()
+    constructor();
     /**
      * 设置对比影像图层
      * @param splitDirection - 分隔方向
      * @returns this
      */
-    addBaseLayer(baseLayer: Cesium.ImageryProvider, splitDirection?: number): MapSplit
+    addBaseLayer(
+      baseLayer: Cesium.ImageryProvider,
+      splitDirection?: number
+    ): MapSplit;
   }
 
   /**
    * 信息框
    */
   declare class Popup extends Widget {
-    constructor()
+    constructor();
     /**
      * 自定义类名
      */
-    config: any
+    config: any;
     /**
      * 设置 Wrapper
      * @returns this
      */
-    setWrapper(wrapper: Element): Popup
+    setWrapper(wrapper: Element): Popup;
     /**
      * 设置popup 位置
      * @param position - 位置点
      * @returns this
      */
-    setPosition(position: Cesium.Cartesian3): Popup
+    setPosition(position: Cesium.Cartesian3): Popup;
     /**
      * 显示并设置内容
      * @param position - 位置点
      * @param content - 内容
      * @returns this
      */
-    showAt(position: Cesium.Cartesian3, content: string | Element): Popup
+    showAt(position: Cesium.Cartesian3, content: string | Element): Popup;
     /**
      * 设置或获取组件是否可用
      */
-    enable: boolean
+    enable: boolean;
   }
 
   /**
    * 状态栏
    */
   declare class StateBar extends Widget {
-    constructor()
+    constructor();
   }
 
   /**
    * 提示信息窗
    */
   declare class Tooltip extends Widget {
-    constructor()
+    constructor();
     /**
      * 设置位置和内容
      * @param position - 屏幕位置
      */
-    showAt(position: Event, content: string): void
+    showAt(position: Event, content: string): void;
   }
 
   /**
    * 缩放控件
    */
   declare class ZoomController extends Widget {
-    constructor()
+    constructor();
     /**
      * 获取设置home位置
      */
-    homePosition: any
+    homePosition: any;
   }
 
   /**
    * 基础组件父类
    */
   declare class Widget {
-    constructor()
+    constructor();
     /**
      * 设置或获取组件是否可用
      */
-    enable: boolean
+    enable: boolean;
     /**
      * 组件状态
      */
-    readonly state: State
+    readonly state: State;
     /**
      * 注册到viewer
      * @param viewer - 视图
      */
-    install(viewer: Viewer): void
+    install(viewer: Viewer): void;
     /**
      * Setting widget content
      * @returns this
      */
-    setContent(content: string | Element): Widget
+    setContent(content: string | Element): Widget;
     /**
      * 隐藏组件
      */
-    hide(): void
+    hide(): void;
     /**
      * 显示组件
      */
-    show(): void
+    show(): void;
     /**
      * 注册组件类型
      */
-    static registerType(type: string): void
+    static registerType(type: string): void;
     /**
      * 获取组件类型
      */
-    static getWidgetType(type: string): void
+    static getWidgetType(type: string): void;
   }
 
   /**
