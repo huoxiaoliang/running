@@ -16,7 +16,7 @@ const startY = 0
 const min = 0
 
 /** 尺子的最大值*/
-const max = 100
+const max = 220
 let leftMin
 let leftMax
 let canvasWidth = 0
