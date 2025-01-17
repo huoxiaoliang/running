@@ -1,0 +1,56 @@
+{
+  "map3d": {
+    "baseMap": [
+      {
+        "groupId": 10,
+        "id": 2000,
+        "name": "天地图影像",
+        "show": true,
+        "iconUrl": "/config/images/icon/天地图.png",
+        "layer": [
+          {
+            "name": "底图",
+            "type": "tdt",
+            "style": "img_c"
+          },
+          {
+            "name": "注记",
+            "type": "tdt",
+            "style": "cia_c"
+          }
+        ]
+      },
+      {
+        "groupId": 10,
+        "id": 2001,
+        "name": "天地图电子",
+        "iconUrl": "/config/images/icon/天地图电子.png",
+        "layer": [
+          {
+            "name": "底图",
+            "type": "tdt",
+            "style": "vec_w"
+          },
+          {
+            "name": "注记",
+            "type": "tdt",
+            "style": "cva_w"
+          }
+        ]
+      },
+      {
+        "groupId": 10,
+        "id": 2003,
+        "name": "arcgis影像",
+        "iconUrl": "/config/images/icon/arcgis.png",
+        "layer": [
+          {
+            "name": "底图",
+            "type": "arcgis",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
+          }
+        ]
+      }
+    ]
+  }
+}
